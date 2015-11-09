@@ -1,0 +1,3 @@
+wikides_maires_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: WikidesMairesBundle:Default:index }

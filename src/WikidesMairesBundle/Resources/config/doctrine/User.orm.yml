@@ -1,0 +1,9 @@
+# src/WikidesMairesBundle/Resources/config/doctrine/User.orm.yml
+WikidesMairesBundle\Entity\User:
+    type:  entity
+    table: fos_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
