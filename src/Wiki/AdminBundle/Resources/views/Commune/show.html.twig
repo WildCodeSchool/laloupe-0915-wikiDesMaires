@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Commune</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nom }}</td>
+            </tr>
+            <tr>
+                <th>Map</th>
+                <td>{{ entity.map }}</td>
+            </tr>
+            <tr>
+                <th>Habitants</th>
+                <td>{{ entity.habitants }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('commune') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('commune_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

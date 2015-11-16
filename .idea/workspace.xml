@@ -1,0 +1,1553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="87abf148-c7ba-41aa-a23f-83d90b624e74" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/public/css/style.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/TestInit.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/.coveralls.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Acl/Model/AclCache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Command/CacheCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Command/ContainsCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Command/DeleteCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Command/FlushCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Command/StatsCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/CacheProviderLoader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Configuration.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/CacheDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/CouchbaseDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/FileSystemDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/MemcacheDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/MemcachedDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/MongodbDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/PhpFileDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/RedisDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/Definition/RiakDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/DoctrineCacheExtension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DependencyInjection/SymfonyBridgeAdapter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/DoctrineCacheBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Resources/config/schema/doctrine_cache-1.0.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Resources/config/services.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Acl/Model/AclCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/AbstractDoctrineCacheExtensionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/Bundles/XmlBundle/XmlBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/Bundles/YamlBundle/YamlBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/Cache/MyCustomType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/Definition/MyCustomTypeDefinition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/acl.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/aliased.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/basic.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/configurable.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/configurable_defaults.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/custom_providers.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/namespaced.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/service_parameter.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/xml/unrecognized.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/acl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/aliased.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/basic.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/configurable.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/configurable_defaults.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/custom_providers.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/namespaced.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/service_parameter.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/Fixtures/config/yml/unrecognized.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/SymfonyBridgeAdapterTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/XmlDoctrineCacheExtensionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/DependencyInjection/YmlDoctrineCacheExtensionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/ArrayCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/BaseCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Command/CommandTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Command/ContainsCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Command/DeleteCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Command/FlushCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Command/StatsCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/FileSystemCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Fixtures/config/array.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Fixtures/config/file_system.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Fixtures/config/memcache.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Fixtures/config/memcached.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Fixtures/config/mongodb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Fixtures/config/php_file.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/Fixtures/config/riak.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/MemcacheCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/MemcachedCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/MongoDBCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/PhpFileCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/Functional/RiakCacheTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/FunctionalTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/TestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/travis/install-deps.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/Tests/travis/php.ini" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/Doctrine/Bundle/DoctrineCacheBundle/ruleset.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundles/framework" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundles/sensiodistribution" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml" afterPath="$PROJECT_DIR$/app/config/parameters.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/.travis.yml" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/LICENSE" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/composer.json" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ApcCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ApcCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/Cache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/Cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/CacheProvider.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/CacheProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ClearableCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ClearableCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FileCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FileCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FilesystemCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FilesystemCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FlushableCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FlushableCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MemcacheCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MemcacheCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MemcachedCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MemcachedCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MongoDBCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MongoDBCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/PredisCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/PredisCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/RedisCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/RedisCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/RiakCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/RiakCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/SQLite3Cache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/SQLite3Cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/Version.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/Version.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/WinCacheCache.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/WinCacheCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ApcCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ApcCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/BaseFileCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/BaseFileCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/CacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/CacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/CouchbaseCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/CouchbaseCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/FileCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/FileCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/FilesystemCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/FilesystemCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MemcacheCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MemcacheCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MemcachedCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MemcachedCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MongoDBCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/MongoDBCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/PhpFileCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/PhpFileCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/PredisCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/PredisCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/RedisCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/RedisCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/RiakCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/RiakCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/SQLite3CacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/SQLite3CacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/VoidCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/VoidCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/WinCacheCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/WinCacheCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/XcacheCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/XcacheCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ZendDataCacheTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/Doctrine/Tests/Common/Cache/ZendDataCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/cache/tests/travis/phpunit.travis.xml" afterPath="$PROJECT_DIR$/vendor/doctrine/cache/tests/travis/phpunit.travis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/GenerateEntitiesDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/GenerateEntitiesDoctrineCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/ImportMappingDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/ImportMappingDoctrineCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/RunDqlDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/RunDqlDoctrineCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/RunSqlDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/RunSqlDoctrineCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Controller/ProfilerController.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Controller/ProfilerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/DoctrineExtension.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/DoctrineExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/schema/doctrine-1.0.xsd" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/schema/doctrine-1.0.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Twig/DoctrineExtension.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Twig/DoctrineExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/.travis.yml" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/LICENSE" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/composer.json" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/tests/Doctrine/Tests/Common/Inflector/InflectorTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/tests/Doctrine/Tests/Common/Inflector/InflectorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sensiolabs/security-checker/composer.json" afterPath="$PROJECT_DIR$/vendor/sensiolabs/security-checker/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/composer.json" afterPath="$PROJECT_DIR$/vendor/twig/twig/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/php_twig.h" afterPath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/php_twig.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Environment.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Environment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error/Syntax.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Error/Syntax.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExpressionParser.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExpressionParser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Core.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Core.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Debug.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Debug.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Escaper.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Escaper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Optimizer.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Optimizer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Profiler.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Profiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Sandbox.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Sandbox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Staging.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/Staging.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/StringLoader.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Extension/StringLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExtensionInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ExtensionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Lexer.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Lexer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/AutoEscape.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/AutoEscape.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Block.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Block.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/BlockReference.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/BlockReference.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Do.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Do.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Array.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Array.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/AssignName.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/AssignName.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/FloorDiv.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/FloorDiv.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/In.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/In.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/NotIn.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/NotIn.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/Power.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/Power.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/Range.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Binary/Range.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/BlockReference.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/BlockReference.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/ExtensionReference.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/ExtensionReference.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Parent.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Parent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Test/Defined.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/Test/Defined.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Flush.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Flush.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/For.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/For.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/ForLoop.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/ForLoop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/If.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/If.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Import.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Import.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Include.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Include.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Macro.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Macro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Module.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Module.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Print.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Print.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Sandbox.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Sandbox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/SandboxedPrint.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/SandboxedPrint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Set.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Set.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Spaceless.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Spaceless.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Text.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Text.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Parser.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/IntegrationTestCase.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/IntegrationTestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/NodeTestCase.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/NodeTestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/AutoEscape.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/AutoEscape.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Block.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Block.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Do.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Do.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Embed.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Embed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Extends.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Extends.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Filter.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Filter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Flush.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Flush.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/For.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/For.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/From.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/From.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/If.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/If.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Import.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Import.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Include.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Include.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Macro.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Macro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Sandbox.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Sandbox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Set.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Set.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Spaceless.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Spaceless.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Use.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParser/Use.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParserBroker.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParserBroker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenStream.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenStream.php" />
+    </list>
+    <ignored path="projet-wiki_des_maires.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="projet-wiki_des_maires" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="projetController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Controller/projetController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+              <folding>
+                <element signature="e#46#81#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="84" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24545455">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/Default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommuneController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Controller/CommuneController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/projet/add.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/bundles/wikiadmin/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/doctrine/Users.orm.yml" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/routing/users.yml" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/Users/show.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Controller/projetController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/projet/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/web/bundles/wikiadmin/css/style.css" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="28" />
+    <option name="width" value="1280" />
+    <option name="height" value="772" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wikiadmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wikiadmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swiftmailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swiftmailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swiftmailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swiftmailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sonata-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sonata-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sonata-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sonata-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wiki" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet-wiki_des_maires" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../projet-wildresa" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87abf148-c7ba-41aa-a23f-83d90b624e74" name="Default" comment="" />
+      <created>1446750826862</created>
+      <option name="number" value="Default" />
+      <updated>1446750826862</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="28" width="1280" height="772" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27786753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24349158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Entity/projetRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Entity/projet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Entity/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/Users/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/Users/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/Users/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.666666">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Controller/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="20.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/doctrine/Users.orm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/doctrine/Commune.orm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/DependencyInjection/WikiAdminExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4229765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/check.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="32.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/config/routing/sonata_admin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/config/templates.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/doc/installing.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1707318">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/console">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Entity/projet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Entity/projetRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Controller/CommuneController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Controller/projetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#46#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/projet/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="84" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/wikiadmin/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24545455">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
