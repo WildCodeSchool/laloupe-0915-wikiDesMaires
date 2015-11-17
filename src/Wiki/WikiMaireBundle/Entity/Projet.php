@@ -2,8 +2,6 @@
 
 namespace Wiki\WikiMaireBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Projet
  */
@@ -17,43 +15,43 @@ class Projet
     /**
      * @var string
      */
-    private $description;
-
-    /**
-     * @var \DateTime
-     */
-    private $dateR;
+    private $nomprojet;
 
     /**
      * @var string
      */
-    private $but;
+    private $commune;
 
     /**
      * @var string
      */
-    private $subvention;
-
-    /**
-     * @var string
-     */
-    private $difficulte;
-
-    /**
-     * @var string
-     */
-    private $conseils;
+    private $entrepreneur;
 
     /**
      * @var float
      */
     private $cout;
 
+    /**
+     * @var \DateTime
+     */
+    private $date;
+
+    /**
+     * @var string
+     */
+    private $description;
+
+    /**
+     * @var string
+     */
+    private $difficulte;
+
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -61,147 +59,82 @@ class Projet
     }
 
     /**
-     * Set description
+     * Set nomprojet
      *
-     * @param string $description
+     * @param string $nomprojet
+     *
      * @return Projet
      */
-    public function setDescription($description)
+    public function setNomprojet($nomprojet)
     {
-        $this->description = $description;
+        $this->nomprojet = $nomprojet;
 
         return $this;
     }
 
     /**
-     * Get description
+     * Get nomprojet
      *
-     * @return string 
+     * @return string
      */
-    public function getDescription()
+    public function getNomprojet()
     {
-        return $this->description;
+        return $this->nomprojet;
     }
 
     /**
-     * Set dateR
+     * Set commune
      *
-     * @param \DateTime $dateR
+     * @param string $commune
+     *
      * @return Projet
      */
-    public function setDateR($dateR)
+    public function setCommune($commune)
     {
-        $this->dateR = $dateR;
+        $this->commune = $commune;
 
         return $this;
     }
 
     /**
-     * Get dateR
+     * Get commune
      *
-     * @return \DateTime 
+     * @return string
      */
-    public function getDateR()
+    public function getCommune()
     {
-        return $this->dateR;
+        return $this->commune;
     }
 
     /**
-     * Set but
+     * Set entrepreneur
      *
-     * @param string $but
+     * @param string $entrepreneur
+     *
      * @return Projet
      */
-    public function setBut($but)
+    public function setEntrepreneur($entrepreneur)
     {
-        $this->but = $but;
+        $this->entrepreneur = $entrepreneur;
 
         return $this;
     }
 
     /**
-     * Get but
+     * Get entrepreneur
      *
-     * @return string 
+     * @return string
      */
-    public function getBut()
+    public function getEntrepreneur()
     {
-        return $this->but;
-    }
-
-    /**
-     * Set subvention
-     *
-     * @param string $subvention
-     * @return Projet
-     */
-    public function setSubvention($subvention)
-    {
-        $this->subvention = $subvention;
-
-        return $this;
-    }
-
-    /**
-     * Get subvention
-     *
-     * @return string 
-     */
-    public function getSubvention()
-    {
-        return $this->subvention;
-    }
-
-    /**
-     * Set difficulte
-     *
-     * @param string $difficulte
-     * @return Projet
-     */
-    public function setDifficulte($difficulte)
-    {
-        $this->difficulte = $difficulte;
-
-        return $this;
-    }
-
-    /**
-     * Get difficulte
-     *
-     * @return string 
-     */
-    public function getDifficulte()
-    {
-        return $this->difficulte;
-    }
-
-    /**
-     * Set conseils
-     *
-     * @param string $conseils
-     * @return Projet
-     */
-    public function setConseils($conseils)
-    {
-        $this->conseils = $conseils;
-
-        return $this;
-    }
-
-    /**
-     * Get conseils
-     *
-     * @return string 
-     */
-    public function getConseils()
-    {
-        return $this->conseils;
+        return $this->entrepreneur;
     }
 
     /**
      * Set cout
      *
      * @param float $cout
+     *
      * @return Projet
      */
     public function setCout($cout)
@@ -214,10 +147,83 @@ class Projet
     /**
      * Get cout
      *
-     * @return float 
+     * @return float
      */
     public function getCout()
     {
         return $this->cout;
     }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Projet
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Projet
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set difficulte
+     *
+     * @param string $difficulte
+     *
+     * @return Projet
+     */
+    public function setDifficulte($difficulte)
+    {
+        $this->difficulte = $difficulte;
+
+        return $this;
+    }
+
+    /**
+     * Get difficulte
+     *
+     * @return string
+     */
+    public function getDifficulte()
+    {
+        return $this->difficulte;
+    }
 }
+
