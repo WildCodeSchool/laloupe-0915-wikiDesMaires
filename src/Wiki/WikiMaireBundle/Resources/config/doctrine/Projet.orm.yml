@@ -1,0 +1,31 @@
+Wiki\WikiMaireBundle\Entity\Projet:
+    type: entity
+    table: null
+    repositoryClass: Wiki\WikiMaireBundle\Entity\ProjetRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: string
+            length: 255
+        dateR:
+            type: date
+        but:
+            type: string
+            length: 255
+        subvention:
+            type: string
+            length: 255
+        difficulte:
+            type: string
+            length: 255
+        conseils:
+            type: string
+            length: 255
+        cout:
+            type: float
+    lifecycleCallbacks: {  }

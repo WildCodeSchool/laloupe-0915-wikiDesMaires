@@ -9,6 +9,8 @@ file that was distributed with this source code.
 
 #}
 
+{% extends '::base.html.twig' %}
+{% block body %}
 {% block sonata_page_breadcrumb %}
     {% if breadcrumb_context is not defined %}
         {% set breadcrumb_context = 'user_index' %}
@@ -35,3 +37,4 @@ file that was distributed with this source code.
     </div>
 
 </div>
+{% endblock %}
