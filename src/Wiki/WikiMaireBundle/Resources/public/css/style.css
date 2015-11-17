@@ -1,0 +1,19 @@
+header{
+    font-size: 18px;
+    background-color: #e6e6e6;
+}
+
+.nav {
+    margin-bottom: 30px;
+    border-bottom: 1px solid gray;
+}
+.nav li + li {
+    border-left: 1px solid gray;
+}
+
+.login-page .panel-info{
+    max-width: 700px;
+    margin: 10vh auto 0 auto;
+}
+
+

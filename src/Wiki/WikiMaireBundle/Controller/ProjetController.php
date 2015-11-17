@@ -18,7 +18,10 @@ class ProjetController extends Controller
             //
             $em = $this->getDoctrine()->getManager();
             $em->persist($projet);
-            $em->flush();
+            $em->flush(); ?>
+            <script type=text/javascript>
+            alert('Donner');
+            </script><?php
             return $this->redirectToRoute('homepage');
         }
         return $this->render('WikiWikiMaireBundle:Projet:index.html.twig', array(

@@ -3,5 +3,5 @@ wiki_wiki_maire_homepage:
     defaults: { _controller: WikiWikiMaireBundle:Default:index }
 
 index:
-    path:     /projet
+    path:     /projet/add
     defaults: { _controller: WikiWikiMaireBundle:Projet:index }
