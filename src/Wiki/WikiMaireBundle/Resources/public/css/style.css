@@ -16,4 +16,8 @@ header{
     margin: 10vh auto 0 auto;
 }
 
+table tr td {
+    border:solid black 1px;
+
+}
 
