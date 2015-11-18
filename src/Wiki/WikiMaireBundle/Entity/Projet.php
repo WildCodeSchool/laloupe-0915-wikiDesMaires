@@ -20,12 +20,22 @@ class Projet
     /**
      * @var string
      */
+    private $tailleprojet;
+
+    /**
+     * @var string
+     */
+    private $bassinpopulation;
+
+    /**
+     * @var string
+     */
     private $commune;
 
     /**
      * @var string
      */
-    private $entrepreneur;
+    private $expert;
 
     /**
      * @var float
@@ -83,12 +93,62 @@ class Projet
     }
 
     /**
+     * Set tailleprojet
+     *
+     * @param string $tailleprojet
+     *
+     * @return Projet
+     */
+    public function setTailleprojet($tailleprojet)
+    {
+        $this->tailleprojet = $tailleprojet;
+
+        return $this;
+    }
+
+    /**
+     * Get bassinpopulation
+     *
+     * @return string
+     */
+    public function getTailleprojet()
+    {
+        return $this->tailleprojet;
+    }
+
+    /**
+     * Set bassinpopulation
+     *
+     * @param string $bassinpopulation
+     *
+     * @return Projet
+     */
+
+    public function setBassinpopulation($bassinpopulation)
+    {
+        $this->bassinpopulation = $bassinpopulation;
+
+        return $this;
+    }
+
+    /**
+     * Get bassinpopulation
+     *
+     * @return string
+     */
+    public function getBassinpopulation()
+    {
+        return $this->bassinpopulation;
+    }
+
+    /**
      * Set commune
      *
      * @param string $commune
      *
      * @return Projet
      */
+
     public function setCommune($commune)
     {
         $this->commune = $commune;
@@ -101,33 +161,34 @@ class Projet
      *
      * @return string
      */
+
     public function getCommune()
     {
         return $this->commune;
     }
 
     /**
-     * Set entrepreneur
+     * Set expert
      *
-     * @param string $entrepreneur
+     * @param string $expert
      *
      * @return Projet
      */
-    public function setEntrepreneur($entrepreneur)
+    public function setExpert($expert)
     {
-        $this->entrepreneur = $entrepreneur;
+        $this->expert = $expert;
 
         return $this;
     }
 
     /**
-     * Get entrepreneur
+     * Get expert
      *
      * @return string
      */
-    public function getEntrepreneur()
+    public function getExpert()
     {
-        return $this->entrepreneur;
+        return $this->expert;
     }
 
     /**
