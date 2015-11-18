@@ -22,6 +22,7 @@ class ProjetType extends AbstractType
             ->add('date', 'date', array('label' => 'Date de Réalisation'))
             ->add('description', 'textarea', array('label' => 'Description'))
             ->add('difficulte', 'textarea', array('label' => 'Difficulté'))
+
             ->add('save', 'submit', array('label' => 'Envoyez'))
         ;
     }

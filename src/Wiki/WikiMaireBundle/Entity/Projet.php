@@ -7,10 +7,29 @@ namespace Wiki\WikiMaireBundle\Entity;
  */
 class Projet
 {
+
+
+    // GENERATED CODE
+    
     /**
-     * @var integer
+     * @var string
      */
-    private $id;
+    private $description;
+
+    /**
+     * @var \DateTime
+     */
+    private $date;
+
+    /**
+     * @var string
+     */
+    private $difficulte;
+
+    /**
+     * @var float
+     */
+    private $cout;
 
     /**
      * @var string
@@ -28,34 +47,110 @@ class Projet
     private $entrepreneur;
 
     /**
-     * @var float
+     * @var integer
      */
-    private $cout;
+    private $id;
 
     /**
-     * @var \DateTime
+     * @var \Application\Sonata\UserBundle\Entity\User
      */
-    private $date;
-
-    /**
-     * @var string
-     */
-    private $description;
-
-    /**
-     * @var string
-     */
-    private $difficulte;
+    private $user;
 
 
     /**
-     * Get id
+     * Set description
      *
-     * @return integer
+     * @param string $description
+     *
+     * @return Projet
      */
-    public function getId()
+    public function setDescription($description)
     {
-        return $this->id;
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Projet
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set difficulte
+     *
+     * @param string $difficulte
+     *
+     * @return Projet
+     */
+    public function setDifficulte($difficulte)
+    {
+        $this->difficulte = $difficulte;
+
+        return $this;
+    }
+
+    /**
+     * Get difficulte
+     *
+     * @return string
+     */
+    public function getDifficulte()
+    {
+        return $this->difficulte;
+    }
+
+    /**
+     * Set cout
+     *
+     * @param float $cout
+     *
+     * @return Projet
+     */
+    public function setCout($cout)
+    {
+        $this->cout = $cout;
+
+        return $this;
+    }
+
+    /**
+     * Get cout
+     *
+     * @return float
+     */
+    public function getCout()
+    {
+        return $this->cout;
     }
 
     /**
@@ -131,99 +226,36 @@ class Projet
     }
 
     /**
-     * Set cout
+     * Get id
      *
-     * @param float $cout
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \Application\Sonata\UserBundle\Entity\User $user
      *
      * @return Projet
      */
-    public function setCout($cout)
+    public function setUser(\Application\Sonata\UserBundle\Entity\User $user = null)
     {
-        $this->cout = $cout;
+        $this->user = $user;
 
         return $this;
     }
 
     /**
-     * Get cout
+     * Get user
      *
-     * @return float
+     * @return \Application\Sonata\UserBundle\Entity\User
      */
-    public function getCout()
+    public function getUser()
     {
-        return $this->cout;
-    }
-
-    /**
-     * Set date
-     *
-     * @param \DateTime $date
-     *
-     * @return Projet
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return Projet
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set difficulte
-     *
-     * @param string $difficulte
-     *
-     * @return Projet
-     */
-    public function setDifficulte($difficulte)
-    {
-        $this->difficulte = $difficulte;
-
-        return $this;
-    }
-
-    /**
-     * Get difficulte
-     *
-     * @return string
-     */
-    public function getDifficulte()
-    {
-        return $this->difficulte;
+        return $this->user;
     }
 }
-
