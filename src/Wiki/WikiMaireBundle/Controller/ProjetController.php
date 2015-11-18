@@ -21,8 +21,10 @@ class ProjetController extends Controller
             $em->flush();
             return $this->redirectToRoute('homepage');
         }
-        return $this->render('WikiWikiMaireBundle:Projet:index.html.twig', array(
+        return $this->render('WikiWikiMaireBundle:Projet:ajout.html.twig', array(
             'form' => $form->createView(),
         ));
     }
+
+    
 }

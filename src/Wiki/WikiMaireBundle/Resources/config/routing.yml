@@ -2,6 +2,6 @@ wiki_wiki_maire_homepage:
     path:     /hello/{name}
     defaults: { _controller: WikiWikiMaireBundle:Default:index }
 
-index:
+ajout:
     path:     /projet/add
     defaults: { _controller: WikiWikiMaireBundle:Projet:index }
