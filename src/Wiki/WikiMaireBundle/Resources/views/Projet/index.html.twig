@@ -4,6 +4,33 @@
 
 {% block body %}
     <div class="well">
-        {{ form(form) }}
+        <table>
+            <thead>
+            <tr>
+                <th>Nom Projet :</th>
+                <th>Commune :</th>
+                <th>Maire :</th>
+                <th>Experts :</th>
+                <th>Coût :</th>
+                <th>Date :</th>
+                <th>Déscription :</th>
+                <th>Difficulté :</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for projet in projets %}
+                    <tr>
+                        <td>{{ projet.nomprojet }}</td>
+                        <td>{{ projet.commune }}</td>
+                        <td></td>
+                        <td>{{ projet.entrepreneur }}</td>
+                        <td>{{ projet.cout }}</td>
+                        <td>{% if projet.date %}{{ projet.date|date('Y-m-d') }}{% endif %}</td>
+                        <td>{{ projet.description }}</td>
+                        <td>{{ projet.difficulte }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}
