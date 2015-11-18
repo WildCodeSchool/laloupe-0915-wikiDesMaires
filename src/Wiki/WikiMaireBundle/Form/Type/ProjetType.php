@@ -16,8 +16,10 @@ class ProjetType extends AbstractType
     {
         $builder
             ->add('nomprojet', 'text', array('label' => 'Nom du Projet'))
+            ->add('tailleprojet', 'text', array('label' => 'Taille du Projet'))
+            ->add('bassinpopulation', 'text' ,array('label' => 'Bassin de Population'))
             ->add('commune', 'text', array('label' => 'Commune de Réalisation'))
-            ->add('entrepreneur', 'text', array('label' => 'Entrepreneur'))
+            ->add('expert', 'text', array('label' => 'Expert'))
             ->add('cout', 'text', array('label' => 'Coût du Projet'))
             ->add('date', 'date', array('label' => 'Date de Réalisation'))
             ->add('description', 'textarea', array('label' => 'Description'))
