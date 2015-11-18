@@ -1,0 +1,15 @@
+<?php
+
+namespace Wiki\WikiMaireBundle\Entity;
+
+/**
+ * Projet
+ */
+class Projet
+{
+
+
+    // GENERATED CODE
+    
+}
+

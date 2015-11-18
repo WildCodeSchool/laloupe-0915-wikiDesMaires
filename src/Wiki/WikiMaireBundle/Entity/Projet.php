@@ -7,19 +7,19 @@ namespace Wiki\WikiMaireBundle\Entity;
  */
 class Projet
 {
-    /**
-     * @var integer
-     */
-    private $id;
 
+
+    // GENERATED CODE
+    
     /**
      * @var string
      */
-    private $nomprojet;
+    private $description;
 
     /**
-     * @var string
+     * @var \DateTime
      */
+<<<<<<< HEAD
     private $tailleprojet;
 
     /**
@@ -31,11 +31,18 @@ class Projet
      * @var string
      */
     private $commune;
+=======
+    private $date;
+>>>>>>> 1ecc2a2ead11e580e1e4d72d717f915fdf56c30d
 
     /**
      * @var string
      */
+<<<<<<< HEAD
     private $expert;
+=======
+    private $difficulte;
+>>>>>>> 1ecc2a2ead11e580e1e4d72d717f915fdf56c30d
 
     /**
      * @var float
@@ -43,56 +50,57 @@ class Projet
     private $cout;
 
     /**
-     * @var \DateTime
+     * @var string
      */
-    private $date;
+    private $nomprojet;
 
     /**
      * @var string
      */
-    private $description;
+    private $commune;
 
     /**
      * @var string
      */
-    private $difficulte;
-
+    private $entrepreneur;
 
     /**
-     * Get id
-     *
-     * @return integer
+     * @var integer
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $id;
 
     /**
-     * Set nomprojet
+     * @var \Application\Sonata\UserBundle\Entity\User
+     */
+    private $user;
+
+
+    /**
+     * Set description
      *
-     * @param string $nomprojet
+     * @param string $description
      *
      * @return Projet
      */
-    public function setNomprojet($nomprojet)
+    public function setDescription($description)
     {
-        $this->nomprojet = $nomprojet;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get nomprojet
+     * Get description
      *
      * @return string
      */
-    public function getNomprojet()
+    public function getDescription()
     {
-        return $this->nomprojet;
+        return $this->description;
     }
 
     /**
+<<<<<<< HEAD
      * Set tailleprojet
      *
      * @param string $tailleprojet
@@ -143,31 +151,43 @@ class Projet
 
     /**
      * Set commune
+=======
+     * Set date
+>>>>>>> 1ecc2a2ead11e580e1e4d72d717f915fdf56c30d
      *
-     * @param string $commune
+     * @param \DateTime $date
      *
      * @return Projet
      */
+<<<<<<< HEAD
 
     public function setCommune($commune)
+=======
+    public function setDate($date)
+>>>>>>> 1ecc2a2ead11e580e1e4d72d717f915fdf56c30d
     {
-        $this->commune = $commune;
+        $this->date = $date;
 
         return $this;
     }
 
     /**
-     * Get commune
+     * Get date
      *
-     * @return string
+     * @return \DateTime
      */
+<<<<<<< HEAD
 
     public function getCommune()
+=======
+    public function getDate()
+>>>>>>> 1ecc2a2ead11e580e1e4d72d717f915fdf56c30d
     {
-        return $this->commune;
+        return $this->date;
     }
 
     /**
+<<<<<<< HEAD
      * Set expert
      *
      * @param string $expert
@@ -177,11 +197,23 @@ class Projet
     public function setExpert($expert)
     {
         $this->expert = $expert;
+=======
+     * Set difficulte
+     *
+     * @param string $difficulte
+     *
+     * @return Projet
+     */
+    public function setDifficulte($difficulte)
+    {
+        $this->difficulte = $difficulte;
+>>>>>>> 1ecc2a2ead11e580e1e4d72d717f915fdf56c30d
 
         return $this;
     }
 
     /**
+<<<<<<< HEAD
      * Get expert
      *
      * @return string
@@ -189,6 +221,15 @@ class Projet
     public function getExpert()
     {
         return $this->expert;
+=======
+     * Get difficulte
+     *
+     * @return string
+     */
+    public function getDifficulte()
+    {
+        return $this->difficulte;
+>>>>>>> 1ecc2a2ead11e580e1e4d72d717f915fdf56c30d
     }
 
     /**
@@ -216,75 +257,108 @@ class Projet
     }
 
     /**
-     * Set date
+     * Set nomprojet
      *
-     * @param \DateTime $date
+     * @param string $nomprojet
      *
      * @return Projet
      */
-    public function setDate($date)
+    public function setNomprojet($nomprojet)
     {
-        $this->date = $date;
+        $this->nomprojet = $nomprojet;
 
         return $this;
     }
 
     /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return Projet
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
+     * Get nomprojet
      *
      * @return string
      */
-    public function getDescription()
+    public function getNomprojet()
     {
-        return $this->description;
+        return $this->nomprojet;
     }
 
     /**
-     * Set difficulte
+     * Set commune
      *
-     * @param string $difficulte
+     * @param string $commune
      *
      * @return Projet
      */
-    public function setDifficulte($difficulte)
+    public function setCommune($commune)
     {
-        $this->difficulte = $difficulte;
+        $this->commune = $commune;
 
         return $this;
     }
 
     /**
-     * Get difficulte
+     * Get commune
      *
      * @return string
      */
-    public function getDifficulte()
+    public function getCommune()
     {
-        return $this->difficulte;
+        return $this->commune;
+    }
+
+    /**
+     * Set entrepreneur
+     *
+     * @param string $entrepreneur
+     *
+     * @return Projet
+     */
+    public function setEntrepreneur($entrepreneur)
+    {
+        $this->entrepreneur = $entrepreneur;
+
+        return $this;
+    }
+
+    /**
+     * Get entrepreneur
+     *
+     * @return string
+     */
+    public function getEntrepreneur()
+    {
+        return $this->entrepreneur;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \Application\Sonata\UserBundle\Entity\User $user
+     *
+     * @return Projet
+     */
+    public function setUser(\Application\Sonata\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Application\Sonata\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
-
