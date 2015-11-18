@@ -154,11 +154,11 @@ class Projet
         return $this->commune;
     }
     /**
-     * Set entrepreneur
+     * Set expert
      *
-     * @param string $entrepreneur
+     * @param string $expert
      *
-     * @return Projet
+     * @return expert
      */
     public function setExpert($expert)
     {
@@ -166,7 +166,7 @@ class Projet
         return $this;
     }
     /**
-     * Get entrepreneur
+     * Get expert
      *
      * @return string
      */

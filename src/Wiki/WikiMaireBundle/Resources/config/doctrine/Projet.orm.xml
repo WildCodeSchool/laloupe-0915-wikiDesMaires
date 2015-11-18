@@ -4,6 +4,17 @@
     <id name="id" type="integer" column="id">
       <generator strategy="IDENTITY"/>
     </id>
+
+    <field name="tailleprojet" type="string" column="tailleprojet" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="bassinpopulation" type="string" column="bassinpopulation" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <field name="description" type="string" column="description" length="255" nullable="false">
       <options>
         <option name="fixed"/>
@@ -26,13 +37,11 @@
         <option name="fixed"/>
       </options>
     </field>
-    <field name="entrepreneur" type="string" column="entrepreneur" length="255" nullable="false">
+    <field name="expert" type="string" column="expert" length="255" nullable="false">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-    <many-to-one field="user" target-entity="Application\Sonata\UserBundle\Entity\User">
-      <join-column name="user_id" referenced-column-name="id" />
-    </many-to-one>
+
   </entity>
 </doctrine-mapping>
