@@ -5,3 +5,7 @@ wiki_wiki_maire_homepage:
 ajout:
     path:     /projet/add
     defaults: { _controller: WikiWikiMaireBundle:Projet:index }
+
+index:
+    path:     /projet/show
+    defaults: { _controller: WikiWikiMaireBundle:Projet:show }

@@ -14,8 +14,10 @@ class ProjetController extends Controller
         $projet = new Projet();
         $form = $this->get('form.factory')->create(new ProjetType(), $projet);
         $form->handleRequest($request);
+
         if ($form->isValid()) {
-            //
+
+            // On stock le formulaire dans la base de données
             $em = $this->getDoctrine()->getManager();
             $em->persist($projet);
             $em->flush();
@@ -26,5 +28,14 @@ class ProjetController extends Controller
         ));
     }
 
-    
+    public function showAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $listeProjet = $em->getRepository('WikiWikiMaireBundle:Projet')->findAll();
+
+        return $this->render('WikiWikiMaireBundle:Projet:index.html.twig', array(
+            'projets' => $listeProjet,
+        ));
+
+    }
 }
