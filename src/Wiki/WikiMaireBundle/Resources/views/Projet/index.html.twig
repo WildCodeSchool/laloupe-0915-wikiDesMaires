@@ -13,8 +13,10 @@
                 <th>Experts :</th>
                 <th>Coût :</th>
                 <th>Date :</th>
-                <th>Déscription :</th>
+                <th>Description :</th>
                 <th>Difficulté :</th>
+                <th>Taille Projet :</th>
+                <th>Bassion population :</th>
             </tr>
             </thead>
             <tbody>
@@ -23,11 +25,13 @@
                         <td>{{ projet.nomprojet }}</td>
                         <td>{{ projet.commune }}</td>
                         <td></td>
-                        <td>{{ projet.entrepreneur }}</td>
+                        <td>{{ projet.expert }}</td>
                         <td>{{ projet.cout }}</td>
                         <td>{% if projet.date %}{{ projet.date|date('Y-m-d') }}{% endif %}</td>
                         <td>{{ projet.description }}</td>
                         <td>{{ projet.difficulte }}</td>
+                        <td>{{ projet.tailleprojet }}</td>
+                        <td>{{ projet.bassinpopulation }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
