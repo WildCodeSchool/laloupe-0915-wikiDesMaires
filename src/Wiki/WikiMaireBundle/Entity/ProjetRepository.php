@@ -10,5 +10,4 @@ namespace Wiki\WikiMaireBundle\Entity;
  */
 class ProjetRepository extends \Doctrine\ORM\EntityRepository
 {
-
 }

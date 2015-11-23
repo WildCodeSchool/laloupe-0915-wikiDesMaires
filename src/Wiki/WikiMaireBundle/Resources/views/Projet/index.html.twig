@@ -3,24 +3,8 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 {% endblock %}
-{% block javascripts %}
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            var availableTags = [
-                    "Eolienne",
-                    "ecole",
-                    "couture",
-                    "wild code school",
-                    "La Loupe",
-                    "Anna",
-            ];
-            $( "#tags" ).autocomplete({
-                source: availableTags
-            });
-        });
-    </script>
+{% block javascript %}
+
 {% endblock %}
 {% block body -%}
     <ul>
@@ -30,10 +14,9 @@
             </a>
         </li>
     </ul>
-    <div class="ui-widget">
-        <label for="tags">Rechercher un projet: </label>
-        <input id="tags">
-    </div>
+
+
+
     <h1>Liste des Projets</h1>
 
     <table class="records_list" id="thetable">
@@ -42,11 +25,11 @@
                 <th>Id</th>
                 <th>Nomprojet</th>
                 <th>Description</th>
-                <th>Daterealisation</th>
+                <th>Date de Realisation</th>
                 <th>Difficulte</th>
                 <th>Cout</th>
-                <th>Tailleprojet</th>
-                <th>Bassinpopulation</th>
+                <th>Taille du projet</th>
+                <th>Bassin de population</th>
 
                 <th>Actions</th>
             </tr>
@@ -57,7 +40,7 @@
                 <td><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.nomprojet }}</td>
                 <td>{{ entity.description }}</td>
-                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ entity.difficulte }}</td>
                 <td>{{ entity.cout }}</td>
                 <td>{{ entity.tailleprojet }}</td>
@@ -81,5 +64,4 @@
         </tbody>
     </table>
 
-
-    {% endblock %}
+{% endblock %}

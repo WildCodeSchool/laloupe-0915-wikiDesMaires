@@ -7,4 +7,3 @@ wiki_wiki_maire_projet:
 wiki_wiki_maire_homepage:
     path:     /hello/{name}
     defaults: { _controller: WikiWikiMaireBundle:Default:index }
-
