@@ -23,7 +23,8 @@
         "sonata-project/easy-extends-bundle": "^2.1",
         "sonata-project/user-bundle": "^2.2",
         "knplabs/knp-menu-bundle": "~1.1",
-        "symfony/doctrine-bridge": "^2.7"
+        "symfony/doctrine-bridge": "^2.7",
+        "jms/serializer": "^1.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

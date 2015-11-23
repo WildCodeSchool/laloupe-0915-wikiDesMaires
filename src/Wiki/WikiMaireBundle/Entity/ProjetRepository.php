@@ -10,5 +10,37 @@ namespace Wiki\WikiMaireBundle\Entity;
  */
 class ProjetRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function RechercheProjet($tags)
+    {
+        $queryBuilder = $this->_em->createQueryBuilder()
+            ->select('p')
+            ->from($this->_entityName, 'p')// Dans un repository, $this->_entityName est le namespace de l'entité gérée
+            ->Where('p.tags LIKE :str')
+            ->setParameter('str', '%'.$tags.'%');
+        $query = $queryBuilder->getQuery();
+        return $query->getResult();
+    }
 
+    /*public function RechercheProjet ($projets)
+    {
+        $qb = $this->createQueryBuilder('p');
+
+        $qb ->select('p.tags')
+            ->where('p.tags LIKE :projet')
+            ->setParameter('projet', '%'.$projets.'%');
+
+        return $queryBuilder->getQuery()->getResult();
+
+        $arrayAss= $qb->getQuery()
+            ->getArrayResult();
+
+        // Transformer le tableau associatif en un tableau standard
+        $array = array();
+        foreach($arrayAss as $data)
+        {
+            $array[] = $data['tags'];
+        }
+
+        return $array;
+    }*/
 }

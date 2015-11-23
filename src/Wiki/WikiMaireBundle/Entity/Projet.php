@@ -7,6 +7,15 @@ namespace Wiki\WikiMaireBundle\Entity;
  */
 class Projet
 {
+    public function __toString()
+    {
+        return $this->nomprojet;
+    }
+
+
+
+
+    // GENERATED CODE
     /**
      * @var integer
      */
@@ -253,5 +262,34 @@ class Projet
     public function getUser()
     {
         return $this->user;
+    }
+    /**
+     * @var string
+     */
+    private $tags;
+
+
+    /**
+     * Set tags
+     *
+     * @param string $tags
+     *
+     * @return Projet
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Get tags
+     *
+     * @return string
+     */
+    public function getTags()
+    {
+        return $this->tags;
     }
 }
