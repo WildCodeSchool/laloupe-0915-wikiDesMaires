@@ -2,9 +2,9 @@
 
 namespace Wiki\WikiMaireBundle\Entity;
 
-    /**
-     * Projet
-     */
+/**
+ * Projet
+ */
 class Projet
 {
     /**
@@ -13,39 +13,9 @@ class Projet
     private $id;
 
     /**
-    * @var string
-    */
+     * @var string
+     */
     private $nomprojet;
-
-    /**
-     * @var string
-     */
-    private  $tailleprojet;
-
-    /**
-     * @var string
-     */
-    private  $bassinpopulation;
-
-    /**
-     * @var string
-     */
-    private $commune;
-
-    /**
-     * @var string
-    */
-    private $expert;
-
-    /**
-    * @var float
-    */
-    private $cout;
-
-    /**
-    * @var \DateTime
-    */
-    private $date;
 
     /**
      * @var string
@@ -53,9 +23,30 @@ class Projet
     private $description;
 
     /**
+     * @var \DateTime
+     */
+    private $daterealisation;
+
+    /**
      * @var string
-    */
+     */
     private $difficulte;
+
+    /**
+     * @var float
+     */
+    private $cout;
+
+    /**
+     * @var string
+     */
+    private $tailleprojet;
+
+    /**
+     * @var integer
+     */
+    private $bassinPopulation;
+
 
     /**
      * Get id
@@ -66,6 +57,7 @@ class Projet
     {
         return $this->id;
     }
+
     /**
      * Set nomprojet
      *
@@ -76,8 +68,10 @@ class Projet
     public function setNomprojet($nomprojet)
     {
         $this->nomprojet = $nomprojet;
+
         return $this;
     }
+
     /**
      * Get nomprojet
      *
@@ -86,6 +80,102 @@ class Projet
     public function getNomprojet()
     {
         return $this->nomprojet;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Projet
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set daterealisation
+     *
+     * @param \DateTime $daterealisation
+     *
+     * @return Projet
+     */
+    public function setDaterealisation($daterealisation)
+    {
+        $this->daterealisation = $daterealisation;
+
+        return $this;
+    }
+
+    /**
+     * Get daterealisation
+     *
+     * @return \DateTime
+     */
+    public function getDaterealisation()
+    {
+        return $this->daterealisation;
+    }
+
+    /**
+     * Set difficulte
+     *
+     * @param string $difficulte
+     *
+     * @return Projet
+     */
+    public function setDifficulte($difficulte)
+    {
+        $this->difficulte = $difficulte;
+
+        return $this;
+    }
+
+    /**
+     * Get difficulte
+     *
+     * @return string
+     */
+    public function getDifficulte()
+    {
+        return $this->difficulte;
+    }
+
+    /**
+     * Set cout
+     *
+     * @param float $cout
+     *
+     * @return Projet
+     */
+    public function setCout($cout)
+    {
+        $this->cout = $cout;
+
+        return $this;
+    }
+
+    /**
+     * Get cout
+     *
+     * @return float
+     */
+    public function getCout()
+    {
+        return $this->cout;
     }
 
     /**
@@ -98,10 +188,12 @@ class Projet
     public function setTailleprojet($tailleprojet)
     {
         $this->tailleprojet = $tailleprojet;
+
         return $this;
     }
+
     /**
-     * Get nomprojet
+     * Get tailleprojet
      *
      * @return string
      */
@@ -111,151 +203,55 @@ class Projet
     }
 
     /**
-     * Set bassinpopulation
+     * Set bassinPopulation
      *
-     * @param string $bassinpopulation
+     * @param integer $bassinPopulation
      *
      * @return Projet
      */
-    public function setBassinpopulation($bassinpopulation)
+    public function setBassinPopulation($bassinPopulation)
     {
-        $this->bassinpopulation= $bassinpopulation;
+        $this->bassinPopulation = $bassinPopulation;
+
         return $this;
-    }
-    /**
-     * Get bassinpopulation
-     *
-     * @return string
-     */
-    public function getBassinpopulation()
-    {
-        return $this->bassinpopulation;
     }
 
     /**
-     * Set commune
+     * Get bassinPopulation
      *
-     * @param string $commune
+     * @return integer
+     */
+    public function getBassinPopulation()
+    {
+        return $this->bassinPopulation;
+    }
+    /**
+     * @var \Application\Sonata\UserBundle\Entity\User
+     */
+    private $user;
+
+
+    /**
+     * Set user
+     *
+     * @param \Application\Sonata\UserBundle\Entity\User $user
      *
      * @return Projet
      */
-    public function setCommune($commune)
+    public function setUser(\Application\Sonata\UserBundle\Entity\User $user = null)
     {
-        $this->commune = $commune;
+        $this->user = $user;
+
         return $this;
     }
+
     /**
-     * Get commune
+     * Get user
      *
-     * @return string
+     * @return \Application\Sonata\UserBundle\Entity\User
      */
-    public function getCommune()
+    public function getUser()
     {
-        return $this->commune;
-    }
-    /**
-     * Set expert
-     *
-     * @param string $expert
-     *
-     * @return expert
-     */
-    public function setExpert($expert)
-    {
-        $this->expert = $expert;
-        return $this;
-    }
-    /**
-     * Get expert
-     *
-     * @return string
-     */
-    public function getExpert()
-    {
-        return $this->expert;
-    }
-        /**
-     * Set cout
-     *
-     * @param float $cout
-     *
-     * @return Projet
- */
-    public function setCout($cout)
-    {
-        $this->cout = $cout;
-        return $this;
-    }
-    /**
-     * Get cout
-     *
-     * @return float
-     */
-    public function getCout()
-    {
-        return $this->cout;
-    }
-    /**
-     * Set date
-     *
-     * @param \DateTime $date
-     *
-     * @return Projet
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-        return $this;
-    }
-        /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return Projet
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-        return $this;
-    }
-    /**
-     * Get description
-     *
-     * @return string
-     */
-        public function getDescription()
-    {
-        return $this->description;
-    }
-    /**
-     * Set difficulte
-     *
-     * @param string $difficulte
-     *
-     * @return Projet
-     */
-    public function setDifficulte($difficulte)
-    {
-        $this->difficulte = $difficulte;
-        return $this;
-    }
-    /**
-     * Get difficulte
-     *
-     * @return string
-    */
-    public function getDifficulte()
-    {
-        return $this->difficulte;
+        return $this->user;
     }
 }

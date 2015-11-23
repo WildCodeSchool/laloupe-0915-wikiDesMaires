@@ -15,9 +15,15 @@ header{
     max-width: 700px;
     margin: 10vh auto 0 auto;
 }
-
-table tr td {
-    border:solid black 1px;
-
+.login{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    width: 700px;
 }
+#thetable{
+    border: solid gray 1px;
+}
+
 

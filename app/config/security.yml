@@ -25,18 +25,13 @@ security:
                 login_path:     /admin/login
                 use_forward:    false
                 check_path:     /admin/login_check
+                default_target_path: /admin/dashboard
                 failure_path:   null
             logout:
                 path:           /admin/logout
             anonymous:          true
         main:
-            # activate different ways to authenticate
 
-            # http_basic: ~
-            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
-
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
             pattern:             .*
             context:             user
             form_login:
@@ -45,6 +40,7 @@ security:
                 use_forward:    false
                 check_path:     /login_check
                 failure_path:   null
+                success_handler: admin_success_handler
             logout:             true
             anonymous:          true
 

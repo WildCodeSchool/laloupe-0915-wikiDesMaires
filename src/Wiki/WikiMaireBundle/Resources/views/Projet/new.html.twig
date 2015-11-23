@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 align="center">Création d'un nouveau Projet</h1><br>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('projet') }}">
+            Retour a la liste de Projet
+        </a>
+    </li>
+</ul>
+{% endblock %}

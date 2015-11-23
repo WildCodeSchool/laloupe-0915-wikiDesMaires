@@ -52,3 +52,4 @@ class Commune
         return $this->nomcommune;
     }
 }
+

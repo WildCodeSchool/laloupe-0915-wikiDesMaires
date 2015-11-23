@@ -35,6 +35,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form:
+        resources: ['bootstrap_3_horizontal_layout.html.twig']
 
 # Assetic Configuration
 assetic:
@@ -102,6 +104,22 @@ sonata_block:
 sonata_user:
     security_acl: true
     manager_type: orm # can be orm or mongodb
+    profile:  # Profile Form (firstname, lastname, etc ...)
+        form:
+            type:               application_sonata_user_profile
+            handler:            sonata.user.profile.form.handler.default
+            name:               sonata_user_profile_form
+            validation_groups:  [Profile]
+    admin:
+        user:
+            class:      Application\Sonata\UserBundle\Admin\Model\UserAdmin
+            controller:     SonataAdminBundle:CRUD
+            translation:    SonataUserBundle
+
+sonata_admin:
+    security:
+        handler: sonata.admin.security.handler.role
+
 
 fos_user:
     db_driver:      orm # can be orm or odm

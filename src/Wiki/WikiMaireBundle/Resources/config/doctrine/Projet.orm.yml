@@ -1,0 +1,38 @@
+Wiki\WikiMaireBundle\Entity\Projet:
+    type: entity
+    table: null
+    repositoryClass: Wiki\WikiMaireBundle\Entity\ProjetRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomprojet:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        daterealisation:
+            type: date
+        difficulte:
+            type: string
+            length: 255
+        cout:
+            type: float
+        tailleprojet:
+            type: string
+            length: 255
+        bassinPopulation:
+            type: integer
+            column: bassin_population
+
+    manyToOne:
+        user:
+            targetEntity: Application\Sonata\UserBundle\Entity\User
+            joinColumn:
+                name: maire_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

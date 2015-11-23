@@ -1,40 +1,85 @@
-{% extends "::base.html.twig" %}
+{% extends '::base.html.twig' %}
 
-{% block title %}WikiWikiMaireBundle:Projet:index{% endblock %}
-
-{% block body %}
-    <div class="well">
-        <table>
-            <thead>
-            <tr>
-                <th>Nom Projet :</th>
-                <th>Commune :</th>
-                <th>Maire :</th>
-                <th>Experts :</th>
-                <th>Coût :</th>
-                <th>Date :</th>
-                <th>Description :</th>
-                <th>Difficulté :</th>
-                <th>Taille Projet :</th>
-                <th>Bassion population :</th>
-            </tr>
-            </thead>
-            <tbody>
-                {% for projet in projets %}
-                    <tr>
-                        <td>{{ projet.nomprojet }}</td>
-                        <td>{{ projet.commune }}</td>
-                        <td></td>
-                        <td>{{ projet.expert }}</td>
-                        <td>{{ projet.cout }}</td>
-                        <td>{% if projet.date %}{{ projet.date|date('Y-m-d') }}{% endif %}</td>
-                        <td>{{ projet.description }}</td>
-                        <td>{{ projet.difficulte }}</td>
-                        <td>{{ projet.tailleprojet }}</td>
-                        <td>{{ projet.bassinpopulation }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+{% block stylesheets %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 {% endblock %}
+{% block javascripts %}
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            var availableTags = [
+                    "Eolienne",
+                    "ecole",
+                    "couture",
+                    "wild code school",
+                    "La Loupe",
+                    "Anna",
+            ];
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+{% endblock %}
+{% block body -%}
+    <ul>
+        <li>
+            <a href="{{ path('projet_new') }}">
+                <button class="btn btn-default">Créer un nouveau Projet</button>
+            </a>
+        </li>
+    </ul>
+    <div class="ui-widget">
+        <label for="tags">Rechercher un projet: </label>
+        <input id="tags">
+    </div>
+    <h1>Liste des Projets</h1>
+
+    <table class="records_list" id="thetable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomprojet</th>
+                <th>Description</th>
+                <th>Daterealisation</th>
+                <th>Difficulte</th>
+                <th>Cout</th>
+                <th>Tailleprojet</th>
+                <th>Bassinpopulation</th>
+
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nomprojet }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.difficulte }}</td>
+                <td>{{ entity.cout }}</td>
+                <td>{{ entity.tailleprojet }}</td>
+                <td>{{ entity.bassinPopulation }}</td>
+
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('projet_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('projet_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('projet_detail', { 'id': entity.id }) }}">detail</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    {% endblock %}

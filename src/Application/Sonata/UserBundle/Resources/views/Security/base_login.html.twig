@@ -13,7 +13,7 @@ file that was distributed with this source code.
 {% block body %}
 {% block fos_user_content %}
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12 login">
             <div class="panel panel-info">
 
                 <div class="panel-heading">
@@ -76,9 +76,9 @@ file that was distributed with this source code.
             </div>
 
         </div>
-        <div class="col-md-6">
+        {#<div class="col-md-6">
             {% render controller("FOSUserBundle:Registration:register") %}
-        </div>
+        </div>#}
     </div>
 {% endblock fos_user_content %}
 {% endblock %}

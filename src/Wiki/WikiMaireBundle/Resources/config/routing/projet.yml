@@ -1,0 +1,35 @@
+projet:
+    path:     /
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:index" }
+
+projet_show:
+    path:     /{id}/show
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:show" }
+
+projet_new:
+    path:     /new
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:new" }
+
+projet_create:
+    path:     /create
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:create" }
+    methods:  POST
+
+projet_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:edit" }
+
+projet_update:
+    path:     /{id}/update
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:update" }
+    methods:  [POST, PUT]
+
+projet_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:delete" }
+    methods:  [POST, DELETE]
+
+projet_detail:
+    path:     /{id}/detail
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:detail" }
+    methods:  [POST, GET]
