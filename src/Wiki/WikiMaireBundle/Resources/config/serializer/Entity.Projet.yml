@@ -1,0 +1,7 @@
+Wiki\WikiMaireBundle\Entity\Projet:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+        nomprojet:
+            expose: true

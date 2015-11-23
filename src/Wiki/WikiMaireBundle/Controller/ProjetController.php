@@ -2,9 +2,11 @@
 
 namespace Wiki\WikiMaireBundle\Controller;
 
+use JMS\Serializer\SerializerBuilder;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use Symfony\Component\HttpFoundation\Response;
 use Wiki\WikiMaireBundle\Entity\Projet;
 use Wiki\WikiMaireBundle\Form\ProjetType;
 
@@ -240,5 +242,19 @@ class ProjetController extends Controller
         ));
     }
 
+    public function RechercheAction(Request $request)
+    {
+        $tags = $request->request->get('tags');
+        $em = $this->getDoctrine()->getManager();
 
+        $serializer = SerializerBuilder::create()->build();
+
+        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->RechercheProjet($tags);
+        $jsonContent = $serializer->serialize($projets, 'json');
+
+        $response = new Response($jsonContent);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
 }

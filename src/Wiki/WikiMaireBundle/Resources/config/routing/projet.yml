@@ -33,3 +33,8 @@ projet_detail:
     path:     /{id}/detail
     defaults: { _controller: "WikiWikiMaireBundle:Projet:detail" }
     methods:  [POST, GET]
+
+projet_recherche:
+    path:     /recherche
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:Recherche" }
+    methods:  [POST, GET]

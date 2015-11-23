@@ -3,8 +3,34 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 {% endblock %}
-{% block javascript %}
+{% block javascripts %}
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
+    <script>
+        $('#tags').autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    type:"POST",
+                    url : "{{ path('projet_recherche') }}",
+                    dataType : 'json',
+                    data: {'tags': request.term},
+                    success: function (data)
+                    {
+                        console.log(data);
+                        response( $.map( data, function(item) {
+                            return item.nomprojet;
+                        }));
+                    },
+                    error: function (data)
+                    {
+                        console.error(data);
+                    }
+                });
+            },
+            minLength: 2
+        });
+    </script>
 {% endblock %}
 {% block body -%}
     <ul>
@@ -15,7 +41,10 @@
         </li>
     </ul>
 
-
+    <div class="ui-widget">
+        <label for="tags">Rechercher un projet: </label>
+        <input id="tags" type="text">&nbsp;<input type="submit">
+    </div>
 
     <h1>Liste des Projets</h1>
 

@@ -10,4 +10,15 @@ namespace Wiki\WikiMaireBundle\Entity;
  */
 class ProjetRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function RechercheProjet($tags)
+    {
+        $queryBuilder = $this->_em->createQueryBuilder()
+            ->select('p')
+            ->from($this->_entityName, 'p')// Dans un repository, $this->_entityName est le namespace de l'entité gérée
+            ->Where('p.tags LIKE :str')
+            ->setParameter('str', '%'.$tags.'%');
+        $query = $queryBuilder->getQuery();
+        return $query->getResult();
+    }
 }
