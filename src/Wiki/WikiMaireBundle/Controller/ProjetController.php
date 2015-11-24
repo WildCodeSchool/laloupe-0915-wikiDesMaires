@@ -282,4 +282,16 @@ class ProjetController extends Controller
             return $response;
         }
     }*/
+
+    public function mesprojetsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+
+        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->findByUser($user);
+
+        return $this->render('WikiWikiMaireBundle:Projet:profil.html.twig', array(
+            'projets' => $projets,
+        ));
+    }
 }
