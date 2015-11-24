@@ -43,6 +43,11 @@ class ProjetController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            $user = $this->getUser();
+
+            $entity->setUser($user);
+
             $em->persist($entity);
             $em->flush();
 

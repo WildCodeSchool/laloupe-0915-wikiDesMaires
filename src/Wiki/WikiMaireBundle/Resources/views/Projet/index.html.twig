@@ -2,10 +2,17 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.jqueryui.min.css">
+
 {% endblock %}
 {% block javascripts %}
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.10/js/dataTables.jqueryui.min.js"></script>
+
     {#<script>
         $(function() {
             var availableTags = [
@@ -25,11 +32,11 @@
         });
     </script>#}
     <script>
-        $('#tags').autocomplete({
+        /*$('#tags').autocomplete({
             source: function (request, response) {
                 $.ajax({
                     type:"POST",
-                    url : "{{ path('projet_recherche') }}",
+                    {#url : "{{ path('projet_recherche') }}",#}
                     dataType : 'json',
                     data: {'tags': request.term},
                     success: function (data)
@@ -46,7 +53,24 @@
                 });
             },
             minLength: 2
-        });
+        });*/
+
+        //Action de filtre dans la table
+        var table = $('#thetable').DataTable({
+            //supprime la barre de recherche par defaut du datable
+            "sDom": 'lrtip',
+            "bPaginate": false,
+            "bLengthChange": false,
+            "bFilter": true,
+            "bInfo": false,
+            "bAutoWidth": false
+
+        } );
+
+        // remplacer la fonction de recherche par notre propre input
+        $('#tags').on( 'keyup', function () {
+            table.search( this.value ).draw();
+        } );
     </script>
 {% endblock %}
 {% block body -%}
@@ -59,7 +83,7 @@
     </ul>
     <div class="ui-widget">
         <label for="tags">Rechercher un projet: </label>
-        <input id="tags" type="text">&nbsp;<input type="submit">
+        <input id="tags" type="text">
     </div>
     <h1>Liste des Projets</h1>
 
