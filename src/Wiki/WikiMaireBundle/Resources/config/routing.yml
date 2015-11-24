@@ -1,0 +1,14 @@
+wiki_wiki_maire_projet:
+    resource: "@WikiWikiMaireBundle/Resources/config/routing/projet.yml"
+    prefix:   /projet
+
+
+
+wiki_wiki_maire_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: WikiWikiMaireBundle:Default:index }
+
+wiki_wiki_maire_mes_projets:
+    path:     /dashbord
+    defaults: { _controller: WikiWikiMaireBundle:Projet:mesprojets }
+

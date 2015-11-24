@@ -1,0 +1,15 @@
+Wiki\WikiMaireBundle\Entity\Commune:
+    type: entity
+    table: null
+    repositoryClass: Wiki\WikiMaireBundle\Entity\CommuneRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomcommune:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

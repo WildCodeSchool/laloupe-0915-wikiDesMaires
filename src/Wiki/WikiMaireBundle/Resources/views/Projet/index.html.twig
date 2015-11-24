@@ -1,0 +1,136 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.jqueryui.min.css">
+
+{% endblock %}
+{% block javascripts %}
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.10/js/dataTables.jqueryui.min.js"></script>
+
+    {#<script>
+        $(function() {
+            var availableTags = [
+                    "Eolienne",
+                    "ecole",
+                    "couture",
+                    "wild code school",
+                    "La Loupe",
+                    "Anna"
+            ];
+            $( "#tags" ).autocomplete({
+                source: availableTags,
+                select: function(event,ui){
+                    //do something
+                }
+            });
+        });
+    </script>#}
+    <script>
+        /*$('#tags').autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    type:"POST",
+                    {#url : "{{ path('projet_recherche') }}",#}
+                    dataType : 'json',
+                    data: {'tags': request.term},
+                    success: function (data)
+                    {
+                        console.log(data);
+                        response( $.map( data, function(item) {
+                            return item.nomprojet;
+                        }));
+                    },
+                    error: function (data)
+                    {
+                        console.error(data);
+                    }
+                });
+            },
+            minLength: 2
+        });*/
+
+        //Action de filtre dans la table
+        var table = $('#thetable').DataTable({
+            //supprime la barre de recherche par defaut du datable
+            "sDom": 'lrtip',
+            "bPaginate": false,
+            "bLengthChange": false,
+            "bFilter": true,
+            "bInfo": false,
+            "bAutoWidth": false
+
+        } );
+
+        // remplacer la fonction de recherche par notre propre input
+        $('#tags').on( 'keyup', function () {
+            table.search( this.value ).draw();
+        } );
+    </script>
+{% endblock %}
+{% block body -%}
+    <ul>
+        <li>
+            <a href="{{ path('projet_new') }}">
+                <button class="btn btn-default">Créer un nouveau Projet</button>
+            </a>
+        </li>
+    </ul>
+    <div class="ui-widget">
+        <label for="tags">Rechercher un projet: </label>
+        <input id="tags" type="text">
+    </div>
+    <h1>Liste des Projets</h1>
+
+    <table class="records_list" id="thetable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomprojet</th>
+                <th>Description</th>
+                <th>Daterealisation</th>
+                <th>Difficulte</th>
+                <th>Cout</th>
+                <th>Tailleprojet</th>
+                <th>Bassinpopulation</th>
+
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nomprojet }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.difficulte }}</td>
+                <td>{{ entity.cout }}</td>
+                <td>{{ entity.tailleprojet }}</td>
+                <td>{{ entity.bassinPopulation }}</td>
+
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('projet_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('projet_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('projet_detail', { 'id': entity.id }) }}">detail</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    {% endblock %}

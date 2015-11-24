@@ -1,0 +1,39 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Bienvenue sur mon Dashbord</h1>
+    connecte en tant que : {{ app.user.username }}
+    
+    <ul>
+        <li>
+            <a href="{{ path('projet_new') }}">
+                <button class="btn btn-default">Créer un nouveau Projet</button>
+            </a>
+        </li>
+        <br>
+        <li>
+            <a href="{{ path('projet') }}">
+                <button class="btn btn-default">Rechercher un projet</button>
+            </a>
+        </li>
+    </ul>
+    <h1>Mes Projets</h1>
+    <table class="records_list">
+        <thead>
+        <tr>
+
+            <th>Nom</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in projets %}
+            <tr>
+
+                <td>{{ entity.nomprojet }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

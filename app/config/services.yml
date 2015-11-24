@@ -3,7 +3,18 @@
 parameters:
 #    parameter_name: value
 
+#services:
+#    admin.projet:
+#        class: Wiki\WikiMaireBundle\Admin\ProjetAdmin
+#        arguments: [~, Wiki\WikiMaireBundle\Entity\Projet, ~]
+#        tags:
+#            - { name: sonata.admin, manager_type: orm,  group: "Projet", label: Projet }
+
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    admin_success_handler:
+        class: Wiki\WikiMaireBundle\Services\AuthenticationHandler
+        arguments: [@router]
+
+    sonata.user.admin.group:
+        abstract: true
+        public: false
