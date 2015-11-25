@@ -37,4 +37,33 @@ class User extends BaseUser
     {
         return $this->id;
     }
+    /**
+     * @var \Wiki\WikiMaireBundle\Entity\Commune
+     */
+    private $commune;
+
+
+    /**
+     * Set commune
+     *
+     * @param \Wiki\WikiMaireBundle\Entity\Commune $commune
+     *
+     * @return User
+     */
+    public function setCommune(\Wiki\WikiMaireBundle\Entity\Commune $commune = null)
+    {
+        $this->commune = $commune;
+
+        return $this;
+    }
+
+    /**
+     * Get commune
+     *
+     * @return \Wiki\WikiMaireBundle\Entity\Commune
+     */
+    public function getCommune()
+    {
+        return $this->commune;
+    }
 }
