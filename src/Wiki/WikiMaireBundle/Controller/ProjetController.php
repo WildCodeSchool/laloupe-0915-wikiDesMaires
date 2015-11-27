@@ -262,24 +262,4 @@ class ProjetController extends Controller
 
         return $response;
     }
-
-    /*public function RechercheAction(Request $request)
-    {
-        $tags = $request->query->get('tags');
-
-        if($tags->isXmlHttpRequest())
-       {
-            $projets = $tags->request->get('tags');
-
-            $array= $this->getDoctrine()
-                ->getEntityManager()
-                ->getRepository('WikiWikiBundle:projet')
-                ->RechercheProjet($projets);
-
-            $response = new Response(json_encode($array));
-
-            $response -> headers -> set('Content-Type', 'application/json');
-            return $response;
-        }
-    }*/
 }

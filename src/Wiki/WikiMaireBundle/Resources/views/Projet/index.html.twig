@@ -13,47 +13,7 @@
     <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
     <script src="//cdn.datatables.net/1.10.10/js/dataTables.jqueryui.min.js"></script>
 
-    {#<script>
-        $(function() {
-            var availableTags = [
-                    "Eolienne",
-                    "ecole",
-                    "couture",
-                    "wild code school",
-                    "La Loupe",
-                    "Anna"
-            ];
-            $( "#tags" ).autocomplete({
-                source: availableTags,
-                select: function(event,ui){
-                    //do something
-                }
-            });
-        });
-    </script>#}
     <script>
-        /*$('#tags').autocomplete({
-            source: function (request, response) {
-                $.ajax({
-                    type:"POST",
-                    {#url : "{{ path('projet_recherche') }}",#}
-                    dataType : 'json',
-                    data: {'tags': request.term},
-                    success: function (data)
-                    {
-                        console.log(data);
-                        response( $.map( data, function(item) {
-                            return item.nomprojet;
-                        }));
-                    },
-                    error: function (data)
-                    {
-                        console.error(data);
-                    }
-                });
-            },
-            minLength: 2
-        });*/
 
         //Action de filtre dans la table
         var table = $('#thetable').DataTable({
@@ -75,11 +35,9 @@
 {% endblock %}
 {% block body -%}
     <ul>
-        <li>
             <a href="{{ path('projet_new') }}">
                 <button class="btn btn-default">Créer un nouveau Projet</button>
             </a>
-        </li>
     </ul>
     <div class="ui-widget">
         <label for="tags">Rechercher un projet: </label>
@@ -87,17 +45,17 @@
     </div>
     <h1>Liste des Projets</h1>
 
-    <table class="records_list" id="thetable">
+    <table class="records_list table-hover" id="thetable">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Nomprojet</th>
+                <th>Nom du projet</th>
                 <th>Description</th>
-                <th>Daterealisation</th>
+                <th>Date de realisation</th>
                 <th>Difficulte</th>
                 <th>Cout</th>
-                <th>Tailleprojet</th>
-                <th>Bassinpopulation</th>
+                <th>Taille projet</th>
+                <th>Bassin de population</th>
 
                 <th>Actions</th>
             </tr>
