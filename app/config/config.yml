@@ -121,20 +121,7 @@ sonata_admin:
     security:
         handler: sonata.admin.security.handler.role
 
-
-fos_user:
-    db_driver:      orm # can be orm or odm
-    firewall_name:  main
-    user_class:     Application\Sonata\UserBundle\Entity\User
-
-
-    group:
-        group_class:   Sonata\UserBundle\Entity\Group
-        group_manager: sonata.user.orm.group_manager                    # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
-
-    service:
-        user_manager: sonata.user.orm.user_manager                      # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
-
+    title:  'WIKI DES MAIRES'
 
 
 fos_user:
@@ -149,3 +136,6 @@ fos_user:
 
     service:
         user_manager: sonata.user.orm.user_manager                      # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
+
+
+                    # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)

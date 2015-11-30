@@ -62,19 +62,6 @@ class LoadUserData implements FixtureInterface, ContainerAwareInterface
         $userManager->updateUser($user3, true);
 
 
-        /*$userAdmin = new User();
-        $userAdmin->setUsername('admin');
-        $userAdmin->setPassword('test');
-        $userAdmin->setEmail('admin@admin.com');
-
-        $user = new User();
-        $user->setUsername('traore');
-        $user->setPassword('traore');
-        $user->setEmail('admin@admin.com');
-
-
-        $manager->persist($userAdmin, $user);
-        $manager->flush();*/
     }
     public function getOrder()
     {
