@@ -6,16 +6,18 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ProjetControllerTest extends WebTestCase
 {
-    /*
+
     public function testCompleteScenario()
     {
         // Create a new client to browse the application
         $client = static::createClient();
 
+        $this->assertEquals(true, true);
+
         // Create a new entry in the database
-        $crawler = $client->request('GET', '/projet/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /projet/");
-        $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
+        $crawler = $client->request('GET', '/projet');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /projet");
+        $crawler = $client->click($crawler->selectLink('Create a new entry')->link('projet_create'));
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
@@ -49,7 +51,6 @@ class ProjetControllerTest extends WebTestCase
 
         // Check the entity has been delete on the list
         $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
+        
     }
-
-    */
 }
