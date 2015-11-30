@@ -31,6 +31,10 @@ Wiki\WikiMaireBundle\Entity\Projet:
         bassinPopulation:
             type: integer
             column: bassin_population
+        photo:
+            type: string
+            length: 255
+
 
     manyToOne:
         user:
@@ -38,4 +42,10 @@ Wiki\WikiMaireBundle\Entity\Projet:
             joinColumn:
                 name: maire_id
                 referencedColumnName: id
-    lifecycleCallbacks: {  }
+
+    lifecycleCallbacks:
+        prePersist: [ preUpload ]
+        preUpdate: [ preUpload ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]

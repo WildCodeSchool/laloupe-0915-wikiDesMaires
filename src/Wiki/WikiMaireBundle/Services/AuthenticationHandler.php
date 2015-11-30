@@ -32,7 +32,7 @@ class AuthenticationHandler implements  AuthenticationSuccessHandlerInterface {
 
         // otherwise we redirect user to the profile area
         else
-            $redirection = new RedirectResponse($this->router->generate('fos_user_profile_show'));
+            $redirection = new RedirectResponse($this->router->generate('wiki_wiki_maire_mes_projets'));
 
         return $redirection;
 

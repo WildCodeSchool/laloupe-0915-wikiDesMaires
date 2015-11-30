@@ -31,6 +31,7 @@ class ProjetController extends Controller
             'entities' => $entities,
         ));
     }
+
     /**
      * Creates a new Projet entity.
      *
@@ -43,6 +44,11 @@ class ProjetController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            $user = $this->getUser();
+
+            $entity->setUser($user);
+
             $em->persist($entity);
             $em->flush();
 
@@ -51,7 +57,7 @@ class ProjetController extends Controller
 
         return $this->render('WikiWikiMaireBundle:Projet:new.html.twig', array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         ));
     }
 
@@ -81,11 +87,11 @@ class ProjetController extends Controller
     public function newAction()
     {
         $entity = new Projet();
-        $form   = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity);
 
         return $this->render('WikiWikiMaireBundle:Projet:new.html.twig', array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         ));
     }
 
@@ -106,7 +112,7 @@ class ProjetController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return $this->render('WikiWikiMaireBundle:Projet:show.html.twig', array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -129,19 +135,19 @@ class ProjetController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return $this->render('WikiWikiMaireBundle:Projet:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
 
     /**
-    * Creates a form to edit a Projet entity.
-    *
-    * @param Projet $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
+     * Creates a form to edit a Projet entity.
+     *
+     * @param Projet $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createEditForm(Projet $entity)
     {
         $form = $this->createForm(new ProjetType(), $entity, array(
@@ -153,6 +159,7 @@ class ProjetController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing Projet entity.
      *
@@ -178,11 +185,12 @@ class ProjetController extends Controller
         }
 
         return $this->render('WikiWikiMaireBundle:Projet:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
+
     /**
      * Deletes a Projet entity.
      *
@@ -220,8 +228,7 @@ class ProjetController extends Controller
             ->setAction($this->generateUrl('projet_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Supprimer'))
-            ->getForm()
-        ;
+            ->getForm();
     }
 
     public function detailAction($id)
@@ -237,7 +244,7 @@ class ProjetController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return $this->render('WikiWikiMaireBundle:Projet:detail.html.twig', array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         ));
     }
