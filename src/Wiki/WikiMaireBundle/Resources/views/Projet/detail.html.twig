@@ -4,8 +4,7 @@
     <h1>{{ entity.nomprojet }}</h1>
 
     <ul>
-        <li><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.id }}</a></li>
-        <li>{{ entity.nomprojet }}</li>
+        <td><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></td>
         <li>{{ entity.description }}</li>
         <li>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</li>
         <li>{{ entity.difficulte }}</li>

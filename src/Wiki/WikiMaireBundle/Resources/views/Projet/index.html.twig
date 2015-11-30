@@ -48,7 +48,6 @@
     <table class="records_list table-hover" id="thetable">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom du projet</th>
                 <th>Description</th>
                 <th>Date de realisation</th>
@@ -63,8 +62,7 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.nomprojet }}</td>
+                <td><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></td>
                 <td>{{ entity.description }}</td>
                 <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ entity.difficulte }}</td>
