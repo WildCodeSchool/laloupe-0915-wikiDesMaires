@@ -57,22 +57,7 @@ class ProfileType extends \Sonata\UserBundle\Form\Type\ProfileType
                 'label'    => 'form.label_date_of_birth',
                 'required' => false,
                 'widget'   => 'single_text'
-            ))
-            ->add('website', 'url', array(
-                'label'    => 'form.label_website',
-                'required' => false,
-            ))
-            ->add('biography', 'textarea', array(
-                'label'    => 'form.label_biography',
-                'required' => false
-            ))
-            ->add('locale', 'locale', array(
-                'label'    => 'form.label_locale',
-                'required' => false
-            ))
-            ->add('timezone', 'timezone', array(
-                'label'    => 'form.label_timezone',
-                'required' => false
+
             ))
             ->add('phone', null, array(
                 'label'    => 'form.label_phone',
