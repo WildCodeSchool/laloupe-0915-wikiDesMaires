@@ -1,9 +1,9 @@
 <?php
 
 
-// src/AppBundle/DataFixtures/ORM/LoadUserData.php
+// src/Wiki/WikiMaireBundle/DataFixtures/ORM/LoadUserData.php
 
-namespace AppBundle\DataFixtures\ORM;
+namespace Wiki\WikiMaireBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Application\Sonata\UserBundle\Entity\User;
