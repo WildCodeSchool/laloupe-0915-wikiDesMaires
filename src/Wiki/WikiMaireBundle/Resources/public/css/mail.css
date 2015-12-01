@@ -1,0 +1,37 @@
+.banniere {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #81b3cc;
+}
+.banniere .connexion{
+    float:right;
+    margin-top: -58px;
+    margin-right: 20px;
+}
+.banniere .connexion a{
+    font-size: 0.8em;
+    text-decoration: none;
+}
+.banniere img {
+    width: 75px;
+    float: left;
+}
+.banniere h2 {
+    margin-left: 20px;
+    color: white;
+}
+.informations {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #E4F5FD;
+    width: 40%;
+    margin-left: 50px;
+}
+.informations p{
+    font-size: 0.8em;
+    line-height: 12px;
+}
+.informations h4 {
+    text-align: center;
+    margin-bottom: 40px;
+}

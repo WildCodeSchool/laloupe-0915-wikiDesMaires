@@ -1,0 +1,17 @@
+<link href="{{ absolute_url(asset('bundles/wikiwikimaire/css/mail.css')) }}" rel="stylesheet">
+
+<div class="banniere">
+    <img src="{{ absolute_url(asset('bundles/wikiwikimaire/images/mail.png')) }}">
+    <h2>Wiki Des Maires</h2>
+    <div class="connexion">
+        <p><a href="http://localhost/projet-wiki_des_maires/web/app_dev.php/profile/">Se connecter à votre espace</a></p>
+    </div>
+</div>
+
+<div class="informations">
+    <h4>Changement de votre Mot de Passe</h4>
+    <p>Bonjour {{ user }}.</p>
+    <p>Votre mot de passe à bien été changer</p><br />
+    <p>Voici votre nouveau mot de passe : {{ password }}</p><br />
+    <p style="text-align: center">Ceci est un message automatique, merci de ne pas répondre.</p>
+</div>
