@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc95805-cbd1-46c7-b165-048dd5a223e2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Resources/public/img/search.png" afterPath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Resources/public/img/search.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Services/AuthenticationHandler.php" afterPath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Services/AuthenticationHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bootstrap.php.cache" afterPath="$PROJECT_DIR$/app/bootstrap.php.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/ChangePassword/changePassword.html.twig" afterPath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/ChangePassword/changePassword.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Resources/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ChangePasswordFOSUser1Controller.php" afterPath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ChangePasswordFOSUser1Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/Group.php" afterPath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/Group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/DataFixtures/ORM/LoadUserData.php" afterPath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/DataFixtures/ORM/LoadUserData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/EventListener/LoginListener.php" afterPath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/EventListener/LoginListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Resources/public/css/completer.css" afterPath="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Resources/public/css/completer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/projet-wiki_des_maires.iml" afterPath="$PROJECT_DIR$/.idea/projet-wiki_des_maires.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="projet-wiki_des_maires.iws" />
@@ -58,11 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthenticationHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AuthenticationHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Services/AuthenticationHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.666667">
+              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadUserData.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Wiki/WikiMaireBundle/DataFixtures/ORM/LoadUserData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2776886">
+              <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -81,6 +99,7 @@
         <option value="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/ChangePassword/changePassword_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/src/Wiki/WikiMaireBundle/DataFixtures/ORM/LoadUserData.php" />
       </list>
     </option>
   </component>
@@ -284,6 +303,36 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="css">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="projet-wiki_des_maires">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Wiki">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="WikiMaireBundle">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="DataFixtures">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ORM">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -746,8 +795,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Wiki/WikiMaireBundle/Services/AuthenticationHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-14.666667">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wiki/WikiMaireBundle/DataFixtures/ORM/LoadUserData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2776886">
+          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="35" />
           <folding />
         </state>
       </provider>
