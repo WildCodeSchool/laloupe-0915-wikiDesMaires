@@ -1,9 +1,14 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Bienvenue sur mon Dashbord</h1>
+    <div class="row">
+        <div class="col-md-8">
+    <h1>Bienvenue sur mon Dashbord </h1>
+        </div >
+        <div class="col-md-4">
     connecte en tant que : {{ app.user.username }}
-    
+        </div>
+    </div>
     <ul>
         <li>
             <a href="{{ path('projet_new') }}">
