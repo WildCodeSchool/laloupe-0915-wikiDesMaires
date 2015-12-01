@@ -69,10 +69,7 @@ class ChangePasswordFOSUser1Controller extends \Sonata\UserBundle\Controller\Cha
         if ($process) {
             $this->setFlash('fos_user_success', 'change_password.flash.success');
 
-            // On récupère le nouveau mot de passe
-            $newPassword = $user->getPlainPassword();
-
-            // On récupère l'adresse mail pour le mailing
+            // On récupère l'adresse mail de l'utilisateur pour le mailing
             $mailDestinataire = $user->getEmail();
 
             // Envoie du mail
@@ -85,7 +82,7 @@ class ChangePasswordFOSUser1Controller extends \Sonata\UserBundle\Controller\Cha
                         'emails/receivedMessage.html.twig',
                         array(
                             'user' => $user,
-                            'password' => $newPassword
+                            'password'
                         )
                     ),
                     'text/html'
