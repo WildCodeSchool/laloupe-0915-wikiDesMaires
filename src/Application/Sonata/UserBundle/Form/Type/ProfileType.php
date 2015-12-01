@@ -63,6 +63,7 @@ class ProfileType extends \Sonata\UserBundle\Form\Type\ProfileType
                 'label'    => 'form.label_phone',
                 'required' => false
             ))
+            
         ;
     }
 
@@ -81,6 +82,6 @@ class ProfileType extends \Sonata\UserBundle\Form\Type\ProfileType
      */
     public function getName()
     {
-        return 'sonata_user_profile';
+        return 'application_sonata_user_profile';
     }
 }

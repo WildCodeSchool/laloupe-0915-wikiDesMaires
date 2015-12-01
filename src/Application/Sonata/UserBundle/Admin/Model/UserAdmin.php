@@ -96,9 +96,6 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                 ->add('username')
                 ->add('email')
             ->end()
-            ->with('Groups')
-                ->add('groups')
-            ->end()
             ->with('Profile')
                 ->add('dateOfBirth')
                 ->add('firstname')
@@ -126,8 +123,6 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                 ->add('plainPassword', 'text', array(
                     'required' => (!$this->getSubject() || is_null($this->getSubject()->getId()))
                 ))
-            ->end()
-
             ->end()
             ->with('Profile')
                 ->add('dateOfBirth', 'birthday', array('required' => false))

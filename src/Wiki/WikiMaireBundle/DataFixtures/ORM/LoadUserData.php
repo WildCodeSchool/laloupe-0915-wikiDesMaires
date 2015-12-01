@@ -57,10 +57,33 @@ class LoadUserData implements FixtureInterface, ContainerAwareInterface
         $user3->setLastname('Mopara');
 
 
+        // Creation de User et des details
+        $user4 = $userManager->createUser();
+        $user4->setUsername('celine');
+        $user4->setPlainPassword('celine');
+        $user4->setEnabled(true);
+        $user4->setEmail('admin4@email.com');
+        $user4->setRoles(array('ROLE_USER'));
+        $user4->setFirstname('Celine');
+        $user4->setLastname('Langlade');
+
+        // Creation de User et des details
+        $user5 = $userManager->createUser();
+        $user5->setUsername('canonball');
+        $user5->setPlainPassword('canonball');
+        $user5->setEnabled(true);
+        $user5->setEmail('admin5@email.com');
+        $user5->setRoles(array('ROLE_USER'));
+        $user5->setFirstname('Pascal');
+        $user5->setLastname('Emeriaud');
+
+
         // Mise a jour des utilisateurs
         $userManager->updateUser($user1, true);
         $userManager->updateUser($user2, true);
         $userManager->updateUser($user3, true);
+        $userManager->updateUser($user4, true);
+        $userManager->updateUser($user5, true);
 
 
     }
