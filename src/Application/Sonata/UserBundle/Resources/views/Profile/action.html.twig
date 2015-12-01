@@ -26,7 +26,12 @@ file that was distributed with this source code.
 
     <div class="span2 col-lg-2" style="padding: 8px 0;">
         {% block sonata_profile_menu %}
-            {{ sonata_block_render({'type': 'sonata.user.block.menu'}, {'current_uri': app.request.requestUri}) }}
+            <div >
+                <div class="list-group">
+                    <a href="{{ path('sonata_user_profile_edit') }}" class="list-group-item ">Mon profil</a>
+                    <a href="{{ path('sonata_user_profile_edit_authentication') }}" class="list-group-item ">Informations de connexion</a>
+                </div>
+            </div>
         {% endblock %}
     </div>
 
