@@ -26,7 +26,7 @@ class AuthenticationHandler implements  AuthenticationSuccessHandlerInterface {
         $rolesTab = array_map(function($role){
             return $role->getRole();
         }, $roles);
-        // If is a RH, admin or super admin we redirect to the backoffice area
+        // If is a admin or super admin we redirect to the backoffice area
         if (in_array('ROLE_ADMIN', $rolesTab, true) || in_array('ROLE_SUPER_ADMIN', $rolesTab, true))
             $redirection = new RedirectResponse($this->router->generate('sonata_admin_dashboard'));
 

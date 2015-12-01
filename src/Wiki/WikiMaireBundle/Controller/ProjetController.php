@@ -51,7 +51,7 @@ class ProjetController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('projet'));
+            return $this->redirect($this->generateUrl('sonata_user_profile_show'));
         }
 
         return $this->render('WikiWikiMaireBundle:Projet:new.html.twig', array(

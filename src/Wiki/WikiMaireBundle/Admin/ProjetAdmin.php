@@ -19,11 +19,8 @@ class ProjetAdmin extends Admin
     {
         $formMapper
             ->add('description')
-            ->add('dateR')
-            ->add('but')
-            ->add('subvention')
+            ->add('daterealisation')
             ->add('difficulte')
-            ->add('conseils')
             ->add('cout')
         ;
     }
@@ -32,11 +29,8 @@ class ProjetAdmin extends Admin
     {
         $datagridMapper
             ->add('description')
-            ->add('dateR')
-            ->add('but')
-            ->add('subvention')
+            ->add('daterealisation')
             ->add('difficulte')
-            ->add('conseils')
             ->add('cout')
         ;
     }
@@ -45,11 +39,8 @@ class ProjetAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('description')
-            ->add('dateR')
-            ->add('but')
-            ->add('subvention')
+            ->add('daterealisation')
             ->add('difficulte')
-            ->add('conseils')
             ->add('cout')
         ;
     }
