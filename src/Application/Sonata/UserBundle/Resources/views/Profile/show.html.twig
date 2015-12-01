@@ -9,18 +9,24 @@ file that was distributed with this source code.
 
 #}
 
-{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{#{% extends "SonataUserBundle:Profile:action.html.twig" %}
 
-{% block sonata_profile_content %}
+{% block sonata_profile_content %}#}
+{% extends '::base.html.twig' %}
 
+{% block body -%}
 
-    <div class="row row-fluid">
+    {% for entity in projet %}
+        {{ entity.nomprojet }}
+    {% endfor %}
+
+    {#<div class="row row-fluid">
         {% set has_center = false %}
         {% for block in blocks %}
             {% if block.position == 'center' %}
                 {% set has_center = true %}
             {% endif %}
-        {% endfor %}
+        {% endfor %}#}
         <ul>
             <li>
                 <a href="{{ path('projet_new') }}">
@@ -34,6 +40,8 @@ file that was distributed with this source code.
                 </a>
             </li>
         </ul>
+        connecte en tant que : {{ app.user.username }}
+
 {#
         <div class="{% if has_center %}span4 col-lg-4{% else %}span6 col-lg-6{% endif %}">
             {% for block in blocks %}
@@ -43,7 +51,7 @@ file that was distributed with this source code.
             {% endfor %}
         </div>#}
 
-        {% if has_center %}
+        {#{% if has_center %}
             <div class="span4 col-lg-4">
                 {% for block in blocks %}
                     {% if block.position == 'center' %}
@@ -60,5 +68,5 @@ file that was distributed with this source code.
                 {% endif %}
             {% endfor %}
         </div>
-    </div>
+    </div>#}
 {% endblock %}
