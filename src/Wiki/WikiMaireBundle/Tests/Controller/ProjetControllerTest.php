@@ -17,6 +17,8 @@ class ProjetControllerTest extends WebTestCase
         $crawler = $client->submit($form);
         $crawler = $client->followRedirect();
 
+
+
         return $crawler;
     }
 
@@ -29,7 +31,7 @@ class ProjetControllerTest extends WebTestCase
         // Test si la page projet affiche les projets
         $crawler = $client->request('GET', '/projet/');
         $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::indexAction', $client->getRequest()->attributes->get('_controller'));
-        $this->assertEquals(200 === $client->getResponse()->getStatusCode());
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
 
         //Test du bouton "Créer un nouveau Projet"
@@ -65,7 +67,7 @@ class ProjetControllerTest extends WebTestCase
        // Test si la page projet affiche les projets
        $crawler = $client->request('GET', '/projet/new');
        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::newAction', $client->getRequest()->attributes->get('_controller'));
-       $this->assertEquals(200 === $client->getResponse()->getStatusCode());
+       $this->assertTrue(200 === $client->getResponse()->getStatusCode());
 
        //Test du bouton "Retour à la liste de Projet"
          $link = $crawler
@@ -117,14 +119,14 @@ class ProjetControllerTest extends WebTestCase
 
          // Sélection basée sur la valeur, l'id ou le nom des boutons
          $form = $crawler->selectButton('Connexion')->form();
-         $form['_username'] = 'celine';
-         $form['_password'] = 'celine';
+         $form['_username'] = 'tra';
+         $form['_password'] = 'tra';
          $crawler = $client->submit($form);
 
          // Il faut suivre la redirection
          $this->assertEquals(302, $client->getResponse()->getStatusCode());
          $crawler = $client->followRedirect();
-         $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
+         $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::mesprojetsAction', $client->getRequest()->attributes->get('_controller'));
      }
 
 
@@ -144,8 +146,8 @@ class ProjetControllerTest extends WebTestCase
          public function testPageProfileConnecté()
      {
          //Test du bouton "Informations de connexion" en étant connecté
-         $username = 'celine';
-         $password = 'celine';
+         $username = 'tra';
+         $password = 'tra';
 
          $client = static::createClient();
          $crawler = $client->request('GET', '/login');
