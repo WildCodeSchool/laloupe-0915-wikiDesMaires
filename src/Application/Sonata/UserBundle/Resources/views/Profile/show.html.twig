@@ -1,77 +1,66 @@
-{#
 
-This file is part of the Sonata package.
-
-(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
-
-For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.
-
-#}
-
-{#{% extends "SonataUserBundle:Profile:action.html.twig" %}
-
-{% block sonata_profile_content %}#}
 {% extends '::base.html.twig' %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
+{% endblock %}
 {% block body -%}
 
+    <div class="container photoprojet">
+        <div class="row">
+            <div class="col-md-4">
+                <p>Nom : {{ app.user.firstname }}</p>
+                <p>Prenom(s) : {{ app.user.lastname }}</p>
+            </div>
+            <div class="col-md-4  col-md-offset-4">
+                <ul>
+                    <li>
+                        <a href="{{ path('projet_create') }}">
+                            <button class="btn btn-info">Créer un nouveau Projet</button>
+                        </a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="{{ path('projet') }}">
+                            <button class="btn btn-info">Rechercher un projet</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-
-    {#<div class="row row-fluid">
-        {% set has_center = false %}
-        {% for block in blocks %}
-            {% if block.position == 'center' %}
-                {% set has_center = true %}
-            {% endif %}
-        {% endfor %}#}
-    <ul>
+    {#<ul>
         <li>
             <a href="{{ path('projet_create') }}">
-                <button class="btn btn-default">Créer un nouveau Projet</button>
+                <button class="btn btn-info">Créer un nouveau Projet</button>
             </a>
         </li>
         <br>
         <li>
             <a href="{{ path('projet') }}">
-                <button class="btn btn-default">Rechercher un projet</button>
+                <button class="btn btn-info">Rechercher un projet</button>
             </a>
         </li>
     </ul>
-    connecte en tant que : {{ app.user.lastname }} {{  app.user.firstname}}
+    connecte en tant que : {{ app.user.lastname }} {{  app.user.firstname}}#}
     <h3>Mes Projets</h3>
+
+    <hr>
     {% for entity in projet %}
-        <ul>
-            <li>{{ entity.nomprojet }}</li>
-            <li>{{ entity.photo }}</li>
-        </ul>
-
-    {% endfor %}
-    {#
-            <div class="{% if has_center %}span4 col-lg-4{% else %}span6 col-lg-6{% endif %}">
-                {% for block in blocks %}
-                    {% if block.position == 'left' %}
-                        {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
-                    {% endif %}
-                {% endfor %}
-            </div>#}
-
-    {#{% if has_center %}
-        <div class="span4 col-lg-4">
-            {% for block in blocks %}
-                {% if block.position == 'center' %}
-                    {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
-                {% endif %}
-            {% endfor %}
+        <div class="container photoprojet">
+            <div class="row">
+                <div class="col-md-5">
+                    <a href="#">
+                        <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                    </a>
+                </div>
+                <div class="col-md-7">
+                    <h3>{{ entity.nomprojet }}</h3>
+                    <p>{{ entity.description }}</p>
+                    <a class="btn btn-primary" href="{{ path('projet_detail', { 'id': entity.id }) }}">Voir Projet <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
         </div>
-    {% endif %}
-
-    <div class="{% if has_center %}span4 col-lg-4{% else %}span6 col-lg-6{% endif %}">
-        {% for block in blocks %}
-            {% if block.position == 'right' %}
-                {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>#}
+        <hr>
+    {% endfor %}
 {% endblock %}
