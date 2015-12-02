@@ -20,27 +20,4 @@ class ProjetRepository extends \Doctrine\ORM\EntityRepository
         $query = $queryBuilder->getQuery();
         return $query->getResult();
     }
-
-    /*public function RechercheProjet ($projets)
-    {
-        $qb = $this->createQueryBuilder('p');
-
-        $qb ->select('p.tags')
-            ->where('p.tags LIKE :projet')
-            ->setParameter('projet', '%'.$projets.'%');
-
-        return $queryBuilder->getQuery()->getResult();
-
-        $arrayAss= $qb->getQuery()
-            ->getArrayResult();
-
-        // Transformer le tableau associatif en un tableau standard
-        $array = array();
-        foreach($arrayAss as $data)
-        {
-            $array[] = $data['tags'];
-        }
-
-        return $array;
-    }*/
 }
