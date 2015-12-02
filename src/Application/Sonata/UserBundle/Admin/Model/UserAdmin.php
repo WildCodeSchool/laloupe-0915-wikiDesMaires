@@ -54,6 +54,8 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
     /**
      * {@inheritdoc}
      */
+
+    // Partie de la vue
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
@@ -75,6 +77,8 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
     /**
      * {@inheritdoc}
      */
+
+    // La partie du filtre des utilisateur
     protected function configureDatagridFilters(DatagridMapper $filterMapper)
     {
         $filterMapper
@@ -114,9 +118,11 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
     /**
      * {@inheritdoc}
      */
+    //La partie d'ajout d'un utilisateur
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            // General Part
             ->with('General')
                 ->add('username')
                 ->add('email')
@@ -124,6 +130,7 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                     'required' => (!$this->getSubject() || is_null($this->getSubject()->getId()))
                 ))
             ->end()
+            //Profile Part
             ->with('Profile')
                 ->add('dateOfBirth', 'birthday', array('required' => false))
                 ->add('firstname', null, array('required' => false))
@@ -136,7 +143,7 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
             ->end()
 
         ;
-
+        //Security
         if ($this->getSubject() && !$this->getSubject()->hasRole('ROLE_SUPER_ADMIN')) {
             $formMapper
                 ->with('Management')
