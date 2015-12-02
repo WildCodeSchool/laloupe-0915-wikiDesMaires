@@ -9,9 +9,6 @@ Wiki\WikiMaireBundle\Entity\Projet:
             generator:
                 strategy: AUTO
     fields:
-        tags:
-            type: string
-            length: 255
         nomprojet:
             type: string
             length: 255

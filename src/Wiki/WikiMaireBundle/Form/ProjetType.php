@@ -22,7 +22,6 @@ class ProjetType extends AbstractType
             ->add('cout', 'number',array('label' => 'Coût de Réalisation'))
             ->add('tailleprojet', 'text',array('label' => 'Taille'))
             ->add('bassinPopulation', 'textarea',array('label' => 'Bassin de la population'))
-            ->add('tags', 'text',array('label' => 'Tags'))
             ->add('file', 'file', array('label' => 'Photo du projet', 'required' => false));
 
         ;
