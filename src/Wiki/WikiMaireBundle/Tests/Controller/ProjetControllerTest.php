@@ -6,51 +6,200 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ProjetControllerTest extends WebTestCase
 {
+    //Permet de reste connecté
+    private function Connexion($username, $password, $client) {
 
-    public function testCompleteScenario()
+        $crawler = $client->request('GET', '/login');
+
+        $form = $crawler->selectButton('Connexion')->form();
+        $form['_username'] = $username;
+        $form['_password'] = $password;
+        $crawler = $client->submit($form);
+        $crawler = $client->followRedirect();
+
+        return $crawler;
+    }
+
+    public function testPageIndex()
     {
-        // Create a new client to browse the application
+        // Create a new project to browse the application
         $client = static::createClient();
 
         $this->assertEquals(true, true);
 
-        // Create a new entry in the database
-        $crawler = $client->request('GET', '/projet');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /projet");
-        $crawler = $client->click($crawler->selectLink('Create a new entry')->link('projet_create'));
 
-        // Fill in the form and submit it
-        $form = $crawler->selectButton('Create')->form(array(
-            'wiki_wikimairebundle_projet[field_name]'  => 'Test',
-            // ... other fields to fill
-        ));
+        // Test si la page projet affiche les projets
+        $crawler = $client->request('GET', '/projet/');
+        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::indexAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
 
-        $client->submit($form);
+
+        //Test du bouton "Créer un nouveau Projet"
+        $link = $crawler
+            ->filter('a:contains("Créer un nouveau Projet")')// find all links with the text "Greet"
+            ->eq(0)// select the second link in the list
+            ->link();
+
+        $crawler = $client->click($link);
+
+        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::newAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+
+
+        //Test du bouton "Login"
+        $link = $crawler
+            ->filter('a:contains("Login")')// find all links with the text "Greet"
+            ->eq(0)// select the second link in the list
+            ->link();
+
+        $crawler = $client->click($link);
+
+        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+    }
+
+
+    public function testPageNew()
+    {
+       // Create a new project to browse the application
+       $client = static::createClient();
+
+       // Test si la page projet affiche les projets
+       $crawler = $client->request('GET', '/projet/new');
+       $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::newAction', $client->getRequest()->attributes->get('_controller'));
+       $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+
+       //Test du bouton "Retour à la liste de Projet"
+         $link = $crawler
+            ->filter('a:contains("Retour a la liste de Projet")') // find all links with the text "Greet"
+            ->eq(0) // select the second link in the list
+            ->link();
+
+        $crawler = $client->click($link);
+
+        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::indexAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+   }
+
+    public function testPageLoginAdmin()
+    {
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/login');
+
+        //$this->assertTrue($crawler->filter('html:contains("Hello Fabien")')->count() > 0);
+        $this->assertTrue($crawler->filter('form input[name="_username"]')->count() == 1);
+        $this->assertTrue($crawler->filter('form input[name="_password"]')->count() == 1);
+
+
+        // Sélection basée sur la valeur, l'id ou le nom des boutons
+        $form = $crawler->selectButton('Connexion')->form();
+        $form['_username'] = 'admin';
+        $form['_password'] = 'admin';
+        $crawler = $client->submit($form);
+
+        // Il faut suivre la redirection
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $crawler = $client->followRedirect();
+        $this->assertEquals('Sonata\AdminBundle\Controller\CoreController::dashboardAction', $client->getRequest()->attributes->get('_controller'));
+    }
 
-        // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('td:contains("Test")')->count(), 'Missing element td:contains("Test")');
+    public function testPageLoginUser()
+    {
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/login');
+        //$this->assertTrue($crawler->filter('html:contains("Hello Fabien")')->count() > 0);
+        $this->assertTrue($crawler->filter('form input[name="_username"]')->count() == 1);
+        $this->assertTrue($crawler->filter('form input[name="_password"]')->count() == 1);
 
-        // Edit the entity
-        $crawler = $client->click($crawler->selectLink('Edit')->link());
+        // Sélection basée sur la valeur, l'id ou le nom des boutons
+        $form = $crawler->selectButton('Connexion')->form();
+        $form['_username'] = 'celine';
+        $form['_password'] = 'celine';
+        $crawler = $client->submit($form);
 
-        $form = $crawler->selectButton('Update')->form(array(
-            'wiki_wikimairebundle_projet[field_name]'  => 'Foo',
-            // ... other fields to fill
-        ));
-
-        $client->submit($form);
+        // Il faut suivre la redirection
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $crawler = $client->followRedirect();
+        $this->assertEquals('Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
+    }
 
-        // Check the element contains an attribute with value equals "Foo"
-        $this->assertGreaterThan(0, $crawler->filter('[value="Foo"]')->count(), 'Missing element [value="Foo"]');
-
-        // Delete the entity
-        $client->submit($crawler->selectButton('Delete')->form());
+    public function testPageProfile()
+    {
+        // Test de la page Profile en étant pas connecté
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/profile/');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $crawler = $client->followRedirect();
+        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
+    }
 
-        // Check the entity has been delete on the list
-        $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
-        
+    public function testPageProfileConnecté()
+    {
+        //Test du bouton "Informations de connexion" en étant connecté
+        $username = 'celine';
+        $password = 'celine';
+
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/login');
+        $crawler = $this->Connexion($username, $password, $client);
+        $link = $crawler
+            ->filter('a:contains("Informations de connexion")')// find all links with the text "Greet"
+            ->eq(0) //select the second link in the list
+            ->link();
+
+        $crawler = $client->click($link);
+
+        $this->assertEquals('Sonata\UserBundle\Controller\ProfileFOSUser1Controller::editAuthenticationAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+
+        //Test du bouton "Créer un nouveau projet" en étant connecté
+        $username = 'celine';
+        $password = 'celine';
+
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/login');
+        $crawler = $this->Connexion($username, $password, $client);
+        $link = $crawler
+            ->filter('a:contains("Créer un nouveau Projet")')// find all links with the text "Greet"
+            ->eq(0)// select the second link in the list
+            ->link();
+
+        $crawler = $client->click($link);
+
+        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::newAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+
+        //Test du bouton "rechercher un projet" en étant connecté
+        $username = 'celine';
+        $password = 'celine';
+
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/login');
+        $crawler = $this->Connexion($username, $password, $client);
+        $link = $crawler
+            ->filter('a:contains("Rechercher un projet")')// find all links with the text "Greet"
+            ->eq(0)// select the second link in the list
+            ->link();
+
+        $crawler = $client->click($link);
+
+        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::indexAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+
+        //Test du bouton "Logout" en étant connecté
+        $username = 'celine';
+        $password = 'celine';
+
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/login');
+        $crawler = $this->Connexion($username, $password, $client);
+        $link = $crawler
+            ->filter('a:contains("Logout")')// find all links with the text "Greet"
+            ->eq(0)// select the second link in the list
+            ->link();
+
+         $crawler = $client->click($link);
+
+        $this->assertEquals('Sonata\UserBundle\Controller\AdminSecurityController::logoutAction', $client->getRequest()->attributes->get('_controller'));
     }
 }

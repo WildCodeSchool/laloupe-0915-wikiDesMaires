@@ -5,7 +5,7 @@ projet:
 projet_create:
     path:     /create
     defaults: { _controller: "WikiWikiMaireBundle:Projet:create" }
-    methods:  POST
+    methods:  [POST, GET]
 
 projet_edit:
     path:     /{id}/edit

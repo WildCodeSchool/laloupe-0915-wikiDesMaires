@@ -1,23 +1,17 @@
 <?php
-// src/Acme/HelloBundle/DataFixtures/ORM/LoadUserData.php
+// src/Wiki/WikiMaireBundle/DataFixtures/ORM/LoadUserData.php
 
 namespace Wiki\WikiMaireBundle\DataFixtures\ORM;
-use Doctrine\Common\DataFixtures\FixtureInterface;
+
 use Doctrine\Common\Persistence\ObjectManager;
 use Application\Sonata\UserBundle\Entity\User;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-class LoadUserData implements FixtureInterface, ContainerAwareInterface
-{
 
-    /**
-     * @var ContainerInterface
-     */
-    private $container;
-    public function setContainer(ContainerInterface $container = null)
-    {
-        $this->container = $container;
-    }
+class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
+{
     /**
      * {@inheritDoc}
      */

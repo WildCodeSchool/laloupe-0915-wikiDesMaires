@@ -33,7 +33,7 @@
 {% endblock %}
 {% block body -%}
     <ul>
-            <a href="{{ path('projet_new') }}">
+            <a href="{{ path('projet_create') }}">
                 <button class="btn btn-default">Créer un nouveau Projet</button>
             </a>
     </ul>
@@ -48,7 +48,6 @@
     <table class="records_list table-hover" id="thetable">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom du projet</th>
                 <th>Description</th>
                 <th>Date de Realisation</th>
@@ -62,8 +61,7 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.nomprojet }}</td>
+                <td><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></td>
                 <td>{{ entity.description }}</td>
                 <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ entity.difficulte }}</td>
@@ -73,9 +71,6 @@
 
                 <td>
                 <ul>
-                    <li>
-                        <a href="{{ path('projet_show', { 'id': entity.id }) }}">show</a>
-                    </li>
                     <li>
                         <a href="{{ path('projet_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
