@@ -1,4 +1,4 @@
-header{
+header {
     font-size: 18px;
     background-color: #e6e6e6;
 }
@@ -7,6 +7,7 @@ header{
     margin-bottom: 30px;
     border-bottom: 1px solid gray;
 }
+
 .nav li + li {
     border-left: 1px solid gray;
 }
@@ -15,15 +16,64 @@ header{
     max-width: 700px;
     margin: 10vh auto 0 auto;
 }
-.login{
+
+.login {
     position: absolute;
     margin: auto;
     right: 0;
     left: 0;
     width: 700px;
 }
+
 #thetable{
-    border: solid gray 1px;
+    border: 1px solid black;
+    max-width: 97%;
+    margin: auto;
 }
+
+td {
+    border: 0.25px solid black;
+    text-align: center;
+}
+
+.ui-state-default {
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+ul {
+   float: right;
+}
+
+.record_properties {
+    border: 1px solid black;
+    max-width: 80%;
+    margin: auto;
+}
+
+th {
+    text-align: center;
+    border: 1px solid black;
+}
+
+li {
+    margin-right: 45%;
+    list-style-type:none;
+}
+
+.form-group {
+    max-width:80%;
+    margin: auto;
+    padding-left: 10%;
+
+}
+
+
+
+
+
+
 
 

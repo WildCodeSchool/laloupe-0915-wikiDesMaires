@@ -33,11 +33,9 @@
 {% endblock %}
 {% block body -%}
     <ul>
-        <li>
             <a href="{{ path('projet_new') }}">
                 <button class="btn btn-default">Créer un nouveau Projet</button>
             </a>
-        </li>
     </ul>
 
     <div class="ui-widget">
@@ -47,18 +45,17 @@
 
     <h1>Liste des Projets</h1>
 
-    <table class="records_list" id="thetable">
+    <table class="records_list table-hover" id="thetable">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Nomprojet</th>
+                <th>Nom du projet</th>
                 <th>Description</th>
                 <th>Date de Realisation</th>
                 <th>Difficulte</th>
                 <th>Cout</th>
                 <th>Taille du projet</th>
                 <th>Bassin de population</th>
-
                 <th>Actions</th>
             </tr>
         </thead>

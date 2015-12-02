@@ -11,7 +11,7 @@
                 <td>{{ entity.id }}</td>
             </tr>
             <tr>
-                <th>Nomprojet</th>
+                <th>Nom du projet</th>
                 <td>{{ entity.nomprojet }}</td>
             </tr>
             <tr>
@@ -19,7 +19,7 @@
                 <td>{{ entity.description }}</td>
             </tr>
             <tr>
-                <th>Daterealisation</th>
+                <th>Date de realisation</th>
                 <td>{{ entity.daterealisation|date('Y-m-d H:i:s') }}</td>
             </tr>
             <tr>
@@ -31,11 +31,11 @@
                 <td>{{ entity.cout }}</td>
             </tr>
             <tr>
-                <th>Tailleprojet</th>
+                <th>Taille du projet</th>
                 <td>{{ entity.tailleprojet }}</td>
             </tr>
             <tr>
-                <th>Bassinpopulation</th>
+                <th>Bassin de population</th>
                 <td>{{ entity.bassinPopulation }}</td>
             </tr>
         </tbody>
@@ -44,12 +44,12 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('projet') }}">
-            Back to the list
+            <button class="btn btn-default">Retourner à la liste</button>
         </a>
     </li>
     <li>
         <a href="{{ path('projet_edit', { 'id': entity.id }) }}">
-            Edit
+            <button class="btn btn-default">Editer</button>
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
