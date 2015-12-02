@@ -212,7 +212,7 @@ class ProjetControllerTest extends WebTestCase
          $crawler = $client->click($link);
 
          $this->assertEquals('Sonata\UserBundle\Controller\AdminSecurityController::logoutAction', $client->getRequest()->attributes->get('_controller'));
-       
+
 
 
      }
