@@ -12,9 +12,7 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
     <script src="//cdn.datatables.net/1.10.10/js/dataTables.jqueryui.min.js"></script>
-
     <script>
-
         //Action de filtre dans la table
         var table = $('#thetable').DataTable({
             //supprime la barre de recherche par defaut du datable
@@ -35,14 +33,16 @@
 {% endblock %}
 {% block body -%}
     <ul>
-            <a href="{{ path('projet_new') }}">
+            <a href="{{ path('projet_create') }}">
                 <button class="btn btn-default">Créer un nouveau Projet</button>
             </a>
     </ul>
+
     <div class="ui-widget">
         <label for="tags">Rechercher un projet: </label>
         <input id="tags" type="text">
     </div>
+
     <h1>Liste des Projets</h1>
 
     <table class="records_list table-hover" id="thetable">
@@ -50,21 +50,20 @@
             <tr>
                 <th>Nom du projet</th>
                 <th>Description</th>
-                <th>Date de realisation</th>
+                <th>Date de Realisation</th>
                 <th>Difficulte</th>
                 <th>Cout</th>
-                <th>Taille projet</th>
+                <th>Taille du projet</th>
                 <th>Bassin de population</th>
-
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('projet_show', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></td>
+                <td><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></td>
                 <td>{{ entity.description }}</td>
-                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ entity.difficulte }}</td>
                 <td>{{ entity.cout }}</td>
                 <td>{{ entity.tailleprojet }}</td>
@@ -72,9 +71,6 @@
 
                 <td>
                 <ul>
-                    <li>
-                        <a href="{{ path('projet_show', { 'id': entity.id }) }}">show</a>
-                    </li>
                     <li>
                         <a href="{{ path('projet_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
@@ -88,5 +84,4 @@
         </tbody>
     </table>
 
-
-    {% endblock %}
+{% endblock %}

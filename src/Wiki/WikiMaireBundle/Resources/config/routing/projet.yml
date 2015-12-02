@@ -2,18 +2,10 @@ projet:
     path:     /
     defaults: { _controller: "WikiWikiMaireBundle:Projet:index" }
 
-projet_show:
-    path:     /{id}/show
-    defaults: { _controller: "WikiWikiMaireBundle:Projet:show" }
-
-projet_new:
-    path:     /new
-    defaults: { _controller: "WikiWikiMaireBundle:Projet:new" }
-
 projet_create:
     path:     /create
     defaults: { _controller: "WikiWikiMaireBundle:Projet:create" }
-    methods:  POST
+    methods:  [POST, GET]
 
 projet_edit:
     path:     /{id}/edit

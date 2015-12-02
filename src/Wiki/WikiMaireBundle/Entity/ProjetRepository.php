@@ -10,6 +10,7 @@ namespace Wiki\WikiMaireBundle\Entity;
  */
 class ProjetRepository extends \Doctrine\ORM\EntityRepository
 {
+
     public function RechercheProjet($tags)
     {
         $queryBuilder = $this->_em->createQueryBuilder()

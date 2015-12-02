@@ -9,56 +9,69 @@ file that was distributed with this source code.
 
 #}
 
-{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{#{% extends "SonataUserBundle:Profile:action.html.twig" %}
 
-{% block sonata_profile_content %}
+{% block sonata_profile_content %}#}
+{% extends '::base.html.twig' %}
+
+{% block body -%}
 
 
-    <div class="row row-fluid">
+
+    {#<div class="row row-fluid">
         {% set has_center = false %}
         {% for block in blocks %}
             {% if block.position == 'center' %}
                 {% set has_center = true %}
             {% endif %}
-        {% endfor %}
+        {% endfor %}#}
+    <ul>
+        <li>
+            <a href="{{ path('projet_create') }}">
+                <button class="btn btn-default">Créer un nouveau Projet</button>
+            </a>
+        </li>
+        <br>
+        <li>
+            <a href="{{ path('projet') }}">
+                <button class="btn btn-default">Rechercher un projet</button>
+            </a>
+        </li>
+    </ul>
+    connecte en tant que : {{ app.user.lastname }} {{  app.user.firstname}}
+    <h3>Mes Projets</h3>
+    {% for entity in projet %}
         <ul>
-            <li>
-                <a href="{{ path('projet_new') }}">
-                    <button class="btn btn-default">Créer un nouveau Projet</button>
-                </a>
-            </li>
-            <br>
-            <li>
-                <a href="{{ path('projet') }}">
-                    <button class="btn btn-default">Rechercher un projet</button>
-                </a>
-            </li>
+            <li>{{ entity.nomprojet }}</li>
+            <li>{{ entity.photo }}</li>
         </ul>
-{#
-        <div class="{% if has_center %}span4 col-lg-4{% else %}span6 col-lg-6{% endif %}">
-            {% for block in blocks %}
-                {% if block.position == 'left' %}
-                    {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
-                {% endif %}
-            {% endfor %}
-        </div>#}
 
-        {% if has_center %}
-            <div class="span4 col-lg-4">
+    {% endfor %}
+    {#
+            <div class="{% if has_center %}span4 col-lg-4{% else %}span6 col-lg-6{% endif %}">
                 {% for block in blocks %}
-                    {% if block.position == 'center' %}
+                    {% if block.position == 'left' %}
                         {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
                     {% endif %}
                 {% endfor %}
-            </div>
-        {% endif %}
+            </div>#}
 
-        <div class="{% if has_center %}span4 col-lg-4{% else %}span6 col-lg-6{% endif %}">
+    {#{% if has_center %}
+        <div class="span4 col-lg-4">
             {% for block in blocks %}
-                {% if block.position == 'right' %}
+                {% if block.position == 'center' %}
                     {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
                 {% endif %}
             {% endfor %}
         </div>
+    {% endif %}
+
+    <div class="{% if has_center %}span4 col-lg-4{% else %}span6 col-lg-6{% endif %}">
+        {% for block in blocks %}
+            {% if block.position == 'right' %}
+                {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
+            {% endif %}
+        {% endfor %}
     </div>
+</div>#}
 {% endblock %}

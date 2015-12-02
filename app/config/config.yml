@@ -103,7 +103,7 @@ sonata_block:
         sonata.block.service.text: # used to if you plan to use Sonata user routes
 
 sonata_user:
-    security_acl: true
+    security_acl: false
     manager_type: orm # can be orm or mongodb
     profile:  # Profile Form (firstname, lastname, etc ...)
         form:
