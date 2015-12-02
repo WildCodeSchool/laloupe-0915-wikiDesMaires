@@ -18,30 +18,42 @@ class ProjetAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('nomprojet')
             ->add('description')
             ->add('daterealisation')
             ->add('difficulte')
             ->add('cout')
+            ->add('tailleprojet')
         ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('description')
+            ->add('nomprojet')
             ->add('daterealisation')
-            ->add('difficulte')
             ->add('cout')
-        ;
+            ->add('tailleprojet')
+            ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('description')
+            ->addIdentifier('nomprojet')
+            ->add('description')
             ->add('daterealisation')
             ->add('difficulte')
             ->add('cout')
+            ->add('tailleprojet')
+            ->add('user')
+            ->add('_action', 'actions', array(
+                'actions' => array(
+                    'edit' => array(),
+                    'show' => array(),
+                    'delete' => array()
+                )
+            ))
         ;
     }
 }
