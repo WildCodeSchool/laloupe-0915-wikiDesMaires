@@ -35,7 +35,7 @@ class LoadCommuneData extends AbstractFixture implements FixtureInterface, Order
      */
     public function getOrder()
     {
-        return 100;
+        return 2;
     }
     /**
      * {@inheritDoc}
