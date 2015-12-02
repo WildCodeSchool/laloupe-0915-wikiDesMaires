@@ -81,8 +81,7 @@ class ChangePasswordFOSUser1Controller extends \Sonata\UserBundle\Controller\Cha
                     $this->renderView(
                         'emails/receivedMessage.html.twig',
                         array(
-                            'user' => $user,
-                            'password'
+                            'user' => $user
                         )
                     ),
                     'text/html'
