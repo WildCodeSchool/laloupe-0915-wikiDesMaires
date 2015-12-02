@@ -29,7 +29,7 @@ class ProjetControllerTest extends WebTestCase
         // Test si la page projet affiche les projets
         $crawler = $client->request('GET', '/projet/');
         $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::indexAction', $client->getRequest()->attributes->get('_controller'));
-        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+        $this->assertEquals(200 === $client->getResponse()->getStatusCode());
 
 
         //Test du bouton "Créer un nouveau Projet"
@@ -52,7 +52,7 @@ class ProjetControllerTest extends WebTestCase
 
         $crawler = $client->click($link);
 
-        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Sonata\UserBundle\Controller\ChangePasswordFOSUser1Controller::changePasswordAction', $client->getRequest()->attributes->get('_controller'));
         $this->assertTrue(200 === $client->getResponse()->getStatusCode());
     }
 
@@ -65,7 +65,7 @@ class ProjetControllerTest extends WebTestCase
        // Test si la page projet affiche les projets
        $crawler = $client->request('GET', '/projet/new');
        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::newAction', $client->getRequest()->attributes->get('_controller'));
-       $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+       $this->assertEquals(200 === $client->getResponse()->getStatusCode());
 
        //Test du bouton "Retour à la liste de Projet"
          $link = $crawler
@@ -124,7 +124,7 @@ class ProjetControllerTest extends WebTestCase
          // Il faut suivre la redirection
          $this->assertEquals(302, $client->getResponse()->getStatusCode());
          $crawler = $client->followRedirect();
-         $this->assertEquals('Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
+         $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
      }
 
 
