@@ -4,10 +4,9 @@ security:
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory: ~
         fos_userbundle:
             id: fos_user.user_manager
+
     encoders:
         FOS\UserBundle\Model\UserInterface: sha512
 
@@ -30,8 +29,9 @@ security:
             logout:
                 path:           /admin/logout
             anonymous:          true
-        main:
 
+        main:
+            http_basic: ~
             pattern:             .*
             context:             user
             form_login:
