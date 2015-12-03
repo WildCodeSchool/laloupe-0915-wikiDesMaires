@@ -67,4 +67,64 @@ class User extends BaseUser
         return $this->commune;
     }
 
+
+    /**
+     * @var string
+     */
+    private $adressemairie;
+
+    /**
+     * @var string
+     */
+    private $bassindepopulation;
+
+
+    /**
+     * Set adressemairie
+     *
+     * @param string $adressemairie
+     *
+     * @return User
+     */
+    public function setAdressemairie($adressemairie)
+    {
+        $this->adressemairie = $adressemairie;
+
+        return $this;
+    }
+
+    /**
+     * Get adressemairie
+     *
+     * @return string
+     */
+    public function getAdressemairie()
+    {
+        return $this->adressemairie;
+    }
+
+    /**
+     * Set bassindepopulation
+     *
+     * @param string $bassindepopulation
+     *
+     * @return User
+     */
+    public function setBassindepopulation($bassindepopulation)
+    {
+        $this->bassindepopulation = $bassindepopulation;
+
+        return $this;
+    }
+
+    /**
+     * Get bassindepopulation
+     *
+     * @return string
+     */
+    public function getBassindepopulation()
+    {
+        return $this->bassindepopulation;
+    }
+
 }
