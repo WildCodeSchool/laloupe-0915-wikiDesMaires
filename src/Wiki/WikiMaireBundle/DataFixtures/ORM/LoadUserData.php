@@ -32,6 +32,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user1->setFirstname('Admin');
         $user1->setLastname('Admin');
 
+
         // Creation de User et des details
         $user2 = $userManager->createUser();
         $user2->setUsername('tra');
