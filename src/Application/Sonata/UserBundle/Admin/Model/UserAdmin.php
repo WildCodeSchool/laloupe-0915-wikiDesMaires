@@ -131,7 +131,9 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                     'required' => (!$this->getSubject() || is_null($this->getSubject()->getId()))
                 ))
             ->end()
+
             //Profile Part
+
             ->with('Profile')
                 ->add('dateOfBirth', 'birthday', array('required' => false))
                 ->add('firstname', null, array('required' => false))
@@ -141,9 +143,14 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                     'translation_domain' => $this->getTranslationDomain()
                 ))
                 ->add('phone', null, array('required' => false))
+
+            // Nouveau Champs ajoutés
+
                 ->add('adressemairie', null, array('label' => 'Adresse mairie'))
                 ->add('bassindepopulation', null, array('label' => 'Bassin de population'))
-                
+                ->add('commune', 'sonata_type_model_list', array(
+                    'label'=> 'Commune'
+                ))
             ->end()
         ;
     }

@@ -7,11 +7,16 @@
 
     <div class="container photoprojet">
         <div class="row">
+            <div class="col-md-2">
+                <img src="{{app.request.basepath}}/uploads/image.gif" class="img-thumbnail" >
+            </div>
             <div class="col-md-4">
                 <p>Nom : {{ app.user.firstname }}</p>
                 <p>Prenom(s) : {{ app.user.lastname }}</p>
+                <p>Email : {{ app.user.email }}</p>
+                <p>Adresse : {{ app.user.adressemairie }}</p>
             </div>
-            <div class="col-md-4  col-md-offset-4">
+            <div class="col-md-2  col-md-offset-4">
                 <ul>
                     <li>
                         <a href="{{ path('projet_create') }}">
@@ -29,7 +34,7 @@
         </div>
     </div>
 
-    <h3>Mes Projets</h3>
+    <h3 align="center">Mes Projets</h3>
 
     <hr>
     {% for entity in projet %}
