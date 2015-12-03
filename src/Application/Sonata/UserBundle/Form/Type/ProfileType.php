@@ -63,7 +63,6 @@ class ProfileType extends \Sonata\UserBundle\Form\Type\ProfileType
                 'label'    => 'form.label_phone',
                 'required' => false
             ))
-            
         ;
     }
 
