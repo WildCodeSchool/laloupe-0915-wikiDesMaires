@@ -31,6 +31,8 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user1->setRoles(array('ROLE_SUPER_ADMIN'));
         $user1->setFirstname('Admin');
         $user1->setLastname('Admin');
+        $user1->setPhone('0768298272');
+        $user1->setAdressemairie('18 Rue de la Gare');
 
 
         // Creation de User et des details
@@ -42,6 +44,8 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user2->setRoles(array('ROLE_USER'));
         $user2->setFirstname('traore');
         $user2->setLastname('Mahamadou');
+        $user2->setPhone('0768298272');
+        $user2->setAdressemairie('18 Rue de la Gare');
 
         // Creation de User et des details
         $user3 = $userManager->createUser();
@@ -52,6 +56,8 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user3->setRoles(array('ROLE_USER'));
         $user3->setFirstname('traore');
         $user3->setLastname('Mahamadou');
+        $user3->setPhone('0768298272');
+        $user3->setAdressemairie('18 Rue de la Gare');
 
 
         // Creation de User et des details
@@ -63,6 +69,8 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user4->setRoles(array('ROLE_USER'));
         $user4->setFirstname('Celine');
         $user4->setLastname('Langlade');
+        $user4->setPhone('0768298272');
+        $user4->setAdressemairie('18 Rue de la Gare');
 
         // Creation de User et des details
         $user5 = $userManager->createUser();
@@ -73,6 +81,8 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user5->setRoles(array('ROLE_USER'));
         $user5->setFirstname('Pascal');
         $user5->setLastname('Emeriaud');
+        $user5->setPhone('0768298272');
+        $user5->setAdressemairie('18 Rue de la Gare');
 
 
         // Mise a jour des utilisateurs
