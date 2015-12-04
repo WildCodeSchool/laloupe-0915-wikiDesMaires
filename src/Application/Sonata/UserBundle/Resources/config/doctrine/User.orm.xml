@@ -9,6 +9,7 @@
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO" />
         </id>
+        <field name="photoprofil" column="photoprofil" type="string" length="255" nullable="true" />
         <field name="adressemairie" column="adressemarie" type="string" length="255" nullable="true" />
         <field name="bassindepopulation" column="bassindepopulation" type="string" length="255" nullable="true"
 />

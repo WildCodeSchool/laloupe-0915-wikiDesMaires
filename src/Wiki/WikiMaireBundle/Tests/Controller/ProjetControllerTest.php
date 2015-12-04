@@ -11,8 +11,8 @@ class ProjetControllerTest extends WebTestCase
     {
         // Create a new project to browse the application
         $client = static::createClient(array(), array(
-            'PHP_AUTH_USER' => 'tra',
-            'PHP_AUTH_PW'   => 'tra',
+            'PHP_AUTH_USER' => 'celine',
+            'PHP_AUTH_PW'   => 'celine',
         ));
 
         $this->assertEquals(true, true);
@@ -53,8 +53,8 @@ class ProjetControllerTest extends WebTestCase
     {
         // Create a new project to browse the application
         $client = static::createClient(array(), array(
-            'PHP_AUTH_USER' => 'tra',
-            'PHP_AUTH_PW'   => 'tra',
+            'PHP_AUTH_USER' => 'celine',
+            'PHP_AUTH_PW'   => 'celine',
         ));
 
         // Test si la page projet affiche les projets
@@ -94,7 +94,7 @@ class ProjetControllerTest extends WebTestCase
         // Il faut suivre la redirection
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $crawler = $client->followRedirect();
-        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Sonata\AdminBundle\Controller\CoreController::dashboardAction', $client->getRequest()->attributes->get('_controller'));
     }
 
     public function testPageLoginAdminCo()
@@ -108,7 +108,7 @@ class ProjetControllerTest extends WebTestCase
         // Il faut suivre la redirection
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $crawler = $client->followRedirect();
-        $this->assertEquals('Application\Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
     }
 
 
@@ -124,8 +124,8 @@ class ProjetControllerTest extends WebTestCase
 
         // Sélection basée sur la valeur, l'id ou le nom des boutons
         $form = $crawler->selectButton('Connexion')->form();
-        $form['_username'] = 'tra';
-        $form['_password'] = 'tra';
+        $form['_username'] = 'celine';
+        $form['_password'] = 'celine';
         $crawler = $client->submit($form);
 
         // Il faut suivre la redirection
@@ -149,8 +149,8 @@ class ProjetControllerTest extends WebTestCase
     {
         //Test du bouton "Créer un nouveau projet" en étant connecté
         $client = static::createClient(array(), array(
-            'PHP_AUTH_USER' => 'tra',
-            'PHP_AUTH_PW'   => 'tra',
+            'PHP_AUTH_USER' => 'celine',
+            'PHP_AUTH_PW'   => 'celine',
         ));
 
         $crawler = $client->request('GET', '/profile/');
@@ -166,8 +166,8 @@ class ProjetControllerTest extends WebTestCase
 
         //Test du bouton "rechercher un projet" en étant connecté
         $client = static::createClient(array(), array(
-            'PHP_AUTH_USER' => 'tra',
-            'PHP_AUTH_PW'   => 'tra',
+            'PHP_AUTH_USER' => 'celine',
+            'PHP_AUTH_PW'   => 'celine',
         ));
         $crawler = $client->request('GET', '/profile/');
         $link = $crawler
@@ -182,8 +182,8 @@ class ProjetControllerTest extends WebTestCase
 
         //Test du bouton "Logout" en étant connection
         $client = static::createClient(array(), array(
-            'PHP_AUTH_USER' => 'tra',
-            'PHP_AUTH_PW'   => 'tra',
+            'PHP_AUTH_USER' => 'celine',
+            'PHP_AUTH_PW'   => 'celine',
         ));
 
         $crawler = $client->request('GET', '/profile/');

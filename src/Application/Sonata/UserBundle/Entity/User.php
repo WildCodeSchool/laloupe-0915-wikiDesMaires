@@ -25,6 +25,65 @@ class User extends BaseUser
 {
 
 
+
+    public $file;
+
+    protected function getUploadDir()
+    {
+        return 'uploads';
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->photoprofil ? null : $this->getUploadDir().'/'.$this->photoprofil;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->photoprofil ? null : $this->getUploadRootDir().'/'.$this->photoprofil;
+    }
+
+
+    public function preUpload()
+    {
+        if (null !== $this->file) {
+            // do whatever you want to generate a unique name
+            $this->photoprofil = uniqid() . '.' . $this->file->guessExtension();
+        }
+    }
+
+
+    public function upload()
+    {
+        if (null === $this->file) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file->move($this->getUploadRootDir(), $this->photoprofil);
+
+        unset($this->file);
+    }
+
+
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
+        }
+    }
+
+
+
+    // GENERATED CODE
+
     /**
      * @var integer $id
      */
@@ -129,4 +188,33 @@ class User extends BaseUser
         return $this->bassindepopulation;
     }
 
+    /**
+     * @var string
+     */
+    private $photoprofil;
+
+
+    /**
+     * Set photoprofil
+     *
+     * @param string $photoprofil
+     *
+     * @return User
+     */
+    public function setPhotoprofil($photoprofil)
+    {
+        $this->photoprofil = $photoprofil;
+
+        return $this;
+    }
+
+    /**
+     * Get photoprofil
+     *
+     * @return string
+     */
+    public function getPhotoprofil()
+    {
+        return $this->photoprofil;
+    }
 }

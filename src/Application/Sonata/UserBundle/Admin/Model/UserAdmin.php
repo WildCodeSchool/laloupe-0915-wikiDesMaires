@@ -149,7 +149,11 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                 ->add('adressemairie', null, array('label' => 'Adresse mairie'))
                 ->add('bassindepopulation', null, array('label' => 'Bassin de population'))
                 ->add('commune', 'sonata_type_model_list', array(
-                    'label'=> 'Commune'
+                    'label'=> 'Commune'))
+                ->add('file', 'file', array(
+                    'label' => 'Photo de profil',
+                    'required' => false
+
                 ))
             ->end()
         ;
