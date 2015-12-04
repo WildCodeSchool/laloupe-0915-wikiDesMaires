@@ -1,10 +1,46 @@
 {% extends '::base.html.twig' %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
+{% endblock %}
 {% block body -%}
-    <h1>{{ entity.nomprojet }}</h1>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></h1>
+                    <h4> Commune de Réalisation : {{ app.user.commune.nomcommune }} comptant {{ entity.bassinPopulation }} Habitants</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 tab1">
+                    <a href="#">
+                        <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                    </a>
+                </div>
+                <div class="col-md-4  tab2">
+                    <p>Maire : {{ entity.user.lastname}} {{ entity.user.firstname}}</p>
+                    <p>Budget : {{ entity.cout }} Euro</p>
+                    <p>Date  : {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
+                    <p>Contact :</p>
+                    <p>Taille du Projet : {{ entity.tailleprojet }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 tab1">
+                   <h3>Description</h3>
+                    {{ entity.description }}
+                </div>
+            </div>
+        </div>
 
-    <ul>
-        <td><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></td>
+    </div>
+    {#<ul>
+
+
         <li>{{ entity.description }}</li>
         <li>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</li>
         <li>{{ entity.difficulte }}</li>
@@ -12,6 +48,9 @@
         <li>{{ entity.tailleprojet }}</li>
         <li>{{ entity.bassinPopulation }}</li>
         <li>{{ entity.user.username}}</li>
+        <a href="#">
+            <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+        </a>
 
-    </ul>
+    </ul>#}
 {% endblock %}
