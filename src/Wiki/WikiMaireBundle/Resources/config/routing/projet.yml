@@ -19,7 +19,7 @@ projet_update:
 projet_delete:
     path:     /{id}/delete
     defaults: { _controller: "WikiWikiMaireBundle:Projet:delete" }
-    methods:  [POST, DELETE]
+    methods:  [POST, GET]
 
 projet_detail:
     path:     /{id}/detail
