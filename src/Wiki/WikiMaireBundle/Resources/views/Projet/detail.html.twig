@@ -25,6 +25,8 @@
                     <p>Date  : {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
                     <p>Contact :</p>
                     <p>Taille du Projet : {{ entity.tailleprojet }}</p>
+                    <p>Adresse : {{ app.user.adressemairie }}</p>
+                    <p>Contact : {{ app.user.phone }}</p>
                 </div>
             </div>
         </div>
