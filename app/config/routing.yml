@@ -22,7 +22,7 @@ sonata_user_profile:
     prefix: /profile
 
 sonata_user_profil:
-    path:     /{id}/profil
+    path:     /profil
     defaults: { _controller: "WikiWikiMaireBundle:Projet:Profile" }
     methods:  [POST, GET]
 

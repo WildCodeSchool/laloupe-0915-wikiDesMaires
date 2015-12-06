@@ -6,22 +6,25 @@
     <div class="section">
         <div class="container photoprojet">
             <div class="row">
-                <div class="col-md-2">
-                    <img src="{{app.request.basepath}}/uploads/image.gif" class="img-thumbnail" >
-                </div>
-                <div class="col-md-4">
-                <p>Nom : {{ app.user.firstname }}</p>
-                <p>Prenom(s) : {{ app.user.lastname }}</p>
-                <p>Email : {{ app.user.email }}</p>
-                <p>Adresse : {{ app.user.adressemairie }}</p>
-                <p>Commune : {{ app.user.commune.nomcommune }}</p>
-                <p>Contact : {{ app.user.phone }}</p>
-                <p>Genre : {{ app.user.gender }}</p>
-                <p>Biographie : {{ app.user.biography }}</p>
-                <p>Biographie : {{ app.user.biography }}</p>
+                <div class="col-md-4 col-md-offset-2">
+                    <p>Nom : {{ app.user.firstname }}</p>
+                    <p>Prenom(s) : {{ app.user.lastname }}</p>
+                    <p>Email : {{ app.user.email }}</p>
+                    <p>Adresse : {{ app.user.adressemairie }}</p>
+                    <p>Commune : {{ app.user.commune.nomcommune }}</p>
+                    <p>Contact : {{ app.user.phone }}</p>
+                    <p>Genre : {{ app.user.gender }}</p>
+                    <p>Biographie : {{ app.user.biography }}</p>
+                    <p><a href="{{ path('sonata_user_profile_edit') }}">
+                            <button class="btn btn-primary">modifier son profil</button>
+                        </a></p>
 
                 </div>
+                <div class="col-md-2 ">
+                    <img src="{{app.request.basepath}}/uploads/image.gif" class="img-thumbnail" >
+                </div>
             </div>
+
         </div>
     </div>
 {% endblock %}
