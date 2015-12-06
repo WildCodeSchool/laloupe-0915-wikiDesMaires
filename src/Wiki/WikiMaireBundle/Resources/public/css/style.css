@@ -1,16 +1,12 @@
 header {
     font-size: 18px;
-    background-color: #e6e6e6;
+    background-color: black;
 }
 
 .nav {
     margin-bottom: 30px;
-    border-bottom: 1px solid gray;
-
-}
-
-.nav li + li {
-    border-left: 1px solid gray;
+    margin-top: 60px;
+    background-color: #f8f8f8;
 }
 
 .login-page .panel-info{
@@ -24,7 +20,7 @@ header {
     right: 0;
     left: 0;
     width: 800px;
-    padding-top:70px;
+    padding-top:200px;
 }
 
 #thetable{
