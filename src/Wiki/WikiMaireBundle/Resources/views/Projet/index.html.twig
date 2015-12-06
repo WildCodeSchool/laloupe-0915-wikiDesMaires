@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.jqueryui.min.css">
-
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
 {% endblock %}
 {% block javascripts %}
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -32,49 +32,64 @@
     </script>
 {% endblock %}
 {% block body -%}
+{#
+    <h1 align="center">Liste des Projets</h1>#}
     <ul>
-            <a href="{{ path('projet_create') }}">
-                <button class="btn btn-default">Créer un nouveau Projet</button>
-            </a>
+        <a href="{{ path('projet_create') }}">
+            <button class="btn btn-info">Créer un nouveau Projet</button>
+        </a>
     </ul>
 
-    <div class="ui-widget">
+    {#search input#}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div id="imaginary_container">
+                    <h1 align="center">Rechercher un Projet</h1>
+                    <div class="input-group stylish-input-group">
+                        <input type="text" class="form-control"  placeholder="Search" id="tags">
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    {#<div class="ui-widget">
         <label for="tags">Rechercher un projet: </label>
         <input id="tags" type="text">
-    </div>
-
-    <h1>Liste des Projets</h1>
+    </div>#}
 
     <table class="records_list table-hover" id="thetable">
         <thead>
-            <tr>
-                <th>Nom du projet</th>
-                <th>Description</th>
-                <th>Date de Realisation</th>
-                <th>Difficulte</th>
-                <th>Cout</th>
-                <th>Taille du projet</th>
-                <th>Bassin de population</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>Nom du projet</th>
+            <th>Description</th>
+            <th>Date de Realisation</th>
+            <th>Cout</th>
+            <th>Bassin de population</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></td>
+                <td>{{ entity.nomprojet }}</td>
                 <td>{{ entity.description }}</td>
-                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ entity.difficulte }}</td>
+                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</td>
                 <td>{{ entity.cout }}</td>
-                <td>{{ entity.tailleprojet }}</td>
                 <td>{{ entity.bassinPopulation }}</td>
 
                 <td>
-                <ul>
-                    <li>
-                        <a class="btn btn-default" href="{{ path('projet_detail', { 'id': entity.id }) }}">detail</a>
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <a class="btn btn-info" href="{{ path('projet_detail', { 'id': entity.id }) }}">detail</a>
+                        </li>
+                    </ul>
                 </td>
             </tr>
         {% endfor %}

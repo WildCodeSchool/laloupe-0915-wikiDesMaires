@@ -106,4 +106,15 @@ class ProfileFOSUser1Controller extends Controller
     {
         $this->container->get('session')->getFlashBag()->set($action, $value);
     }
+    public function ProfileAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->findByUser($user);
+
+        return $this->render('ApplicationSonataUserBundle:Profile:profile.html.twig', array(
+            'projet'   => $projets
+        ));
+    }
+
 }

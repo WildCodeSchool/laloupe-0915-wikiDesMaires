@@ -27,19 +27,16 @@ header {
 }
 
 #thetable{
-    border: 1px solid black;
     max-width: 97%;
     margin: auto;
 }
 
 td {
-    border: 0.25px solid black;
     text-align: center;
 }
 
 .ui-state-default {
     background-color: white;
-    border: 1px solid black;
     text-align: center;
 }
 
@@ -49,14 +46,12 @@ ul {
 }
 
 .record_properties {
-    border: 1px solid black;
     max-width: 80%;
     margin: auto;
 }
 
 th {
     text-align: center;
-    border: 1px solid black;
 }
 
 li {
@@ -77,6 +72,23 @@ li {
 .tab1 img{
     width: 700px;
     height: 300px;
+}
+/*Style input search*/
+
+#imaginary_container{
+    margin-top:20%; /* Don't copy this */
+}
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
 }
 
 

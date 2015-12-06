@@ -16,6 +16,16 @@
                 <p>Email : {{ app.user.email }}</p>
                 <p>Adresse : {{ app.user.adressemairie }}</p>
                 <p>Commune : {{ app.user.commune.nomcommune }}</p>
+                <p>
+    {#{% for entity in projet %}
+                    <a href="{{ path('sonata_user_profil',{ 'id': entity.id }) }}">
+                        <button class="btn btn-info">mod</button>
+                    </a>
+        {% endfor%}#}
+                    <a href="{{ path('sonata_user_profile_edit') }}">
+                        <button class="btn btn-info">modi</button>
+                    </a>
+        </p>
 
 
             </div>

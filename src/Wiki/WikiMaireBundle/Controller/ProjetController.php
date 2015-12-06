@@ -259,4 +259,14 @@ class ProjetController extends Controller
 
         return $response;
     }
+    public function ProfileAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->findByUser($user);
+
+        return $this->render('ApplicationSonataUserBundle:Profile:profile.html.twig', array(
+            'projet'   => $projets
+        ));
+    }
 }
