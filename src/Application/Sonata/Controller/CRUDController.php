@@ -1111,4 +1111,6 @@ class CRUDController extends Controller
 
         return $this->container->get('form.csrf_provider')->generateCsrfToken($intention);
     }
+
+
 }

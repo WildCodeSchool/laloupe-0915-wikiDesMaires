@@ -12,11 +12,11 @@
 namespace Application\Sonata\UserBundle\Admin\Model;
 
 
+use Application\Sonata\UserBundle\Entity\User;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
-use Sonata\UserBundle\Model\UserInterface;
 
 use FOS\UserBundle\Model\UserManagerInterface;
 
@@ -150,7 +150,7 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                 ->add('bassindepopulation', null, array('label' => 'Bassin de population'))
                 ->add('commune', 'sonata_type_model_list', array(
                     'label'=> 'Commune'))
-                ->add('file', 'file', array(
+                ->add('fil', 'file', array(
                     'label' => 'Photo de profil',
                     'required' => false
 
@@ -159,14 +159,24 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
         ;
     }
 
-    /**
-     * {@inheritdoc}
-     */
+    public function prePersist($user)
+    {
+        $this->manageFileUpload($user);
+    }
+
     public function preUpdate($user)
     {
-        $this->getUserManager()->updateCanonicalFields($user);
-        $this->getUserManager()->updatePassword($user);
+        $this->manageFileUpload($user);
     }
+
+    private function manageFileUpload(User $user)
+    {
+        if ($user->fil) {
+            $user->preUpload();
+            $user->upload();
+        }
+    }
+
 
     /**
      * @param UserManagerInterface $userManager
