@@ -21,6 +21,11 @@ sonata_user_profile:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_profile_1.xml"
     prefix: /profile
 
+sonata_user_profil:
+    path:     /profil
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:Profile" }
+    methods:  [POST, GET]
+
 sonata_user_register:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_registration_1.xml"
     prefix: /register

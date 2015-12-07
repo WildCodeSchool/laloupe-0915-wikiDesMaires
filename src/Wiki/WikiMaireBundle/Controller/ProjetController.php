@@ -197,22 +197,17 @@ class ProjetController extends Controller
      */
     public function deleteAction(Request $request, $id)
     {
-        $form = $this->createDeleteForm($id);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('WikiWikiMaireBundle:Projet')->find($id);
 
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('WikiWikiMaireBundle:Projet')->find($id);
-
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Projet entity.');
-            }
-
-            $em->remove($entity);
-            $em->flush();
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find Projet entity.');
         }
 
-        return $this->redirect($this->generateUrl('projet'));
+        $em->remove($entity);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('sonata_user_profile_show'));
     }
 
     /**
@@ -263,5 +258,15 @@ class ProjetController extends Controller
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
+    }
+    public function ProfileAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->findByUser($user);
+
+        return $this->render('ApplicationSonataUserBundle:Profile:profile.html.twig', array(
+            'projet'   => $projets
+        ));
     }
 }

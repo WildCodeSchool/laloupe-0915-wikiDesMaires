@@ -9,32 +9,41 @@ file that was distributed with this source code.
 
 #}
 
-{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% extends "::base.html.twig" %}
 
-{% block sonata_profile_title %}
-    {{ "title_user_account" | trans({}, 'SonataUserBundle')}} - {{ "title_user_edit_profile" | trans({}, 'SonataUserBundle')}}
-{% endblock %}
+{% block body %}
+    {% block sonata_profile_title %}
+        {{ "title_user_account" | trans({}, 'SonataUserBundle')}} - {{ "title_user_edit_profile" | trans({}, 'SonataUserBundle')}}
+    {% endblock %}
 
-{% block sonata_profile_content %}
-    {% sonata_template_box 'This is the user profile edition template. Feel free to override it.' %}
+    {% block sonata_profile_content %}
 
-    {{ form_errors(form) }}
+        {{ form_errors(form) }}
 
-    {% form_theme form _self %}
-
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{ "title_user_account" | trans({}, 'SonataUserBundle')}}</h3>
-        </div>
-        <div class="panel-body">
-            <form action="{{ path('sonata_user_profile_edit') }}" method="POST" class="form-horizontal">
-                {{ form_widget(form) }}
-                <div class="form-actions">
-                    <button type="submit" name="submit"  class="btn btn-primary pull-right">{{ 'sonata_user_submit'|trans({}, 'SonataUserBundle') }}</button>
+        {% form_theme form _self %}
+        <div class="section">
+            <div class="container">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{ "title_user_account" | trans({}, 'SonataUserBundle')}}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form action="{{ path('sonata_user_profile_edit') }}" method="POST" class="form-horizontal">
+                            {{ form_widget(form) }}
+                            <div class="form-actions">
+                                <button type="submit" name="submit"  class="btn btn-primary pull-right">{{ 'sonata_user_submit'|trans({}, 'SonataUserBundle') }}</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </form>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="span12 col-lg-12">
+                        {% render url("sonata_user_change_password") %}
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    {% render url("sonata_user_profile_edit_authentication") %}
+    {% endblock %}
 {% endblock %}

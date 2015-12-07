@@ -30,6 +30,8 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    session:
+        gc_probability: 0
 
 # Twig Configuration
 twig:
@@ -107,7 +109,7 @@ sonata_user:
     manager_type: orm # can be orm or mongodb
     profile:  # Profile Form (firstname, lastname, etc ...)
         form:
-            type:               application_sonata_user_profile
+            type:               sonata_user_profile
             handler:            sonata.user.profile.form.handler.default
             name:               sonata_user_profile_form
             validation_groups:  [Profile]

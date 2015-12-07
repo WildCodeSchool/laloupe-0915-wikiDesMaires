@@ -18,6 +18,7 @@
                 <p>Commune : {{ app.user.commune.nomcommune }}</p>
 
 
+
             </div>
             <div class="col-md-2  col-md-offset-4">
                 <ul>
@@ -53,7 +54,7 @@
                     <p>{{ entity.description }}</p>
                     <a class="btn btn-info" href="{{ path('projet_detail', { 'id': entity.id }) }}">Detail</a>
                     <a class="btn btn-warning" href="{{ path('projet_edit', { 'id': entity.id }) }}">Editer</a>
-                    <a class="btn btn-danger" href="{{ path('projet_delete', { 'id': entity.id }) }}">Supprimer</a>
+                    <a class="btn btn-danger" href="{{ path('projet_delete', { 'id': entity.id }) }}" onclick="return confirm('Voulez vous Réelement Supprimer ce projet?')">Supprimer</a>
                 </div>
             </div>
         </div>
