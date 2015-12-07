@@ -19,7 +19,7 @@ file that was distributed with this source code.
 {%- endblock form_widget %}
 
 {% block form_widget_simple %}
-    {% if sonata_admin.name == 'file' %}
+    {% if sonata_admin.name == 'fil' %}
     {% set attr = attr|merge({'class': attr.class|default('') }) %}
     {% else %}
     {% set attr = attr|merge({'class': attr.class|default('') ~ ' form-control' }) %}
