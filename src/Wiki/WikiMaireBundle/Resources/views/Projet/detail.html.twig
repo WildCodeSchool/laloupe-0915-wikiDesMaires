@@ -22,8 +22,8 @@
                     </a>
                 </div>
                 <div class="col-md-4  tab2">
-                    <p>Maire : {{ entity.user.lastname}} {{ entity.user.firstname}}<a href="{{ path('sonata_user_profil',{ 'id': entity.id }) }}">Voir son profil</a></p>
-                    <p>Budget : {{ entity.cout }} Euro</p>
+                    <p>Maire : {{ entity.user.lastname}} {{ entity.user.firstname}} <a href="{{ path('sonata_user_profile_show', { 'id': entity.user.id }) }}">Voir son profil</a></p>
+                    <p>Budget : {{ entity.cout }} Euro </p>
                     <p>Date  : {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
                     <p>Contact :</p>
                     <p>Taille du Projet : {{ entity.tailleprojet }}</p>

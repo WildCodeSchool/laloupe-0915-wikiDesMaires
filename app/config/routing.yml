@@ -18,7 +18,7 @@ sonata_user_resetting:
     prefix: /resetting
 
 sonata_user_profile:
-    resource: "@SonataUserBundle/Resources/config/routing/sonata_profile_1.xml"
+    resource: "@ApplicationSonataUserBundle/Resources/config/routing/sonata_profile_1.yml"
     prefix: /profile
 
 sonata_user_profil:

@@ -32,14 +32,18 @@ class ProfileFOSUser1Controller extends Controller
      *
      * @throws AccessDeniedException
      */
-    public function showAction()
+    public function showAction($id=0)
     {
         $em = $this->getDoctrine()->getManager();
-        $user = $this->getUser();
+        if ($id==0)
+            $user = $this->getUser();
+        else
+            $user = $em->getRepository('ApplicationSonataUserBundle:User')->find($id);
         $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->findByUser($user);
 
         return $this->render('ApplicationSonataUserBundle:Profile:show.html.twig', array(
-            'projet'   => $projets
+            'projet'   => $projets,
+            'user'     => $user
         ));
     }
 
@@ -105,16 +109,6 @@ class ProfileFOSUser1Controller extends Controller
     protected function setFlash($action, $value)
     {
         $this->container->get('session')->getFlashBag()->set($action, $value);
-    }
-    public function ProfileAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $user = $this->getUser();
-        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->findByUser($user);
-
-        return $this->render('ApplicationSonataUserBundle:Profile:profile.html.twig', array(
-            'projet'   => $projets
-        ));
     }
 
 }
