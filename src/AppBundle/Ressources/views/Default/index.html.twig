@@ -1,4 +1,3 @@
-
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
@@ -48,19 +47,19 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img class="fill" style="background-image:url({{ asset('bundles/wikiwikimaire/img/mairie1.jpg') }})">
+                <img class="fill" background mairie1 src="{{ asset('bundles/wikiwikimaire/img/mairie1.jpg') }}" alt="mairie1">
                 <div class="carousel-caption">
                     <h2>Votre espace de maire à maire</h2>
                 </div>
             </div>
             <div class="item">
-                <img class="fill" style="background-image:url({{ asset('bundles/wikiwikimaire/img/image2.png') }})">
+                <img class="fill" background image2 src="{{ asset('bundles/wikiwikimaire/img/image2.png') }}" alt="image2">
                 <div class="carousel-caption">
                     <h2>Vos Projets ...</h2>
                 </div>
             </div>
             <div class="item">
-                <img class="fill" style="background-image:url({{ asset('bundles/wikiwikimaire/img/document.jpg') }})">
+                <img class="fill" background-image document src="{{ asset('bundles/wikiwikimaire/img/document.jpg') }}" alt="document">
                 <div class="carousel-caption">
                     <h2>Vos ressources ...</h2>
                 </div>
@@ -134,10 +133,11 @@
                 <div class="well">
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="{{ path('contact') }}" class="btn btn-lg btn-default btn-block btn-color center-block">Inscription</a>
+                            <a class="btn btn-lg btn-default btn-block btn-color center-block" href="contact.html">Inscription</a>
                         </div>
                     </div>
                 </div>
 
                 <hr>
 {% endblock %}
+

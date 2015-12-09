@@ -1,0 +1,86 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/modern-business.css">
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/contact.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block body -%}
+
+
+
+<body class="my_background" style="background-image:url({{ asset('bundles/wikiwikimaire/img/contact.png') }})" >
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('wiki_wiki_maire_homepage') }}"><p><span class="glyphicon glyphicon-home"></span> Accueil</p></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Contact Details Column -->
+<div class="col-md-3">
+</div>
+
+<!-- /.row -->
+
+<!-- Contact Form -->
+<!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+<div class="row">
+    <div class="col-md-5">
+        <h3>Nous contacter</h3>
+        <form name="sentMessage" id="contactForm" novalidate>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label>Nom & Prenom:</label>
+                    <input type="text" class="form-control" id="name" required data-validation-required-message="Indiquer votre nom & prenom.">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label>Numero telephone:</label>
+                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Votre numero de telephone.">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label>Adresse Email:</label>
+                    <input type="email" class="form-control" id="email" required data-validation-required-message="Votre Adresse Email.">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label>Message:</label>
+                    <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Votre message" maxlength="999" style="resize:none"></textarea>
+                </div>
+            </div>
+            <div id="success"></div>
+            <!-- For success/fail messages -->
+            <button type="submit" class="btn btn-primary center-block">Envoyer Message</button>
+        </form>
+    </div>
+
+</div>
+<!-- /.row -->
+
+<hr>
+
+{% endblock %}

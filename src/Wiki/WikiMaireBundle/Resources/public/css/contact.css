@@ -1,0 +1,38 @@
+label {
+    color: #263CAC;
+    font-size: 24px;
+}
+h2 {
+    color:#4832B4;
+    font-size:24px;
+}
+h3 {
+    color: red;
+    font-size: 40px;
+    margin-top: 3cm;
+    margin-bottom: 2cm;
+    text-align: center;
+}
+p {
+    text-align: center;
+    color: red;
+}
+.my_background {
+    background: no-repeat;
+    background-size: cover;
+    ;
+}
+.help-block {
+    text-align: center;
+}
+.navbar-brand {
+    font-size: 28px;
+    color: #A9587A;
+}
+.btn {
+    background-color: #337AB7;
+}
+.btn:hover {
+    background-color: #CCC;
+}
+
