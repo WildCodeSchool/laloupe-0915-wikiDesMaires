@@ -2,13 +2,20 @@
 
 namespace Wiki\WikiMaireBundle\Tests\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
+use Liip\FunctionalTestBundle\Test\WebTestCase;
 
 class ProjetControllerTest extends WebTestCase
 {
 
     public function testPageIndex()
     {
+        $fixtures = array(
+            'Wiki\WikiMaireBundle\DataFixtures\ORM\LoadCommuneData',
+            'Wiki\WikiMaireBundle\DataFixtures\ORM\LoadUserData'
+        );
+        $this->fixtures = $this->loadFixtures($fixtures, null, 'doctrine', true)->getReferenceRepository();
+
         // Create a new project to browse the application
         $client = static::createClient(array(), array(
             'PHP_AUTH_USER' => 'celine',
@@ -94,7 +101,7 @@ class ProjetControllerTest extends WebTestCase
         // Il faut suivre la redirection
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $crawler = $client->followRedirect();
-        $this->assertEquals('Sonata\AdminBundle\Controller\CoreController::dashboardAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Application\Sonata\UserBundle\Controller\ChangePasswordFOSUser1Controller::changePasswordAction', $client->getRequest()->attributes->get('_controller'));
     }
 
     public function testPageLoginAdminCo()
@@ -131,7 +138,7 @@ class ProjetControllerTest extends WebTestCase
         // Il faut suivre la redirection
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $crawler = $client->followRedirect();
-        $this->assertEquals('Application\Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Application\Sonata\UserBundle\Controller\ChangePasswordFOSUser1Controller::changePasswordAction', $client->getRequest()->attributes->get('_controller'));
     }
 
 
@@ -154,6 +161,8 @@ class ProjetControllerTest extends WebTestCase
         ));
 
         $crawler = $client->request('GET', '/profile/');
+        $this->assertEquals('Application\Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $link = $crawler
             ->filter('a:contains("Créer un nouveau Projet")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list

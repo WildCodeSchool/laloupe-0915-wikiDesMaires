@@ -8,6 +8,7 @@ use Application\Sonata\UserBundle\Entity\User;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use FOS\UserBundle\Model\UserManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -20,7 +21,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
     {
 
         // Get our userManager, you must implement `ContainerAwareInterface`
-        $userManager = $this->container->get('fos_user.user_manager');
+        $userManager = $this->getUserManager();
 
         // Creation de User et des details
         $user1 = $userManager->createUser();
@@ -68,6 +69,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user4->setEmail('admin4@email.com');
         $user4->setRoles(array('ROLE_USER'));
         $user4->setFirstname('Celine');
+        $user4->setCommune($manager->merge($this->getReference('commune-poulx')));
         $user4->setLastname('Langlade');
         $user4->setPhone('0768298272');
         $user4->setAdressemairie('18 Rue de la Gare');
@@ -105,8 +107,16 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $this->container = $container;
     }
 
+    /**
+     * @return \Sonata\UserBundle\Model\UserManagerInterface
+     */
+    public function getUserManager()
+    {
+        return $this->container->get('fos_user.user_manager');
+    }
+
     public function getOrder()
     {
-        return 1; // ordre d'appel
+        return 2; // ordre d'appel
     }
 }

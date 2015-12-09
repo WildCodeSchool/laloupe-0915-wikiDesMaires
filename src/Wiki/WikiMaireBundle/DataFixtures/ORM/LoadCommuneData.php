@@ -9,6 +9,7 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Wiki\WikiMaireBundle\Entity\Commune;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+
 class LoadCommuneData extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
 {
     /**
@@ -22,7 +23,8 @@ class LoadCommuneData extends AbstractFixture implements FixtureInterface, Order
             $data = explode(',', $line);
             $entity = new Commune();
             $entity->setNomcommune(str_replace('"', '', $data[1]));
-
+            if ($data[0]=='"30206"')
+                $this->setReference('commune-poulx', $entity);
             $em->persist($entity);
         }
         fclose($stream);
@@ -35,7 +37,7 @@ class LoadCommuneData extends AbstractFixture implements FixtureInterface, Order
      */
     public function getOrder()
     {
-        return 2;
+        return 1;
     }
     /**
      * {@inheritDoc}
