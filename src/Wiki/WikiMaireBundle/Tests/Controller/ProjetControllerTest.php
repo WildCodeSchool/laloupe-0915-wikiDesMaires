@@ -131,7 +131,7 @@ class ProjetControllerTest extends WebTestCase
         // Il faut suivre la redirection
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
         $crawler = $client->followRedirect();
-        $this->assertEquals('Application\Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction', $client->getRequest()->attributes->get('_controller'));
     }
 
 
