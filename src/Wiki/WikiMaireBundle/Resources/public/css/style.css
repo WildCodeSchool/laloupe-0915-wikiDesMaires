@@ -69,9 +69,7 @@ li {
     width: 100px;
     height: 100px;
 }
-.photoprojet .photoprofil p{
-    text-align: center;
-}
+
 .photoprojet .photoprofil{
     background-color: #f8f8f8;
     border-radius: 10px;
@@ -97,7 +95,13 @@ li {
     border:0;
     background:transparent;
 }
+.odd{
+    background-color: white;
+}
 
+.even{
+    background-color: #FAF0E6;
+}
 
 
 

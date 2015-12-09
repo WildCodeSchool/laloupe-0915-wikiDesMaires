@@ -19,45 +19,58 @@
                 <p>Genre : {{ user.gender }}</p>
                 <p>Biographie : {{ user.biography }}</p>
                 {% if user.username == app.user %}
-                <p><a href="{{ path('sonata_user_profile_edit') }}">
-                        <button class="btn btn-primary">modifier son profil</button>
-                    </a></p>
+                    <p><a href="{{ path('sonata_user_profile_edit') }}">
+                            <button class="btn btn-default">modifier son profil&nbsp;<i class="glyphicon glyphicon-pencil"></i></button>
+                        </a></p>
                 {% endif %}
 
             </div>
-                {% for entity in projet %}
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
-                                </a>
-                            </div>
-                            <div class="col-md-5">
-                                <h3>{{ entity.nomprojet }}</h3>
-                                <p>{{ entity.description }}</p>
-                                <a class="btn btn-info" href="{{ path('projet_detail', { 'id': entity.id }) }}">Detail</a>
-                                {% if user.username == app.user %}
-                                    <a class="btn btn-warning" href="{{ path('projet_edit', { 'id': entity.id }) }}">Editer</a>
-                                    <a class="btn btn-danger" href="{{ path('projet_delete', { 'id': entity.id }) }}" onclick="return confirm('Voulez vous Réelement Supprimer ce projet?')">Supprimer</a>
-                                {% endif %}
-                            </div>
+            <div class="col-md-3 col-md-offset-5">
+                <ul>
+                    <li>
+                        <a href="{{ path('projet_create') }}">
+                            <button class="btn btn-default ">Créer un nouveau Projet &nbsp;<i class="glyphicon glyphicon-plus"></i></button>
+                        </a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="{{ path('projet') }}">
+                            <button class="btn btn-default">Rechercher un projet &nbsp;<i class="glyphicon glyphicon-search"></i></button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <h1 align="center">Mes Projets</h1>
+        <hr>
 
-                    <hr>
+                {% for entity in projet %}
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#">
+                            <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>{{ entity.nomprojet }}</h3>
+                        <p>{{ entity.description }}</p>
+                        <a class="btn btn-default" href="{{ path('projet_detail', { 'id': entity.id }) }}">Detail &nbsp;<i class="glyphicon glyphicon-list"></i></a>
+                        {% if user.username == app.user %}
+                            <a class="btn btn-default" href="{{ path('projet_edit', { 'id': entity.id }) }}">Editer &nbsp;<i class="glyphicon glyphicon-edit"></i></a>
+                            <a class="btn btn-default" href="{{ path('projet_delete', { 'id': entity.id }) }}" onclick="return confirm('Voulez vous Réelement Supprimer ce projet?')">Supprimer &nbsp;<i class="glyphicon glyphicon-remove-circle"></i></a>
+                        {% endif %}
+                    </div>
+
+
+                     </div>
+                     <hr>
                 {% endfor %}
+
+
 
         </div>
     </div>
-    <ul>
-        <li>
-            <a href="{{ path('projet_create') }}">
-                <button class="btn btn-info">Créer un nouveau Projet</button>
-            </a>
-        </li>
-        <br>
-        <li>
-            <a href="{{ path('projet') }}">
-                <button class="btn btn-info">Rechercher un projet</button>
-            </a>
-        </li>
-    </ul>
+
 
 {% endblock %}

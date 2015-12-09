@@ -1,0 +1,24 @@
+services:
+    application.sonata.user.profile.form.type:
+        class: Application\Sonata\UserBundle\Form\Type\ProfileType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: application_sonata_user_profile }
+
+    application.sonata.user.profile.form:
+        factory_method: createNamed
+        factory_service: form.factory
+        class: Symfony\Component\Form\Form
+        arguments:
+            - %sonata.user.profile.form.name%
+            - @application.sonata.user.profile.form.type
+            - null
+            - { validation_groups: %sonata.user.profile.form.validation_groups%, translation_domain: SonataUserBundle }
+
+    application.sonata.user.profile.form.handler:
+        class: Sonata\UserBundle\Form\Handler\ProfileFormHandler
+        scope: request
+        arguments:
+            - @application.sonata.user.profile.form
+            - @request
+            - @fos_user.user_manager

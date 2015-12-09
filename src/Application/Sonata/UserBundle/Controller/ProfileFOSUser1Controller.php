@@ -35,11 +35,11 @@ class ProfileFOSUser1Controller extends Controller
     public function showAction($id=0)
     {
         $em = $this->getDoctrine()->getManager();
-        if ($id==0)
+        if ($id == 0)
             $user = $this->getUser();
         else
             $user = $em->getRepository('ApplicationSonataUserBundle:User')->find($id);
-        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->findByUser($user);
+            $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->findByUser($user);
 
         return $this->render('ApplicationSonataUserBundle:Profile:show.html.twig', array(
             'projet'   => $projets,
@@ -81,13 +81,13 @@ class ProfileFOSUser1Controller extends Controller
      */
     public function editProfileAction()
     {
-        $user = $this->container->get('security.context')->getToken()->getUser();
+        $user = $this->getUser();
         if (!is_object($user) || !$user instanceof UserInterface) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }
 
-        $form = $this->container->get('sonata.user.profile.form');
-        $formHandler = $this->container->get('sonata.user.profile.form.handler');
+        $form = $this->container->get('application.sonata.user.profile.form');
+        $formHandler = $this->container->get('application.sonata.user.profile.form.handler');
 
         $process = $formHandler->process($user);
         if ($process) {
