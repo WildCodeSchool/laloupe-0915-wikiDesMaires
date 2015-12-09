@@ -4,6 +4,7 @@ header {
 }
 
 .nav {
+    margin-bottom: 30px;
     background-color: #f8f8f8;
 }
 
@@ -63,6 +64,15 @@ li {
 .photoprojet img{
     width: 400px;
     height: 200px;
+}
+.photoprojet .photoprofil img{
+    width: 100px;
+    height: 100px;
+}
+
+.photoprojet .photoprofil{
+    background-color: #f8f8f8;
+    border-radius: 10px;
 }
 .tab1 img{
     width: 700px;

@@ -32,8 +32,8 @@
     </script>
 {% endblock %}
 {% block body -%}
-{#
-    <h1 align="center">Liste des Projets</h1>#}
+    {#
+        <h1 align="center">Liste des Projets</h1>#}
     <ul>
         <a href="{{ path('projet_create') }}">
             <button class="btn btn-info">Créer un nouveau Projet</button>
@@ -63,37 +63,37 @@
         <label for="tags">Rechercher un projet: </label>
         <input id="tags" type="text">
     </div>#}
+    <div class="row">
+        <div class="col-md-12">
+            <table class="records_list table-hover" id="thetable">
+                <thead>
+                <tr>
+                    <th>Nom du projet</th>
+                    <th>Description</th>
+                    <th>Date de Realisation</th>
+                    <th>Bassin de population</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for entity in entities %}
+                    <tr>
+                        <td>{{ entity.nomprojet }}</td>
+                        <td>{{ entity.description }}</td>
+                        <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</td>
+                        <td>{{ entity.bassinPopulation }}</td>
 
-    <table class="records_list table-hover" id="thetable">
-        <thead>
-        <tr>
-            <th>Nom du projet</th>
-            <th>Description</th>
-            <th>Date de Realisation</th>
-            <th>Cout</th>
-            <th>Bassin de population</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td>{{ entity.nomprojet }}</td>
-                <td>{{ entity.description }}</td>
-                <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</td>
-                <td>{{ entity.cout }}</td>
-                <td>{{ entity.bassinPopulation }}</td>
-
-                <td>
-                    <ul>
-                        <li>
-                            <a class="btn btn-info" href="{{ path('projet_detail', { 'id': entity.id }) }}">detail</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
+                        <td>
+                            <ul>
+                                <li>
+                                    <a class="btn btn-info" href="{{ path('projet_detail', { 'id': entity.id }) }}">detail</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}

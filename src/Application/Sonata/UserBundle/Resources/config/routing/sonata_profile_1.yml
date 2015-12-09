@@ -1,0 +1,28 @@
+
+fos_user_profile_show:
+    path:     /
+    defaults: { _controller: "SonataUserBundle:ProfileFOSUser1:show" }
+    methods: [GET]
+
+fos_user_profile_edit_authentication:
+    pattern:     /edit-authentication
+    defaults: { _controller: "SonataUserBundle:ProfileFOSUser1:editAuthentication" }
+
+fos_user_profile_edit:
+    path:     /edit-profile
+    defaults: { _controller: "SonataUserBundle:ProfileFOSUser1:editProfile" }
+
+sonata_user_profile_show:
+    path:     /{id}
+    defaults: { _controller: "SonataUserBundle:ProfileFOSUser1:show", id: 0 }
+    methods:  [GET]
+    requirements:
+        id:  \d+
+
+sonata_user_profile_edit_authentication:
+    path:     /edit-authentication
+    defaults: { _controller: "SonataUserBundle:ProfileFOSUser1:editAuthentication" }
+
+sonata_user_profile_edit:
+    path:     /edit-profile
+    defaults: { _controller: "SonataUserBundle:ProfileFOSUser1:editProfile" }

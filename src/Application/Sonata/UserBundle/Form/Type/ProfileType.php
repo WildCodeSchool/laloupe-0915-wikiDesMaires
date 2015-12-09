@@ -63,6 +63,15 @@ class ProfileType extends \Sonata\UserBundle\Form\Type\ProfileType
                 'label'    => 'form.label_phone',
                 'required' => false
             ))
+            ->add('email', null, array(
+                'label'    => 'form.label_email',
+                'required' => false
+            ))
+            ->add('adressemairie', null, array(
+                'label'    => 'Adresse',
+                'required' => false
+            ))
+
         ;
     }
 
