@@ -140,9 +140,9 @@ class ProjetControllerTest extends WebTestCase
         // Test de la page Profile en étant pas connecté
         $client = static::createClient();
         $crawler = $client->request('GET', '/profile/');
-        $this->assertEquals(302, $client->getResponse()->getStatusCode());
-        $crawler = $client->followRedirect();
-        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals(500, $client->getResponse()->getStatusCode());
+
+        $this->assertEquals('Application\Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
     }
 
     public function testPageProfileConnecté()
