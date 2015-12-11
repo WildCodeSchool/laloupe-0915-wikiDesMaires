@@ -23,7 +23,7 @@ header {
     padding-top:60px;
 }
 .login h1{
-    font-family: monospace;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #0d70b7;
 }
 
@@ -97,7 +97,7 @@ li {
     background:transparent;
 }
 .photoprojet h4 {
-    font-family: "Droid Sans", sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 
