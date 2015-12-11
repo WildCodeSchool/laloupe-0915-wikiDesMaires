@@ -3,6 +3,7 @@ header {
     background-color: black;
 }
 
+
 .nav {
     margin-bottom: 30px;
     background-color: #f8f8f8;
@@ -19,7 +20,11 @@ header {
     right: 0;
     left: 0;
     width: 800px;
-    padding-top:200px;
+    padding-top:60px;
+}
+.login h1{
+    font-family: monospace;
+    color: #0d70b7;
 }
 
 #thetable{
@@ -70,10 +75,6 @@ li {
     height: 100px;
 }
 
-.photoprojet .photoprofil{
-    background-color: #f8f8f8;
-    border-radius: 10px;
-}
 .tab1 img{
     width: 700px;
     height: 300px;
@@ -94,6 +95,9 @@ li {
 .stylish-input-group button{
     border:0;
     background:transparent;
+}
+.photoprojet h4 {
+    font-family: "Droid Sans", sans-serif;
 }
 
 

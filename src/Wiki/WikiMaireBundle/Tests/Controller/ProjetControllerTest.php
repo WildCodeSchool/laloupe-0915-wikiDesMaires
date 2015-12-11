@@ -451,6 +451,7 @@ class ProjetControllerTest extends WebTestCase
         $crawler = $client->click($link);
 
         $this->assertEquals('Sonata\UserBundle\Controller\AdminSecurityController::logoutAction', $client->getRequest()->attributes->get('_controller'));
+
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
 
 
@@ -461,10 +462,22 @@ class ProjetControllerTest extends WebTestCase
             ->eq(0)// select the second link in the list
             ->link();
 
+
+
+
         $crawler = $client->click($link);
 
         $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::ProfileAction', $client->getRequest()->attributes->get('_controller'));
         $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+    }
+    public function testPageProjet()
+    {
+        // Test de la page Profile en étant pas connecté
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/projet/');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+
+        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
     }
 }
 
