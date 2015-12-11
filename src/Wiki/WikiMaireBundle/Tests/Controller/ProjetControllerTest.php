@@ -196,5 +196,14 @@ class ProjetControllerTest extends WebTestCase
 
         $this->assertEquals('Sonata\UserBundle\Controller\AdminSecurityController::logoutAction', $client->getRequest()->attributes->get('_controller'));
     }
+    public function testPageProjet()
+    {
+        // Test de la page Profile en étant pas connecté
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/projet/');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+
+        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));
+    }
 
 }
