@@ -73,6 +73,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user4->setLastname('Langlade');
         $user4->setPhone('0768298272');
         $user4->setAdressemairie('18 Rue de la Gare');
+        $this->setReference('user-celine', $user4);
 
         // Creation de User et des details
         $user5 = $userManager->createUser();

@@ -68,7 +68,8 @@ class ProjetControllerTest extends WebTestCase
     {
         $fixtures = array(
             'Wiki\WikiMaireBundle\DataFixtures\ORM\LoadCommuneData',
-            'Wiki\WikiMaireBundle\DataFixtures\ORM\LoadUserData'
+            'Wiki\WikiMaireBundle\DataFixtures\ORM\LoadUserData',
+            'Wiki\WikiMaireBundle\DataFixtures\ORM\LoadProjetData'
         );
         $this->fixtures = $this->loadFixtures($fixtures, null, 'doctrine', true)->getReferenceRepository();
 
@@ -287,7 +288,7 @@ class ProjetControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/profile/');
         $this->assertEquals('Application\Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
 
         //Test du bouton "Créer un nouveau projet"
         $link = $crawler
@@ -315,16 +316,19 @@ class ProjetControllerTest extends WebTestCase
 
 
         //Test du bouton "Profil"
- /*       $crawler = $client->request('GET', '/profile/');
+        $crawler = $client->request('GET', '/profile/');
         $link = $crawler
-            ->filter('a:contains("Profil")')// find all links with the text "Greet"
+            ->filter('a:contains("Profile")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
             ->link();
 
         $crawler = $client->click($link);
 
         $this->assertEquals('Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction', $client->getRequest()->attributes->get('_controller'));
-        $this->assertEquals(301, $client->getResponse()->getStatusCode()); */
+        $this->assertEquals(301, $client->getResponse()->getStatusCode());
+        $crawler = $client->followRedirect();
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals('Application\Sonata\UserBundle\Controller\ProfileFOSUser1Controller::showAction', $client->getRequest()->attributes->get('_controller'));
 
 
         //Test du bouton "Logout"
@@ -363,7 +367,7 @@ class ProjetControllerTest extends WebTestCase
         $this->assertTrue(200 === $client->getResponse()->getStatusCode());
 
         //Test du bouton "détail"
-/*        $crawler = $client->request('GET', '/profile/');
+        $crawler = $client->request('GET', '/profile/');
         $link = $crawler
           ->filter('a:contains("Detail")')// find all links with the text "Greet"
           ->eq(0)// select the second link in the list
@@ -376,7 +380,7 @@ class ProjetControllerTest extends WebTestCase
 
 
         //Test du bouton "Editer"
-
+        $crawler = $client->request('GET', '/profile/');
         $link = $crawler
             ->filter('a:contains("Editer")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
@@ -384,11 +388,12 @@ class ProjetControllerTest extends WebTestCase
 
         $crawler = $client->click($link);
 
-        $this->assertEquals('Application\Sonata\UserBundle\Controller\ProfileFOSUser1Controller::editAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::editAction', $client->getRequest()->attributes->get('_controller'));
         $this->assertTrue(200 === $client->getResponse()->getStatusCode());
 
 
         //Test du bouton "Supprimer"
+        $crawler = $client->request('GET', '/profile/');
         $link = $crawler
             ->filter('a:contains("Supprimer")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
@@ -396,9 +401,9 @@ class ProjetControllerTest extends WebTestCase
 
         $crawler = $client->click($link);
 
-        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::profilAction', $client->getRequest()->attributes->get('_controller'));
-        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
-*/
+        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::deleteAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+
     }
         //Test page Mon profil
     public function testPageMonProfile()
@@ -411,7 +416,7 @@ class ProjetControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/profil');
         $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::ProfileAction', $client->getRequest()->attributes->get('_controller'));
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
 
         //Test du bouton "modifier son profil"
         $link = $crawler
