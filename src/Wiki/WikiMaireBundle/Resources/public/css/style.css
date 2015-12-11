@@ -3,6 +3,7 @@ header {
     background-color: black;
 }
 
+
 .nav {
     margin-bottom: 30px;
     background-color: #f8f8f8;
@@ -19,7 +20,11 @@ header {
     right: 0;
     left: 0;
     width: 800px;
-    padding-top:150px;
+    padding-top:60px;
+}
+.login h1{
+    font-family: monospace;
+    color: #0d70b7;
 }
 
 #thetable{
