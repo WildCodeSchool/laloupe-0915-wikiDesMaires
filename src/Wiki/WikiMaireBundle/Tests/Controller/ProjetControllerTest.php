@@ -139,7 +139,7 @@ class ProjetControllerTest extends WebTestCase
 
         //Test du bouton "Profil"
         $link = $crawler
-            ->filter('a:contains("Profile")')// find all links with the text "Greet"
+            ->filter('a:contains("Profil")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
             ->link();
 
@@ -318,7 +318,7 @@ class ProjetControllerTest extends WebTestCase
         //Test du bouton "Profil"
         $crawler = $client->request('GET', '/profile/');
         $link = $crawler
-            ->filter('a:contains("Profile")')// find all links with the text "Greet"
+            ->filter('a:contains("Profil")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
             ->link();
 
@@ -357,7 +357,7 @@ class ProjetControllerTest extends WebTestCase
 
         //Test du bouton "modifier son profil"
         $link = $crawler
-            ->filter('a:contains("modifier son profil")')// find all links with the text "Greet"
+            ->filter('a:contains("modifier mon profil")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
             ->link();
 
@@ -420,7 +420,7 @@ class ProjetControllerTest extends WebTestCase
 
         //Test du bouton "modifier son profil"
         $link = $crawler
-            ->filter('a:contains("modifier son profil")')// find all links with the text "Greet"
+            ->filter('a:contains("modifier mon profil")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
             ->link();
 
@@ -431,7 +431,7 @@ class ProjetControllerTest extends WebTestCase
 
         //Test du bouton "Profil"
         $link = $crawler
-            ->filter('a:contains("Profile")')// find all links with the text "Greet"
+            ->filter('a:contains("Profil")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
             ->link();
 
