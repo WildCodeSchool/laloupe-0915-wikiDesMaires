@@ -7,79 +7,81 @@
 
     <div class="container photoprojet">
         <div class="row">
-            <div class="col-md-4 photoprofil">
+            <div class="col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 align="center">Profil</h4>
+                        <h4 align="center">Commune : {{ user.commune.nomcommune }}</h4>
+                        <h5 align="center">Code Postal : {{ user.commune.id }}</h5>
                     </div>
                     <div class="panel-body">
-                <img src="{{app.request.basepath}}/photos/{{ user.photoprofil }}" class="img-circle" >
-
-                <p>Nom : {{ user.firstname }}</p>
-                <p>Prenom(s) : {{ user.lastname }}</p>
-                <p>Email : {{ user.email }}</p>
-                <p>Adresse : {{ user.adressemairie }}</p>
-                <p>Commune : {{ user.commune.nomcommune }}</p>
-                <p>Contact : {{ user.phone }}</p>
-                <p>Genre : {{ user.gender }}</p>
-                <p>Biographie : {{ user.biography }}</p>
-                {% if user.username == app.user %}
-                    <p><a href="{{ path('sonata_user_profile_edit') }}">
-                            <button class="btn btn-default">Modifier mon profil&nbsp;<i class="glyphicon glyphicon-pencil"></i></button>
-                        </a></p>
-                {% endif %}
-                </div>
+                        <h4>Déscription de la commune : </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida dictum arcu eget pharetra. Nulla elementum est tempus eros malesuada, id sagittis sem ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam sagittis ante a velit malesuada ultricies. Etiam dapibus venenatis neque non aliquet. Vestibulum massa ligula, pulvinar ac euismod in, sagittis tempus tortor. In facilisis, metus quis rutrum consectetur, urna lorem vulputate velit, vitae porta magna risus ac lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Aliquam metus dui, dignissim sit amet sagittis quis, condimentum id ante. Nullam congue at velit a blandit. Fusce aliquam tincidunt purus, quis iaculis velit vestibulum vel. Duis ut ultricies justo, at maximus augue. Ut euismod justo in sagittis convallis.
+                           Sed mi eros, rhoncus vel tortor in, tincidunt hendrerit augue. Cras orci lectus, laoreet a dolor sollicitudin, commodo feugiat ex. Suspendisse mattis nulla eget pharetra gravida. Praesent at ex vitae diam malesuada consectetur. Pellentesque eget pretium neque. Aliquam sed ligula eros. Sed sit amet tortor vel dolor condimentum interdum a eget mi. Nulla lectus libero, semper sed consequat quis, venenatis at nunc. In ac accumsan diam. Integer eget nisi augue.
+                        </p>
                     </div>
+                </div>
 
-                        <a href="{{ path('projet_create') }}">
-                            <button class="btn btn-default ">Créer un Projet &nbsp;<i class="glyphicon glyphicon-plus"></i></button>
-                        </a>
-
-                        <a href="{{ path('projet') }}">
-                            <button class="btn btn-default">Rechercher un projet &nbsp;<i class="glyphicon glyphicon-search"></i></button>
-                        </a>
-
-            </div>
-
-            <div class="col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 align="center">Mes Projets</h4>
                     </div>
                     <div class="panel-body">
                     {% for entity in projet %}
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="#">
-                            <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
-                        </a>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="#">
+                                    <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>{{ entity.nomprojet }}</h3>
+                                <p>{{ entity.description }}</p>
+                                <a class="btn btn-default" href="{{ path('projet_detail', { 'id': entity.id }) }}">Detail &nbsp;<i class="glyphicon glyphicon-list"></i></a>
+                                {% if user.username == app.user %}
+                                    <a class="btn btn-default" href="{{ path('projet_edit', { 'id': entity.id }) }}">Editer &nbsp;<i class="glyphicon glyphicon-edit"></i></a>
+                                    <a class="btn btn-default" href="{{ path('projet_delete', { 'id': entity.id }) }}" onclick="return confirm('Voulez vous Réelement Supprimer ce projet?')">Supprimer &nbsp;<i class="glyphicon glyphicon-remove-circle"></i></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
                     </div>
-                    <div class="col-md-8">
-                        <h3>{{ entity.nomprojet }}</h3>
-                        <p>{{ entity.description }}</p>
-                        <a class="btn btn-default" href="{{ path('projet_detail', { 'id': entity.id }) }}">Detail &nbsp;<i class="glyphicon glyphicon-list"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 photoprofil">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 align="center">Profil</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="{{app.request.basepath}}/photos/{{ user.photoprofil }}" class="img-circle" >
+                        <p>Nom : {{ user.firstname }}</p>
+                        <p>Prenom(s) : {{ user.lastname }}</p>
+                        <p>Email : {{ user.email }}</p>
+                        <p>Adresse : {{ user.adressemairie }}</p>
+                        <p>Commune : {{ user.commune.nomcommune }}</p>
+                        <p>Contact : {{ user.phone }}</p>
+                        <p>Genre : {{ user.gender }}</p>
+                        <p>Biographie : {{ user.biography }}</p>
                         {% if user.username == app.user %}
-                            <a class="btn btn-default" href="{{ path('projet_edit', { 'id': entity.id }) }}">Editer &nbsp;<i class="glyphicon glyphicon-edit"></i></a>
-                            <a class="btn btn-default" href="{{ path('projet_delete', { 'id': entity.id }) }}" onclick="return confirm('Voulez vous Réelement Supprimer ce projet?')">Supprimer &nbsp;<i class="glyphicon glyphicon-remove-circle"></i></a>
+                            <p><a href="{{ path('sonata_user_profile_edit') }}">
+                                    <button class="btn btn-default">Modifier mon profil&nbsp;<i class="glyphicon glyphicon-pencil"></i></button>
+                                </a></p>
                         {% endif %}
                     </div>
-
-
-                     </div>
-                     <hr>
-                {% endfor %}
-                        </div>
-                    </div>
+                </div>
+                <a href="{{ path('projet_create') }}">
+                    <button class="btn btn-default ">Proposer un Projet &nbsp;<i class="glyphicon glyphicon-plus"></i></button>
+                </a>
+                <a href="{{ path('projet') }}">
+                    <button class="btn btn-default">Rechercher un projet &nbsp;<i class="glyphicon glyphicon-search"></i></button>
+                </a>
             </div>
-        </div>
-
-
-
-
 
 
         </div>
     </div>
+</div>
 
 
 {% endblock %}
