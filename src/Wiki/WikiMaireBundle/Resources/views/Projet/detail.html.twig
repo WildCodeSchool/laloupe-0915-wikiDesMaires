@@ -42,19 +42,4 @@
         </div>
 
     </div>
-    {#<ul>
-
-
-        <li>{{ entity.description }}</li>
-        <li>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</li>
-        <li>{{ entity.difficulte }}</li>
-        <li>{{ entity.cout }}</li>
-        <li>{{ entity.tailleprojet }}</li>
-        <li>{{ entity.bassinPopulation }}</li>
-        <li>{{ entity.user.username}}</li>
-        <a href="#">
-            <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
-        </a>
-
-    </ul>#}
 {% endblock %}

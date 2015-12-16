@@ -21,6 +21,10 @@ class Commune
      */
     private $nomcommune;
 
+    /**
+     * @var string
+     */
+    private $descriptioncommune;
 
     /**
      * Get id
@@ -54,5 +58,29 @@ class Commune
     public function getNomcommune()
     {
         return $this->nomcommune;
+    }
+
+    /**
+     * Set descriptioncommune
+     *
+     * @param string $descriptioncommune
+     *
+     * @return descriptioncommune
+     */
+    public function setDescriptioncommune($descriptioncommune)
+    {
+        $this->descriptioncommune = $descriptioncommune;
+
+        return $this;
+    }
+
+    /**
+     * Get descirption
+     *
+     * @return string
+     */
+    public function getDescriptioncommune()
+    {
+        return $this->descriptioncommune;
     }
 }

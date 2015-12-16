@@ -13,8 +13,7 @@ Wiki\WikiMaireBundle\Entity\Projet:
             type: string
             length: 255
         description:
-            type: string
-            length: 255
+            type: text
         daterealisation:
             type: date
         difficulte:
@@ -31,7 +30,6 @@ Wiki\WikiMaireBundle\Entity\Projet:
         photo:
             type: string
             length: 255
-
 
     manyToOne:
         user:

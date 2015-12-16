@@ -12,4 +12,5 @@ Wiki\WikiMaireBundle\Entity\Commune:
         nomcommune:
             type: string
             length: 255
+
     lifecycleCallbacks: {  }
