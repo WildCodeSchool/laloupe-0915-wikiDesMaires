@@ -1,0 +1,71 @@
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/home.css') }}" type="text/css"/>
+
+    <!-- Optional theme -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+{% endblock %}
+
+{% block body -%}
+
+    <!-- Infos de connection -->
+    <div class="container info_co">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">
+            <ul>
+                <li>Commune de {{ app.user.commune.nomcommune }}</li>
+                <li><a href="{{ path('fos_user_profile_show')}}">Mon Profil <span class="glyphicon glyphicon-user"></span></a></li>
+                <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter <span class="glyphicon glyphicon-log-out"></span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Corps de la Page -->
+    <div class="container corps_page">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <ul>
+                <li>
+                    <a href="{{ path('projet_create') }}">
+                        <button class="btn btn-default"><h2>Ajouter un nouveau Projet</h2></button>
+                    </a>
+                </li><br>
+                <li>
+                <a href=""><!-- A compléter avec la route vers les Experts -->
+                        <button class="btn btn-default"><h2>Trouver un Expert</h2></button>
+                    </a>
+                </li>
+            </ul>
+            <!-- Barre de Recherche de Projet -->
+            <div id="imaginary_container">
+                <div id="recherche">
+                    <h2 align="center">Rechercher un Projet</h2>
+                </div>
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control" placeholder="Entrez votre recherche" id="tags">
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <!-- Projets Recherchés -->
+    <div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+{% endblock %}
