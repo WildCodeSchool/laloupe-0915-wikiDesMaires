@@ -2,51 +2,60 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}Wiki des maires{% endblock %}</title>
+    <title>{% block title %} WIKI DES MAIRES {% endblock %}</title>
     {% block stylesheets %}{% endblock %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
 
-
-    <!-- Optional theme -->
+    {#Appel des fichiers bootstap en CDN#}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}">
+
 
 
 </head>
-<body data-user="{{ app.user }}" {% if is_granted('ROLE_ADMIN') %} class="admin" {% endif %}>
+<body>
 
-{% block header %}
-<header>
-    <ul class="nav nav-justified navbar-primary navbar-right">
-        {% if app.user %}
-            <li><a href="{{ path('sonata_user_profile_show') }}">Profil</a></li>
-            <li><a href="{{ path('sonata_user_admin_security_logout') }}">Logout</a></li>
+{#Debut header#}
+<header class="main-header">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('wiki_wiki_maire_homepage') }}">WIKI</a>
+            </div>
 
-        {% else %}
-
-            <li><a href="#">Wiki</a></li>
-            <li><a href="{{ path('sonata_user_security_login') }}">Login</a></li>
-        {% endif %}
-    </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if app.user %}
+                    <li>
+                        <a href="{{ path('sonata_user_security_login') }}">LOGOUT</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{{ path('sonata_user_security_login') }}">CONNEXION</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
+{#Fin header#}
+
+{% block body %}
 {% endblock %}
-
-{% block body %}{% endblock %}
-
+{#Appel des fichiers bootstap en CDN#}
+<script src="{{ asset('bundles/wikiwikimaire/js/jquery-1.11.3.min.js') }}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 {% block javascripts %}
-
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-        $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        })
-    </script>
 {% endblock %}
 </body>
 </html>
