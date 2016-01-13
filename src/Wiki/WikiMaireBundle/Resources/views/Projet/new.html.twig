@@ -1,15 +1,260 @@
 {% extends '::base.html.twig' %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/pagecreation.css') }}" type="text/css"/>
+        <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/crop.css') }}">
+    {% endblock %}
+
+
 
 {% block body -%}
-    <h1 align="center">Création d'un nouveau Projet</h1><br>
+    <div class="menu">
+        <ul>
+            <li>Commune de {{ app.user.commune.nomcommune }}</li>
+            <li><a href="{{ path('fos_user_profile_show')}}">Mon Profil <span class="glyphicon glyphicon-user"></span></a></li>
+            <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter <span class="glyphicon glyphicon-log-out"></span></a></li>
+        </ul>
+    </div>
+    <div class="rectangle">
+        <h4>Ajouter un nouveau Projet</h4><br>
+    </div>
 
-    {{ form(form) }}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('projet') }}">
-            Retour a la liste de Projet
-        </a>
-    </li>
-</ul>
+    <div class="col-md-9 question">
+        <div class="rectangle1">
+
+            {{ form_start(form) }}
+            {{ form_errors(form.nomprojet) }}
+            <div class="col-md-3">
+                <label for="nom projet">Nom du Projet</label>
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.nomprojet) }}
+            </div>
+
+            {{ form_errors(form.description) }}
+            <div class="col-md-3">
+                <label for="decription">Description</label>
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.description) }}
+            </div>
+
+            {{ form_errors(form.daterealisation) }}
+            <div class="col-md-3">
+                <label for="annee de realisation">Année de réalisation</label>
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.daterealisation) }}
+            </div>
+
+
+            {{ form_errors(form.duree) }}
+            <div class="col-md-3">
+                <label for="duree">Durée</label>
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.duree) }}
+            </div>
+
+            {{ form_errors(form.gains) }}
+            <div class="col-md-3">
+                <label for="gains">Gains pour la commune</label>
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.gains) }}
+            </div>
+
+            {{ form_errors(form.cout) }}
+            <div class="col-md-3">
+                <label for="cout">Coût de la réalisation</label>
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.cout) }}
+            </div>
+
+            {{ form_errors(form.financement) }}
+            <div class="col-md-3">
+                <label for="financement">Financement</label>
+            </div>
+            <div class="hidden">{{ form_widget(form.financement) }}</div>
+
+
+            <p>
+                <label for="percent-etat">Etat </label>
+                <input type="checkbox" value="etat" class="checkbox" id="etat" style="float:left;">
+                <input type="text" id="percent-etat"/> %
+            </p>
+
+
+            <div class="col-md-3"></div>
+            <p>
+                <label for="percent-region">Région </label>
+                <input type="checkbox" value="region" class="checkbox" style="float:left;">
+                <input type="text" id="percent-region"/> %
+            </p>
+
+            <div class="col-md-3"></div>
+            <p>
+                <label for="percent-departement">Département </label>
+                </label><input type="checkbox" value="departement" class="checkbox" style="float:left;">
+                <input type="text" id="percent-departement"/> %
+            </p>
+
+            <div class="col-md-3"></div>
+            <p>
+                <label for="percent-epci">EPCI </label>
+                <input type="checkbox" value="epci" class="checkbox" style="float:left;">
+                <input type="text" id="percent-epci"/> %
+            </p>
+
+            <div class="col-md-3"></div>
+            <p>
+                <input type="checkbox" value="1" class="checkbox autre" style="float:left;">
+                <input type="text" id="name-1" placeholder="Autre financement..."/>
+                <input type="text" id="percent-1"/> %
+            </p>
+
+
+            <div class="col-md-3">
+                <label for="Photo projet">Photo du projet</label>
+            </div>
+            {{ form_widget(form.file) }}
+
+            {# Coord fields #}
+            {{ form_widget(form.x) }}
+            {{ form_widget(form.y) }}
+            {{ form_widget(form.w) }}
+            {{ form_widget(form.h) }}
+
+            <div class="modal fade" id="cropDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog small">
+                    <div class="modal-content">
+
+                        <div class="modal-header bg-red small">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                x
+                            </button>
+                            <h3 id="myModalLabel">Changer la photo</h3>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="example">
+
+                                <div class="default">
+                                    <div class="cropMain">
+
+                                    </div>
+                                    <div class="cropSlider noUi-target">
+
+                                    </div>
+                                    <div id="output"></div>
+                                    <button>Valider</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {{ form_widget(form.submit) }}
+
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        window.onload = function () {
+            $('form[name="wiki_wikimairebundle_projet"]').submit(function(e){
+                e.preventDefault();
+                var financement = '';
+                $('.checkbox:checked').each(function(){
+                    if (this.value>0) financement += $('input#name-'+this.value).val() + ':' + $('input#percent-'+this.value).val() + ';';
+                    else financement += this.value + ':' + $('input#percent-'+this.value).val() + ';';
+                });
+                $('#wiki_wikimairebundle_projet_financement').val(financement);
+                console.log(this);
+                this.submit();
+            });
+
+            var addExtraFinanceur = function(){
+                //$('.checkbox.autre').click(function(){});
+                $('.checkbox.autre').click( function(){
+                    if( $(this).is(':checked') ) {
+                        var newValue = parseInt($('.checkbox.autre:last').val()) + 1;
+                        $('p:last').after('' +
+                                '<p>' +
+                                '<input type="checkbox" value="'+newValue+'" class="checkbox autre" style="float:left;">' +
+                                '<input type="text" id="name-'+newValue+'" placeholder="Autre financement..."/>' +
+                                '<input type="text" id="percent-'+newValue+'" /> %' +
+                                '</p>');
+                        addExtraFinanceur();
+                    } else {
+                        $(this).parent().remove();
+                    }
+                });
+            };
+
+            addExtraFinanceur();
+        }
+
+    </script>
+    <script type="text/javascript" src="{{ asset('bundles/wikiwikimaire/js/crop.min.js') }}"></script>
+    <script>
+        // crop image when slected
+        $(function() {
+            function loadImageFile(){
+                $('#cropDialog').modal('show');
+                if(document.getElementById("wiki_wikimairebundle_projet_file").files.length===0)
+                    return;
+                var e=document.getElementById("wiki_wikimairebundle_projet_file").files[0];
+                if(!rFilter.test(e.type))
+                {return}
+                oFReader.readAsDataURL(e)
+            }
+            $('#cropDialog').modal({ show: false});
+            var one=new CROP;
+            one.init(".default");
+            one.loadImg("http://localhost/projet-wiki_des_maires/web/bundles/wikiwikimaire/img/image2.png");
+            $("input#wiki_wikimairebundle_projet_file").change(function(){
+                loadImageFile();
+                /*$(".uploadfile").wrap("<form>").closest("form").get(0).reset();
+                 $(".uploadfile").unwrap()*/
+            });
+            oFReader=new FileReader;
+            rFilter=/^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
+            oFReader.onload=function(e){
+                $(".example").html('' +
+                        '<div class="default">' +
+                        '   <div class="cropMain"></div>' +
+                        '   <div class="cropSlider"></div>' +
+                        '   <div id="output"></div>' +
+                        '   <button class="cropButton" id="cropButton">Valider</button>' +
+                        '</div>'
+                );
+                one=new CROP;
+                one.init(".default");
+                one.loadImg(e.target.result);
+                $("#cropButton").click(function(e){
+                    e.preventDefault();
+                    console.log(coordinates(one));
+                    // update coord fields
+                    $('form[name="wiki_wikimairebundle_projet"] input#wiki_wikimairebundle_projet_x').val(coordinates(one).x);
+                    $('form[name="wiki_wikimairebundle_projet"] input#wiki_wikimairebundle_projet_y').val(coordinates(one).y);
+                    $('form[name="wiki_wikimairebundle_projet"] input#wiki_wikimairebundle_projet_w').val(coordinates(one).w);
+                    $('form[name="wiki_wikimairebundle_projet"] input#wiki_wikimairebundle_projet_h').val(coordinates(one).h);
+                    $( "#cropDialog button.close" ).trigger( "click" );
+                });
+            };
+        })
+    </script>
+
 {% endblock %}

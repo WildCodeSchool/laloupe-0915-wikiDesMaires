@@ -1,85 +1,94 @@
-
 {% extends '::base.html.twig' %}
+
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/pageprofil.css') }}" type="text/css"/>
 {% endblock %}
-{% block body -%}
 
-    <div class="container photoprojet">
-        <div class="row">
-            <div class="col-md-4 photoprofil">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 align="center">Profil</h4>
-                    </div>
-                    <div class="panel-body">
-                <img src="{{app.request.basepath}}/photos/{{ user.photoprofil }}" class="img-circle" >
+{% block body %}
+    <div class="menu">
+        <ul>
+            <li>Commune de {{ app.user.commune.nomcommune }}</li>
+            <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter <span class="glyphicon glyphicon-log-out"></span></a></li>
+        </ul>
+    </div>
 
-                <p>Nom : {{ user.firstname }}</p>
-                <p>Prenom(s) : {{ user.lastname }}</p>
-                <p>Email : {{ user.email }}</p>
-                <p>Adresse : {{ user.adressemairie }}</p>
-                <p>Commune : {{ user.commune.nomcommune }}</p>
-                <p>Contact : {{ user.phone }}</p>
-                <p>Genre : {{ user.gender }}</p>
-                <p>Biographie : {{ user.biography }}</p>
-                {% if user.username == app.user %}
-                    <p><a href="{{ path('sonata_user_profile_edit') }}">
-                            <button class="btn btn-default">Modifier mon profil&nbsp;<i class="glyphicon glyphicon-pencil"></i></button>
-                        </a></p>
-                {% endif %}
-                </div>
-                    </div>
+    <a href="{{ path('projet') }}">
+        <button class="btn btn-default">Rechercher un projet &nbsp;</button>
+    </a>
+    <a href="{{ path('projet_create') }}">
+        <button class="btn btn-default ">Proposer un projet &nbsp;</button>
+    </a>
+    <a href="">
+        <button class="btn btn-default">Rechercher un expert &nbsp;</button>
+    </a>
 
-                        <a href="{{ path('projet_create') }}">
-                            <button class="btn btn-default ">Créer un Projet &nbsp;<i class="glyphicon glyphicon-plus"></i></button>
-                        </a>
-
-                        <a href="{{ path('projet') }}">
-                            <button class="btn btn-default">Rechercher un projet &nbsp;<i class="glyphicon glyphicon-search"></i></button>
-                        </a>
-
-            </div>
-
-            <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 align="center">Mes Projets</h4>
-                    </div>
-                    <div class="panel-body">
-                    {% for entity in projet %}
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="#">
-                            <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
-                        </a>
-                    </div>
-                    <div class="col-md-8">
-                        <h3>{{ entity.nomprojet }}</h3>
-                        <p>{{ entity.description }}</p>
-                        <a class="btn btn-default" href="{{ path('projet_detail', { 'id': entity.id }) }}">Detail &nbsp;<i class="glyphicon glyphicon-list"></i></a>
-                        {% if user.username == app.user %}
-                            <a class="btn btn-default" href="{{ path('projet_edit', { 'id': entity.id }) }}">Editer &nbsp;<i class="glyphicon glyphicon-edit"></i></a>
-                            <a class="btn btn-default" href="{{ path('projet_delete', { 'id': entity.id }) }}" onclick="return confirm('Voulez vous Réelement Supprimer ce projet?')">Supprimer &nbsp;<i class="glyphicon glyphicon-remove-circle"></i></a>
-                        {% endif %}
-                    </div>
-
-
-                     </div>
-                     <hr>
-                {% endfor %}
-                        </div>
-                    </div>
-            </div>
+    <div class="col-md-7 presentation">
+        <div class="rectangle_22">
+            <h5>Présentation de la commune</h5>
         </div>
-
-
-
-
-
-
+        <div class="rectangle_3">
+            <p>La Loupe est une commune française située dans le département d’Eure-et-Loir,
+                en région Centre-Val de Loire.
+                C’est une commune du Parc naturel régional du Perche et le chef-lieu du can-
+                ton de La Loupe. Elle fait partie de la communauté de communes des Portes du
+                Perche.
+                La Loupe est située dans l’arrondissement de Nogent-le-Rotrou, dans le Perche.
+                La ligne de chemin de fer de Paris-Montparnasse à Brest traverse La Loupe, la
+                reliant ainsi par le train à Paris Montparnasse, Chartres et Le Mans.
+            </p>
         </div>
     </div>
 
+    <div class="container photoprojet">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-1 photoprofil">
+                <div class="panel-body">
+                    <div class="rectangle_1">
+                        <img src="{{app.request.basepath}}/photos/{{ user.photoprofil }}" class="img-rectangle" >
+                        <div class="texte">
+                            <p class="font-weight"> {{ user.firstname }} {{ user.lastname }}</p>
+                            <p>Mandat : </p>
+                            <p>Population Commune (INSEE): </p>
+                            <div class="rectangle">
+                                <p><i class="glyphicon glyphicon-envelope"></i>  {{ user.email }}</p>
+                                <p><i class="glyphicon glyphicon-earphone"></i> {{ user.phone }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rectangle_2">
+            <h5>Projets de la commune</h5>
+        </div>
+        <div class="projects">
+            {% for entity in projet %}
+                <div class="row project">
+                    {% if loop.index is even %}
+                        <div class="col-md-5">
+                            <a href="#">
+                                <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                            </a>
+                        </div>
+                        <div class="col-md-7">
+                            <p>Description :</p>
+                            <p>{{ entity.description }}</p>
+                        </div>
+                    {% else %}
+                        <div class="col-md-7">
+                            <p>Description :</p>
+                            <p>{{ entity.description }}</p>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#">
+                                <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}

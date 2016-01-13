@@ -1,0 +1,109 @@
+/*Style page profil*/
+.panel-body {
+    float: right;
+}
+
+body {
+    background-color: #DDD7EA;
+}
+
+.rectangle{
+    width: 160px;
+    height: 50px;
+    margin-left: 12px;
+    background: white;
+}
+
+.rectangle_1 {
+    width: 185px;
+    height: 320px;
+    background: #C5BBDB;
+    margin-top: -90px;
+
+}
+
+.rectangle_22 {
+    width: 200px;
+    height: 25px;
+    margin-left: 60px;
+    background: #C5BBDB;
+}
+
+.rectangle_2 {
+    width: 200px;
+    height: 25px;
+    margin-left: 50px;
+    background: #C5BBDB;
+
+}
+
+.rectangle_3 {
+    margin-left: 60px;
+    background: white;
+}
+
+.rectangle_4 {
+    margin-left: 50px;
+    background: white;
+    height: 220px;
+    width: 972px;
+}
+
+.rectangle_5 {
+    background: white;
+    height: 220px;
+    width: 972px;
+}
+
+h5 {
+    margin-top: 50px;
+    margin-left: 3px;
+    font-weight: bolder;
+}
+
+p {
+    margin-left: 11.5px;
+}
+
+.menu {
+    margin-top: 50px;
+    padding-left: 930px;
+}
+
+.btn {
+    background: #C5BBDB;
+    display: block;
+    width: 200px;
+    margin-left: 150px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 4px #555;
+}
+
+a {
+    color:  black;
+}
+
+.row {
+    display: block;
+}
+
+.img-rectangle {
+    margin-left: 45px;
+    margin-top: 20px;
+
+}
+
+.texte {
+    padding-top: 20px;
+}
+
+.font-weight {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.project {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+}

@@ -15,22 +15,24 @@ Wiki\WikiMaireBundle\Entity\Projet:
         description:
             type: string
             length: 255
+        duree:
+            type: string
+            length: 255
+        gains:
+            type: string
+            length: string
         daterealisation:
             type: date
-        difficulte:
-            type: string
-            length: 255
         cout:
             type: float
-        tailleprojet:
-            type: string
-            length: 255
-        bassinPopulation:
-            type: integer
-            column: bassin_population
         photo:
             type: string
             length: 255
+        financement:
+            type: string
+            length: 255
+
+
 
 
     manyToOne:

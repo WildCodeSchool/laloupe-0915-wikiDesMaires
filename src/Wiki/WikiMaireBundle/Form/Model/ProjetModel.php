@@ -1,78 +1,15 @@
 <?php
 
-namespace Wiki\WikiMaireBundle\Entity;
+namespace Wiki\WikiMaireBundle\Form\Model;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 
 /**
  * Projet
  */
-class Projet
+class ProjetModel
 {
-    public function __toString()
-    {
-        return $this->nomprojet;
-    }
-
-    public $file;
-
-    protected function getUploadDir()
-    {
-        return 'uploads';
-    }
-
-    protected function getUploadRootDir()
-    {
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
-    }
-
-    public function getWebPath()
-    {
-        return null === $this->photo ? null : $this->getUploadDir().'/'.$this->photo;
-    }
-
-    public function getAbsolutePath()
-    {
-        return null === $this->photo ? null : $this->getUploadRootDir().'/'.$this->photo;
-    }
-
-
-    public function preUpload()
-    {
-        if (null !== $this->file) {
-            // do whatever you want to generate a unique name
-            $this->photo = uniqid() . '.' . $this->file->guessExtension();
-        }
-    }
-
-
-    public function upload()
-    {
-        if (null === $this->file) {
-            return;
-        }
-
-        // if there is an error when moving the file, an exception will
-        // be automatically thrown by move(). This will properly prevent
-        // the entity from being persisted to the database on error
-        $this->file->move($this->getUploadRootDir(), $this->photo);
-
-        unset($this->file);
-    }
-
-
-    public function removeUpload()
-    {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
-        }
-    }
-
-
-    // GENERATED CODE
-    /**
-     * @var integer
-     */
-    private $id;
-
     /**
      * @var string
      */
@@ -88,11 +25,56 @@ class Projet
      */
     private $daterealisation;
 
-
     /**
      * @var float
      */
     private $cout;
+
+    /**
+     * @var \Application\Sonata\UserBundle\Entity\User
+     */
+    private $user;
+
+    /**
+     * @var string
+     */
+    private $tags;
+
+    /**
+     * @var string
+     */
+    private $photo;
+
+    /**
+     * @var string
+     */
+    private $duree;
+
+    /**
+     * @var string
+     */
+    private $gains;
+
+    /**
+     * @var string
+     */
+    private $financement;
+
+    private $x;
+    private $y;
+    private $w;
+    private $h;
+
+    /**
+     * @var UploadedFile
+     */
+    public $file;
+
+
+    /**
+     * @var integer
+     */
+    private $id;
 
     /**
      * Get id
@@ -103,6 +85,9 @@ class Projet
     {
         return $this->id;
     }
+
+
+
 
     /**
      * Set nomprojet
@@ -202,11 +187,6 @@ class Projet
         return $this->cout;
     }
 
-    /**
-     * @var \Application\Sonata\UserBundle\Entity\User
-     */
-    private $user;
-
 
     /**
      * Set user
@@ -231,10 +211,6 @@ class Projet
     {
         return $this->user;
     }
-    /**
-     * @var string
-     */
-    private $tags;
 
 
     /**
@@ -260,10 +236,6 @@ class Projet
     {
         return $this->tags;
     }
-    /**
-     * @var string
-     */
-    private $photo;
 
 
     /**
@@ -290,20 +262,12 @@ class Projet
         return $this->photo;
     }
 
-
-
-    /**
-     * @var string
-     */
-    private $duree;
-
-
     /**
      * Set duree
      *
      * @param string $duree
      *
-     * @return Projet
+     * @return ProjetModel
      */
     public function setDuree($duree)
     {
@@ -321,10 +285,6 @@ class Projet
     {
         return $this->duree;
     }
-    /**
-     * @var string
-     */
-    private $gains;
 
 
     /**
@@ -332,7 +292,7 @@ class Projet
      *
      * @param string $gains
      *
-     * @return Projet
+     * @return ProjetModel
      */
     public function setGains($gains)
     {
@@ -350,11 +310,6 @@ class Projet
     {
         return $this->gains;
     }
-    
-    /**
-     * @var string
-     */
-    private $financement;
 
 
     /**
@@ -362,7 +317,7 @@ class Projet
      *
      * @param string $financement
      *
-     * @return Projet
+     * @return ProjetModel
      */
     public function setFinancement($financement)
     {
@@ -379,5 +334,53 @@ class Projet
     public function getFinancement()
     {
         return $this->financement;
+    }
+
+
+    public function setX($x)
+    {
+        $this->x = $x;
+
+        return $this;
+    }
+
+    public function getX()
+    {
+        return $this->x;
+    }
+
+    public function setY($y)
+    {
+        $this->y = $y;
+        return $this;
+    }
+
+    public function getY()
+    {
+        return $this->y;
+    }
+
+    public function setW($w)
+    {
+        $this->w = $w;
+
+        return $this;
+    }
+
+    public function getW()
+    {
+        return $this->w;
+    }
+
+    public function setH($h)
+    {
+        $this->h = $h;
+
+        return $this;
+    }
+
+    public function getH()
+    {
+        return $this->h;
     }
 }

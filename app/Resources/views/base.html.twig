@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}Wiki des maires{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
-
+        <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css">
+    {% block stylesheets %}{% endblock %}
 
     <!-- Optional theme -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -18,19 +17,7 @@
 <body data-user="{{ app.user }}" {% if is_granted('ROLE_ADMIN') %} class="admin" {% endif %}>
 
 {% block header %}
-<header>
-    <ul class="nav nav-justified navbar-primary navbar-right">
-        {% if app.user %}
-            <li><a href="{{ path('sonata_user_profile_show') }}">Profil</a></li>
-            <li><a href="{{ path('sonata_user_admin_security_logout') }}">Logout</a></li>
 
-        {% else %}
-
-            <li><a href="#">Wiki</a></li>
-            <li><a href="{{ path('sonata_user_security_login') }}">Login</a></li>
-        {% endif %}
-    </ul>
-</header>
 {% endblock %}
 
 {% block body %}{% endblock %}
