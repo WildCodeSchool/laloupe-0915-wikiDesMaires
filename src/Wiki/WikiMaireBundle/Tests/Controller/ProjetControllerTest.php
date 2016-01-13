@@ -499,7 +499,9 @@ class ProjetControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/projet/');
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
 
-        $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::indexAction', $client->getRequest()->attributes->get('_controller'));
+        /*$this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::indexAction',
+            $client->getRequest()->attributes->get('_controller'));*/
+
         $crawler = $client->followRedirect();
         $this->assertTrue(200 === $client->getResponse()->getStatusCode());
         $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::loginAction', $client->getRequest()->attributes->get('_controller'));

@@ -1,108 +1,145 @@
-header {
-    font-size: 18px;
-    background-color: black;
+body{
+    background-color: #DDD7EA;
+}
+.navbar {
+    position: relative;
+    min-height: 80px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #E7E7E7;
+    padding-top: 12px;
 }
 
-
-.nav {
-    margin-bottom: 30px;
-    background-color: #f8f8f8;
+/*Carousel slide*/
+.carousel-inner{
+    height: 500px;
 }
 
-.login-page .panel-info{
-    max-width: 700px;
-    margin: 10vh auto 0 auto;
+.carousel-page
+{
+    width:100%;
+    height:500px;
+    background-color:#5f666d;
+    color:white;
 }
-
-.login {
+.slider img{
+    height: 500px;
+    width: 1280px;
+}
+.slider .slide_bg{
     position: absolute;
-    margin: auto;
-    right: 0;
+    bottom: 0;
     left: 0;
-    width: 800px;
-    padding-top:60px;
-}
-.login h1{
-    font-family: monospace;
-    color: #0d70b7;
-}
-
-#thetable{
-    max-width: 97%;
-    margin: auto;
+    display: block;
+    width: 100%;
+    text-indent: 20px;
+    padding: 20px 0;
+    color: #fff;
+    background-image: url('../img/bg_trans.png');
+    text-decoration: none;
+    font-size: 18px;
 }
 
-td {
+/*Block comment ça marche ? */
+#column {
+    width: 300px;
+    height: auto;
+    position: relative;
+}
+#column h4 {
+    width: 270px;
+    padding: 10px;
+    padding-left: 20px;
+    color: #ffffff;
+    background-color: #9786BA;
+    font-size: 18px;
+    margin: 0;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
+.blockquote p {
+    font-style: italic;
+    padding: 20px 20px 20px 60px;
+    width: 850px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: #F7F5E2;
+    /*font-family: "Fira Sans","Helvetica Neue",Arial,sans-serif;*/
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    background-color: #9786BA;
+    font-size: 18px;
+    height: 45px;
+    width: 140px;
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #ffffff;
+    background-color: #B9AED2;
+}
+.hr_line {
+    width: 100%;
+    max-width: 1260px;
+    color: #00ADB3;
+    border-bottom: 1px dashed;
+    margin-bottom: 30px;
+    float: left;
+}
+footer{
+    width: 100%;
+    background-color: lightgrey;
+    height: 110px;
+}
+footer p {
     text-align: center;
 }
-
-.ui-state-default {
-    background-color: white;
-    text-align: center;
+.form-control {
+    display: block;
+    height: 50px;
+    width: 350px;
+    margin-top: 30px;
 }
-
-
-ul {
-   float: right;
+.form-group .pass{
+    margin-top: 100px;
 }
-
-.record_properties {
-    max-width: 80%;
-    margin: auto;
-}
-
-th {
-    text-align: center;
-}
-
-li {
-    margin-right: 45%;
-    list-style-type:none;
-}
-
-.form-group {
-    max-width:80%;
-    margin: auto;
-    padding-left: 10%;
+.connexion{
+    margin-left: 320px;
+    height: 330px;
+    width: 650px;
+    background-color: #F7F5E2;
+    border-radius-bottomleft: 10px;
+    margin-top: -10px;
 
 }
-.photoprojet img{
-    width: 400px;
-    height: 200px;
+.form-horizontal .control-label {
+    margin-top: 30px;
 }
-.photoprojet .photoprofil img{
-    width: 100px;
-    height: 100px;
+#column_connexion h4 {
+    width: 270px;
+    padding: 10px;
+    padding-left: 20px;
+    color: #ffffff;
+    background-color: #9786BA;
+    font-size: 18px;
+    margin: 0;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    margin-left: 320px;
 }
-
-.tab1 img{
-    width: 700px;
-    height: 300px;
+input[type="submit"] {
+    width: 250px;
+    height: 40px;
+    background-color: #9786BA;
+    color: #fff;
 }
-/*Style input search*/
-
-#imaginary_container{
-    margin-top:20%; /* Don't copy this */
-}
-.stylish-input-group .input-group-addon{
-    background: white !important;
-}
-.stylish-input-group .form-control{
-    border-right:0;
-    box-shadow:0 0 0;
-    border-color:#ccc;
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
-}
-.photoprojet h4 {
-    font-family: "Droid Sans", sans-serif;
-}
-
-
-
-
-
-
 
