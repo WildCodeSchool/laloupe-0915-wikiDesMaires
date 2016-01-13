@@ -4,31 +4,45 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.jqueryui.min.css">
     <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/pageprofil.css') }}" type="text/css"/>
 {% endblock %}
 {% block javascripts %}
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-    <script src="//cdn.datatables.net/1.10.10/js/dataTables.jqueryui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
     <script>
-        //Action de filtre dans la table
-        var table = $('#thetable').DataTable({
-            //supprime la barre de recherche par defaut du datable
-            "sDom": 'lrtip',
-            "bPaginate": false,
-            "bLengthChange": false,
-            "bFilter": true,
-            "bInfo": false,
-            "bAutoWidth": false
-
-        } );
-
-        // remplacer la fonction de recherche par notre propre input
-        $('#tags').on( 'keyup', function () {
-            table.search( this.value ).draw();
-        } );
+        $( function() {
+            // quick search regex
+            var qsRegex;
+            // init Isotope
+            var $grid = $('.grid').isotope({
+                itemSelector: '.element-item',
+                layoutMode: 'fitRows',
+                filter: function() {
+                    return qsRegex ? $(this).text().match( qsRegex ) : true;
+                }
+            });
+            // use value of search field to filter
+            var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+                qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+                $grid.isotope();
+            }, 200 ) );
+        });
+        // debounce so filtering doesn't happen every millisecond
+        function debounce( fn, threshold ) {
+            var timeout;
+            return function debounced() {
+                if ( timeout ) {
+                    clearTimeout( timeout );
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+                timeout = setTimeout( delayed, threshold || 100 );
+            }
+        }
     </script>
 {% endblock %}
 {% block body -%}
@@ -39,7 +53,7 @@
                 <div id="imaginary_container">
                     <h1 align="center">Rechercher un Projet</h1>
                     <div class="input-group stylish-input-group">
-                        <input type="text" class="form-control"  placeholder="Search" id="tags">
+                        <input type="text" class="form-control quicksearch"  placeholder="Search" id="tags">
                     <span class="input-group-addon">
                         <button type="submit">
                             <span class="glyphicon glyphicon-search"></span>
@@ -55,37 +69,33 @@
         <label for="tags">Rechercher un projet: </label>
         <input id="tags" type="text">
     </div>#}
-    <div class="row">
-        <div class="col-md-12">
-            <table class="records_list table-hover" id="thetable">
-                <thead>
-                <tr>
-                    <th>Nom du projet</th>
-                    <th>Description</th>
-                    <th>Date de Realisation</th>
-                    <th>Bassin de population</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for entity in entities %}
-                    <tr>
-                        <td>{{ entity.nomprojet }}</td>
-                        <td>{{ entity.description }}</td>
-                        <td>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</td>
-                        <td>{{ entity.bassinPopulation }}</td>
-
-                        <td>
-                            <ul>
-                                <li>
-                                    <a class="btn btn-default" href="{{ path('projet_detail', { 'id': entity.id }) }}">detail &nbsp;<i class="glyphicon glyphicon-list"></i></a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+    <div class="grid">
+        <div class="projects ">
+            {% for entity in entities %}
+                <div class="row project element-item">
+                    {% if loop.index is even %}
+                        <div class="col-md-5">
+                            <a href="#">
+                                <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                            </a>
+                        </div>
+                        <div class="col-md-7">
+                            <p>Description :</p>
+                            <p>{{ entity.description }}</p>
+                        </div>
+                    {% else %}
+                        <div class="col-md-7">
+                            <p>Description :</p>
+                            <p>{{ entity.description }}</p>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#">
+                                <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
