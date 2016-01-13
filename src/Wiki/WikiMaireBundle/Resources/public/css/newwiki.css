@@ -11,7 +11,7 @@ p {
 }
 
 body {
-    background-color: #F3E9C6;
+    background-color: #F3E9C6 !important;
 }
 
 .logo {

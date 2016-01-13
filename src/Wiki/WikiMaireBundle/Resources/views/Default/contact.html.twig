@@ -11,29 +11,7 @@
 {% block body -%}
 
 
-
-<body class="my_background" style="background-image:url({{ asset('bundles/wikiwikimaire/img/contact.png') }})" >
-
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ path('wiki_wiki_maire_homepage') }}"><p><span class="glyphicon glyphicon-home"></span> Accueil</p></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
+<body class="my_background" style="background-image:url({{ asset('bundles/wikiwikimaire/img/contact.png') }})">
 
 <!-- Contact Details Column -->
 <div class="col-md-3">
@@ -46,37 +24,47 @@
 <div class="row">
     <div class="col-md-5">
         <h3>Nous contacter</h3>
+
         <form name="sentMessage" id="contactForm" novalidate>
             <div class="control-group form-group">
                 <div class="controls">
-                    <label>Nom & Prenom:</label>
-                    <input type="text" class="form-control" id="name" required data-validation-required-message="Indiquer votre nom & prenom.">
+                    <span class="input-group-addon" id="basic-addon3">Nom & Prénom</span>
+                    <input type="text" class="form-control" id="name" required
+                           data-validation-required-message="Indiquer votre nom & prenom.">
+
                     <p class="help-block"></p>
                 </div>
             </div>
             <div class="control-group form-group">
                 <div class="controls">
-                    <label>Numero telephone:</label>
-                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Votre numero de telephone.">
+                    <span class="input-group-addon" id="basic-addon3">Numero telephone</span>
+                    <input type="tel" class="form-control" id="phone" required
+                           data-validation-required-message="Votre numero de telephone.">
                 </div>
             </div>
             <div class="control-group form-group">
                 <div class="controls">
-                    <label>Adresse Email:</label>
-                    <input type="email" class="form-control" id="email" required data-validation-required-message="Votre Adresse Email.">
+                    <span class="input-group-addon" id="basic-addon3">Votre adresse Email</span>
+                    <input type="email" class="form-control" id="email" required
+                           data-validation-required-message="Votre Adresse Email.">
                 </div>
             </div>
             <div class="control-group form-group">
                 <div class="controls">
-                    <label>Message:</label>
-                    <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Votre message" maxlength="999" style="resize:none"></textarea>
+                    <span class="input-group-addon" id="basic-addon3">Votre Message</span>
+                    <textarea rows="10" cols="100" class="form-control" id="message" required
+                              data-validation-required-message="Votre message" maxlength="999"
+                              style="resize:none"></textarea>
                 </div>
             </div>
             <div id="success"></div>
-            <!-- For success/fail messages -->
-            <button type="submit" class="btn btn-primary center-block">Envoyer Message</button>
-        </form>
     </div>
+    <div class="col-md-offset-4 col-md-1">
+        <!-- For success/fail messages -->
+        <input type="submit" value="Envoyez">
+    </div>
+    </form>
+
 
 </div>
 <!-- /.row -->
