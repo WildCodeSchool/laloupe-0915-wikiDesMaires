@@ -27,7 +27,7 @@ class ProjetController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('WikiWikiMaireBundle:Projet')->findAll();
+        $entities = $em->getRepository('WikiWikiMaireBundle:Projet')->getSuggested(4);
 
         return $this->render('WikiWikiMaireBundle:Projet:index.html.twig', array(
             'entities' => $entities,
@@ -253,6 +253,7 @@ class ProjetController extends Controller
 
         return $response;
     }
+
     public function ProfileAction()
     {
         $em = $this->getDoctrine()->getManager();

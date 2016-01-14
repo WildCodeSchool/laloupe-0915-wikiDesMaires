@@ -72,28 +72,28 @@
     <div class="grid">
         <div class="projects ">
             {% for entity in entities %}
-                <div class="row project element-item">
-                    {% if loop.index is even %}
+                <div class="row project element-item col-md-12">
+                    {#{% if loop.index is even %}#}
+                        {#<div class="col-md-5">#}
+                            {#<a href="#">#}
+                                {#<img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >#}
+                            {#</a>#}
+                        {#</div>#}
+                        {#<div class="col-md-7">#}
+                            {#<p>Description :</p>#}
+                            {#<p>{{ entity.description }}</p>#}
+                        {#</div>#}
+                    {#{% else %}#}
+                        <div class="col-md-7">
+                            <p>Description :</p>
+                            <p>{{ entity.description }}</p>
+                        </div>
                         <div class="col-md-5">
                             <a href="#">
                                 <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
                             </a>
                         </div>
-                        <div class="col-md-7">
-                            <p>Description :</p>
-                            <p>{{ entity.description }}</p>
-                        </div>
-                    {% else %}
-                        <div class="col-md-7">
-                            <p>Description :</p>
-                            <p>{{ entity.description }}</p>
-                        </div>
-                        <div class="col-md-5">
-                            <a href="#">
-                                <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
-                            </a>
-                        </div>
-                    {% endif %}
+                    {#{% endif %}#}
                 </div>
             {% endfor %}
         </div>
