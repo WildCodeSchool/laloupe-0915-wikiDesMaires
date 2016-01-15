@@ -8,6 +8,10 @@ wiki_wiki_maire_homepage:
     path:     /
     defaults: { _controller: WikiWikiMaireBundle:Default:index }
 
+homepage_afterlogin:
+    path:     /home
+    defaults: { _controller: WikiWikiMaireBundle:Default:home }
+
 contact:
     path:     /contact
     defaults: { _controller: WikiWikiMaireBundle:Default:contact }
