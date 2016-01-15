@@ -40,7 +40,7 @@ li {
     background-color: #C5BBDB;
     background-image: none;
     box-shadow: 4px 4px 4px #555;
-    border-color: #C5BBDB;
+
 }
 
 /**********************
@@ -50,28 +50,23 @@ li {
 **********************/
 
 .section, .contact, .projet_similaires {
-    border: solid #C5BBDB;
-    background-color: whitesmoke;
-    margin-top: 50px;
+    background-color: white;
+    padding: 30px;
+    width: 1120px;
+    margin-left: 28px;
 }
 
 .titre a {
     color: #333;
-    text-decoration: underline;
 }
 
 .img_projet {
-    width: 1000px;
+    margin-left: 290px;
+    padding: 40px;
 }
 
 .corps_projet ul {
-    margin-left: 85px;
     margin-right: 85px;
-    background-color: #DDD7EA;
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-    background-color: #C5BBDB;
 }
 
 .corps_projet li a {
@@ -85,5 +80,22 @@ li {
 
 .contact p {
     display: inline;
-    margin: 50px;
+    margin: 170px;
+
+}
+
+.rectangle {
+    width: 150px;
+    height: 25px;
+    margin-left: 28px;
+    background: #C5BBDB;
+
+}
+
+h5 {
+    margin-top: 50px;
+    margin-left: 3px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 6px;
 }
