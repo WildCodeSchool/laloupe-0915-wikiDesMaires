@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8" />
 
-    <title>{% block title %} WIKI DES MAIRES {% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
+    <title>{% block title %} Wiki des Maires {% endblock %}</title>
+
 
     {#Appel des fichiers bootstap en CDN#}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+
+
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}">
+
+    {% endblock %}
 
 
 
