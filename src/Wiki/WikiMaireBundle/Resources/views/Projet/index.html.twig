@@ -4,64 +4,34 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
     <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/pageprofil.css') }}" type="text/css"/>
 {% endblock %}
-{% block javascripts %}
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-    <script>
-        $( function() {
-            // quick search regex
-            var qsRegex;
-            // init Isotope
-            var $grid = $('.grid').isotope({
-                itemSelector: '.element-item',
-                layoutMode: 'fitRows',
-                filter: function() {
-                    return qsRegex ? $(this).text().match( qsRegex ) : true;
-                }
-            });
-            // use value of search field to filter
-            var $quicksearch = $('.quicksearch').keyup( debounce( function() {
-                qsRegex = new RegExp( $quicksearch.val(), 'gi' );
-                $grid.isotope();
-            }, 200 ) );
-        });
-        // debounce so filtering doesn't happen every millisecond
-        function debounce( fn, threshold ) {
-            var timeout;
-            return function debounced() {
-                if ( timeout ) {
-                    clearTimeout( timeout );
-                }
-                function delayed() {
-                    fn();
-                    timeout = null;
-                }
-                timeout = setTimeout( delayed, threshold || 100 );
-            }
-        }
-    </script>
-{% endblock %}
+
 {% block body -%}
+    <div class="menu">
+        <ul>
+            <li>Commune de {{ app.user.commune.nomcommune }}</li>
+            <li><a href="{{ path('fos_user_profile_show') }}">Mon Profil <span class="glyphicon glyphicon-user"></span></a>
+            </li>
+            <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter <span
+                            class="glyphicon glyphicon-log-out"></span></a></li>
+        </ul>
+    </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <div id="imaginary_container">
-                    <h1 align="center">Rechercher un Projet</h1>
+
+            <div id="imaginary_container">
+                <div class="rectangle_24">
+                    <h5>Rechercher un Projet</h5>
+                </div>
+                <div class="rectangle_20">
                     <div class="input-group stylish-input-group">
-                        <input type="text" class="form-control quicksearch"  placeholder="Search" id="tags">
-                    <span class="input-group-addon">
-                        <button type="submit">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
+                        <input type="text" class="form-control quicksearch" placeholder="Entrer votre recherche" id="tags">
                     </div>
                 </div>
             </div>
+            <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
         </div>
     </div>
     <br>
@@ -72,25 +42,29 @@
     <div class="grid">
         <div class="projects ">
             {% for entity in entities %}
-                <div class="row project element-item col-md-12">
-                    {#{% if loop.index is even %}#}
-                        {#<div class="col-md-5">#}
-                            {#<a href="#">#}
-                                {#<img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >#}
-                            {#</a>#}
-                        {#</div>#}
-                        {#<div class="col-md-7">#}
-                            {#<p>Description :</p>#}
-                            {#<p>{{ entity.description }}</p>#}
-                        {#</div>#}
-                    {#{% else %}#}
+
+                <div class="row project element-item col-md-11">
+                    {% if loop.index is even %}
+                        <div class="col-md-5">
+                            <a href="#">
+                                <img src="{{ app.request.basepath }}/uploads/{{ entity.photo }}" class="img-thumbnail">
+                            </a>
+                        </div>
                         <div class="col-md-7">
                             <p>Description :</p>
+
+                            <p>{{ entity.description }}</p>
+                        </div>
+                    {% else %}
+
+                        <div class="col-md-7">
+                            <p>Description :</p>
+
                             <p>{{ entity.description }}</p>
                         </div>
                         <div class="col-md-5">
                             <a href="#">
-                                <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
+                                <img src="{{ app.request.basepath }}/uploads/{{ entity.photo }}" class="img-thumbnail">
                             </a>
                         </div>
                     {#{% endif %}#}
@@ -98,4 +72,44 @@
             {% endfor %}
         </div>
     </div>
+
+    {% block javascripts %}
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+        <script>
+            $(function () {
+                // quick search regex
+                var qsRegex;
+                // init Isotope
+                var $grid = $('.grid').isotope({
+                    itemSelector: '.element-item',
+                    layoutMode: 'fitRows',
+                    filter: function () {
+                        return qsRegex ? $(this).text().match(qsRegex) : true;
+                    }
+                });
+                // use value of search field to filter
+                var $quicksearch = $('.quicksearch').keyup(debounce(function () {
+                    qsRegex = new RegExp($quicksearch.val(), 'gi');
+                    $grid.isotope();
+                }, 200));
+            });
+            // debounce so filtering doesn't happen every millisecond
+            function debounce(fn, threshold) {
+                var timeout;
+                return function debounced() {
+                    if (timeout) {
+                        clearTimeout(timeout);
+                    }
+                    function delayed() {
+                        fn();
+                        timeout = null;
+                    }
+
+                    timeout = setTimeout(delayed, threshold || 100);
+                }
+            }
+        </script>
+    {% endblock %}
 {% endblock %}

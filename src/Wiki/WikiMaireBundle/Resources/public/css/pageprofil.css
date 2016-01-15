@@ -32,10 +32,23 @@ body {
 .rectangle_2 {
     width: 200px;
     height: 25px;
-    margin-left: 50px;
     background: #C5BBDB;
-
 }
+
+.rectangle_24 {
+    width: 200px;
+    height: 25px;
+    background: #C5BBDB;
+    margin-left: 28px;
+}
+
+.rectangle_20 {
+    width: 540px;
+    height: 90px;
+    background: white;
+    margin-left: 28px;
+}
+
 
 .rectangle_3 {
     margin-left: 60px;
@@ -59,6 +72,8 @@ h5 {
     margin-top: 50px;
     margin-left: 3px;
     font-weight: bolder;
+    text-align: center;
+    padding-top: 6px;
 }
 
 p {
@@ -87,10 +102,15 @@ a {
     display: block;
 }
 
-.img-rectangle {
-    margin-left: 45px;
-    margin-top: 20px;
+.grid {
+    padding-left: 45px;
+}
 
+.img-rectangle {
+    margin-left: 25px;
+    margin-top: 20px;
+    height: 90px;
+    width: auto;
 }
 
 .texte {
@@ -107,3 +127,11 @@ a {
     padding: 10px;
     margin: 10px 0;
 }
+
+.input-group {
+    width: 505px;
+    margin-left: 28px;
+}
+
+
+

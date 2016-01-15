@@ -1,0 +1,89 @@
+/*********************
+*                    *
+* Pour toute la Page *
+*                    *
+*********************/
+
+body {
+    margin: 10px;
+    padding: 5px;
+    background-color: #DDD7EA;
+
+}
+
+li {
+    list-style: none;
+}
+
+/**********************
+*                     *
+* Infos de Connection *
+*                     *
+**********************/
+
+.info_co {
+    text-align: right;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.info_co a {
+    text-decoration: none;
+    color: #333;
+}
+
+.info_co a:hover {
+    text-decoration: underline;
+}
+
+.info_co .btn-info, .btn-info:hover {
+    background-color: #C5BBDB;
+    background-image: none;
+    box-shadow: 4px 4px 4px #555;
+    border-color: #C5BBDB;
+}
+
+/**********************
+*                     *
+*   Corps de la Page  *
+*                     *
+**********************/
+
+.section, .contact, .projet_similaires {
+    border: solid #C5BBDB;
+    background-color: whitesmoke;
+    margin-top: 50px;
+}
+
+.titre a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.img_projet {
+    width: 1000px;
+}
+
+.corps_projet ul {
+    margin-left: 85px;
+    margin-right: 85px;
+    background-color: #DDD7EA;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    background-color: #C5BBDB;
+}
+
+.corps_projet li a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.corps_projet .tab-content {
+    padding-top: 10px;
+}
+
+.contact p {
+    display: inline;
+    margin: 50px;
+}

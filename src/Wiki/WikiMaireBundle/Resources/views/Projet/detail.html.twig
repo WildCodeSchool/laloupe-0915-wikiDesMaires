@@ -1,47 +1,94 @@
 {% extends '::base.html.twig' %}
+
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}" type="text/css"/>
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/projet_detail.css') }}" type="text/css"/>
 {% endblock %}
+
 {% block body -%}
-<a class="btn btn-info" href="{{ path('projet') }}">Retour</a>
+
+    <!-- Infos de connection -->
+    <div class="container info_co">
+        <div class="col-md-7"></div>
+        <div class="col-md-4">
+            <ul>
+                <li>Commune de {{ app.user.commune.nomcommune }}</li>
+                <li><a href="{{ path('fos_user_profile_show')}}">Mon Profil <span class="glyphicon glyphicon-user"></span></a></li>
+                <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter <span class="glyphicon glyphicon-log-out"></span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Corps de la Page -->
+
 
     <div class="section">
-        <div class="container">
+
+        <!-- Titre -->
+        <div class="container titre">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-2">
                     <h1><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></h1>
-                    <h4> Commune de Réalisation : {{ entity.user.commune.nomcommune }} comptant {{ entity.bassinPopulation }} Habitants</h4>
                 </div>
             </div>
         </div>
-        <div class="container">
+
+        <!-- Image Projet -->
+        <div class="container img_projet">
             <div class="row">
-                <div class="col-md-8 tab1">
+                <div class="col-md-12">
                     <a href="#">
                         <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
                     </a>
                 </div>
-                <div class="col-md-4  tab2">
-                    <p>Maire : {{ entity.user.lastname}} {{ entity.user.firstname}} <a href="{{ path('sonata_user_profile_show', { 'id': entity.user.id }) }}">Voir son profil</a></p>
-                    <p>Budget : {{ entity.cout }} Euro </p>
-                    <p>Date  : {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
-                    <p>Contact :</p>
-                    <p>Taille du Projet : {{ entity.tailleprojet }}</p>
-                    <p>Adresse : {{ app.user.adressemairie }}</p>
-                    <p>Contact : {{ app.user.phone }}</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 tab1">
-                   <h3>Description</h3>
-                    {{ entity.description }}
-                </div>
             </div>
         </div>
 
+        <!-- Corps du Projet -->
+        <div class="container corps_projet">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#projet">Projets:</a></li>
+                <li><a data-toggle="tab" href="#actu">Actualités:</a></li>
+                <li><a data-toggle="tab" href="#com">Commentaires:</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="projet" class="tab-pane fade in active">
+                    <p>- Description : {{ entity.description }}</p>
+                    <p>- Budget : {{ entity.cout }} Euro </p>
+                    <p>- Date  : {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
+                    <p>- Adresse : {{ app.user.adressemairie }}</p>
+                </div>
+                <div id="actu" class="tab-pane fade">
+                    <p>actu</p>
+                </div>
+                <div id="com" class="tab-pane fade">
+                    <p>Commentaire 1</p>
+                    <p>Commentaire 2</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Contact -->
+    <div class="container contact">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Contact</h3>
+                <p><span class="glyphicon glyphicon-envelope"></span> {{ entity.user.email }}</p>
+                <p><span class="glyphicon glyphicon-earphone"></span> {{ app.user.phone }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet Similaires -->
+    <div class="container projet_similaires">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Projets Similaires</h3>
+            </div>
+        </div>
+    </div>
+
     {#<ul>
 
 
@@ -57,4 +104,10 @@
         </a>
 
     </ul>#}
+{% endblock %}
+
+{% block javascripts %}
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 {% endblock %}
