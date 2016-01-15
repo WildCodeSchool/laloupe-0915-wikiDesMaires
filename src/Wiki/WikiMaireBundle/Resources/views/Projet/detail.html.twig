@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }}</a></h1>
-                    <h4> Commune de Réalisation : {{ entity.user.commune.nomcommune }} comptant {{ entity.bassinPopulation }} Habitants</h4>
+                    <h4> Commune de Réalisation : {{ entity.user.commune.nomcommune }} </h4>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
                     <p>Budget : {{ entity.cout }} Euro </p>
                     <p>Date  : {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
                     <p>Contact :</p>
-                    <p>Taille du Projet : {{ entity.tailleprojet }}</p>
+                    
                     <p>Adresse : {{ app.user.adressemairie }}</p>
                     <p>Contact : {{ app.user.phone }}</p>
                 </div>
