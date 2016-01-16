@@ -110,8 +110,68 @@
     </ul>#}
 {% endblock %}
 
+
+
 {% block javascripts %}
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="{{ asset('bundles/wikiwikimaire/js/jquery-1.11.3.min.js') }}"></script>
+    <script src="{{ asset('bundles/wikiwikimaire/js/jcanvas.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+    <script>
+        window.onload = function () {
+
+            var dps = [
+                {y: 10, legendText:"Etat", label: "Etat 10%"},
+                {y: 13, legendText:"Région", label: "Région 13%"},
+                {y: 18, legendText:"Département", label: "Département 18%"},
+                {y: 20, legendText:"EPCI", label: "EPCI 20%"},
+                {y: 5,  legendText:"autre", label: "autre 5%"}
+            ];
+            var bmp = [{x:"Etat"}, { x: "Région"}, { x: "Département"}, { x: "EPCI"}, {x: "autre"}];
+            //dataPoints.
+
+            var chart = new CanvasJS.Chart("chartContainer",{
+                title :{
+                    text: "Financement"
+                },
+                data: [{
+                    type: "pie",
+                    dataPoints : dps,
+                    indexLabels : bmp
+                }],
+                legendText: bmp
+            });
+
+            chart.render();
+            var xVal = dps.length + 1;
+            var yVal = 15;
+            var updateInterval = 1000;
+
+            var updateChart = function () {
+
+
+                yVal = yVal +  Math.round(5 + Math.random() *(-5-5));
+                dps.push({x: xVal,y: yVal});
+
+                xVal++;
+                if (dps.length >  10 )
+                {
+                    dps.shift();
+                }
+
+                chart.render();
+
+// update chart after specified time.
+
+            };
+        }
+    </script>
+
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
 {% endblock %}
+

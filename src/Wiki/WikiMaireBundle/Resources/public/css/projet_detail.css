@@ -99,3 +99,27 @@ h5 {
     text-align: center;
     padding-top: 6px;
 }
+
+
+/**********************
+*                     *
+*   Camembert         *
+*                     *
+**********************/
+
+.a, .b {
+    height: 50px;
+    width: 50px;
+    padding: 10px 10px;
+    border: 1px solid;
+    text-align: center;
+}
+.a:active, .b:active {
+    background-color: red;
+}
+.a:hover + .b {
+    background-color: transparent;
+}
+a:active + .b {
+    background-color: yellow;
+}
