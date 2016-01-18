@@ -1,0 +1,22 @@
+Wiki\WikiMaireBundle\Entity\Contact:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        telephone:
+            type: string
+            length: 255
+        mail:
+            type: string
+            length: 255
+        message:
+            type: text
+    lifecycleCallbacks: {  }
