@@ -23,10 +23,7 @@ class LoadProjetData extends AbstractFixture implements FixtureInterface, Ordere
         $entity->setNomprojet('S\'assoir autour d\'une table');
         $entity->setDescription('Blabla bla blabla');
         $entity->setDaterealisation(new \DateTime());
-        $entity->setDifficulte('complexe');
         $entity->setCout('20 000');
-        $entity->setTailleprojet('209');
-        $entity->setBassinPopulation('20 000');
         $file = new File(__DIR__.'/../Data/projet.jpeg');
         $destFile = __DIR__.'/../Data/tmp-projet.jpeg';
         copy($file, $destFile);
