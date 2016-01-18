@@ -1,9 +1,6 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/modern-business.css">
     <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/contact.css') }}" type="text/css"/>
 {% endblock %}
@@ -14,7 +11,7 @@
 <body class="my_background" style="background-image:url({{ asset('bundles/wikiwikimaire/img/contact.png') }})">
 
 <!-- Contact Details Column -->
-<div class="col-md-3">
+<div class="col-md-2">
 </div>
 
 <!-- /.row -->
@@ -22,13 +19,22 @@
 <!-- Contact Form -->
 <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
 <div class="row">
-    <div class="col-md-5">
+
+    <a href="{{ path('wiki_wiki_maire_homepage') }}">
+        <button class="btn btn-default">Retour</button>
+    </a>
+
+
+    <div class="col-md-4">
+        <div class="rectangle">
+
         <h3>Nous contacter</h3>
+
 
         <form name="sentMessage" id="contactForm" novalidate>
             <div class="control-group form-group">
                 <div class="controls">
-                    <span class="input-group-addon" id="basic-addon3">Nom & Prénom</span>
+                    <span class="input-group-addon" id="basic-addon3">Votre nom et prénom</span>
                     <input type="text" class="form-control" id="name" required
                            data-validation-required-message="Indiquer votre nom & prenom.">
 
@@ -37,7 +43,7 @@
             </div>
             <div class="control-group form-group">
                 <div class="controls">
-                    <span class="input-group-addon" id="basic-addon3">Numero telephone</span>
+                    <span class="input-group-addon" id="basic-addon3">Votre numéro de téléphone</span>
                     <input type="tel" class="form-control" id="phone" required
                            data-validation-required-message="Votre numero de telephone.">
                 </div>
@@ -58,17 +64,15 @@
                 </div>
             </div>
             <div id="success"></div>
+
+            <div class="col-md-1">
+                <!-- For success/fail messages -->
+                <input type="submit" value="Envoyez">
+            </div>
+        </form>
     </div>
-    <div class="col-md-offset-4 col-md-1">
-        <!-- For success/fail messages -->
-        <input type="submit" value="Envoyez">
-    </div>
-    </form>
+        </div>
+    <!-- /.row -->
 
 
-</div>
-<!-- /.row -->
-
-<hr>
-
-{% endblock %}
+    {% endblock %}

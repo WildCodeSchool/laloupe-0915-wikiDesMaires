@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
 
     <title>{% block title %}Wiki des maires{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/contact.css') }}" type="text/css"/>
-
-
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     {% block stylesheets %}
@@ -23,20 +19,6 @@
 </head>
 
 <body data-user="{{ app.user }}" {% if is_granted('ROLE_ADMIN') %} class="admin" {% endif %}>
-
-{% block header %}
-<header>
-    <ul class="nav nav-justified navbar-primary navbar-right">
-        {% if app.user %}
-            <li><a href="{{ path('sonata_user_profile_show') }}">Profil</a></li>
-            <li><a href="{{ path('sonata_user_admin_security_logout') }}">Logout</a></li>
-
-        {% else %}
-
-        {% endif %}
-    </ul>
-</header>
-{% endblock %}
 
 
 {#&#123;&#35;Debut header&#35;&#125;#}
@@ -70,10 +52,9 @@
     {#</nav>#}
 {#</header>#}
 {#&#123;&#35;Fin header&#35;&#125;#}
-
-
 {% block body %}
 {% endblock %}
+
 {#Appel des fichiers bootstap en CDN#}
 <script src="{{ asset('bundles/wikiwikimaire/js/jquery-1.11.3.min.js') }}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
