@@ -3,6 +3,7 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/projet_detail.css') }}" type="text/css"/>
+
 {% endblock %}
 
 {% block body -%}
@@ -89,6 +90,8 @@
         </div>
     </div>
 
+    <canvas id="myChart" width="400" height="400"></canvas>
+
     {#<ul>
 
 
@@ -110,4 +113,47 @@
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+    <script>
+        var financements = [];
+        $.ajax({
+        url: 'http://localhost/projet-wiki_des_maires/web/app_dev.php/projet/recherche',
+        datatype: 'json'
+        })
+        .done(function(data) {
+            console.log(data);
+            data.forEach(function(elem) {
+                financements.push(elem.financement);
+                var dato = [];
+                financements.forEach(function(str) {
+                    var i = 0;
+                    var key = "";
+                    var value = "";
+                    var inValue = false;
+                    while (str[i] != ';') {
+                        if (!inValue && str[i] != ':') {
+                            key += str[i];
+                        } else if (str[i] === ':') {
+                            inValue = true;
+                        } else {
+                            value += str[i];
+                        }
+                        i++;
+                    }
+                    value = parseInt(value);
+                    dato.push({
+                        value: value,
+                        label: key
+                    });
+
+                })
+                console.log(dato);
+
+                var canvas = document.getElementById("myChart");
+                var ctx = canvas.getContext("2d");
+                new Chart(ctx).Doughnut(dato);
+            });
+
+        });
+    </script>
 {% endblock %}
