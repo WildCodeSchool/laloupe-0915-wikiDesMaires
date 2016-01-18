@@ -1,0 +1,125 @@
+/*********************
+*                    *
+* Pour toute la Page *
+*                    *
+*********************/
+
+body {
+    margin: 10px;
+    padding: 5px;
+    background-color: #DDD7EA;
+
+}
+
+li {
+    list-style: none;
+}
+
+/**********************
+*                     *
+* Infos de Connection *
+*                     *
+**********************/
+
+.info_co {
+    text-align: right;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.info_co a {
+    text-decoration: none;
+    color: #333;
+}
+
+.info_co a:hover {
+    text-decoration: underline;
+}
+
+.info_co .btn-info, .btn-info:hover {
+    background-color: #C5BBDB;
+    background-image: none;
+    box-shadow: 4px 4px 4px #555;
+
+}
+
+/**********************
+*                     *
+*   Corps de la Page  *
+*                     *
+**********************/
+
+.section, .contact, .projet_similaires {
+    background-color: white;
+    padding: 30px;
+    width: 1120px;
+    margin-left: 28px;
+}
+
+.titre a {
+    color: #333;
+}
+
+.img_projet {
+    margin-left: 290px;
+    padding: 40px;
+}
+
+.corps_projet ul {
+    margin-right: 85px;
+}
+
+.corps_projet li a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.corps_projet .tab-content {
+    padding-top: 10px;
+}
+
+.contact p {
+    display: inline;
+    margin: 170px;
+
+}
+
+.rectangle {
+    width: 150px;
+    height: 25px;
+    margin-left: 28px;
+    background: #C5BBDB;
+
+}
+
+h5 {
+    margin-top: 50px;
+    margin-left: 3px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 6px;
+}
+
+
+/**********************
+*                     *
+*   Camembert         *
+*                     *
+**********************/
+
+.a, .b {
+    height: 50px;
+    width: 50px;
+    padding: 10px 10px;
+    border: 1px solid;
+    text-align: center;
+}
+.a:active, .b:active {
+    background-color: red;
+}
+.a:hover + .b {
+    background-color: transparent;
+}
+a:active + .b {
+    background-color: yellow;
+}

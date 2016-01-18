@@ -84,5 +84,6 @@ class ProfileFormHandler
     protected function onSuccess(UserInterface $user)
     {
         $this->userManager->updateUser($user);
+
     }
 }

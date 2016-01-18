@@ -1,0 +1,73 @@
+/*********************
+*                    *
+* Pour toute la Page *
+*                    *
+*********************/
+
+body {
+    margin: 10px;
+    padding: 5px;
+    background-color: #DDD7EA;
+}
+
+li {
+    list-style: none;
+}
+
+
+/**********************
+*                     *
+* Infos de Connection *
+*                     *
+**********************/
+
+.info_co {
+    text-align: right;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.info_co a {
+    text-decoration: none;
+    color: #333;
+}
+
+.info_co a:hover {
+    text-decoration: underline;
+}
+
+/*******************
+*                  *
+* Corps de la Page *
+*                  *
+*******************/
+
+.corps_page {
+    text-align: center;
+}
+
+.btn-default, .btn-default:hover, #recherche {
+    background-color: #C5BBDB;
+    background-image: none;
+    box-shadow: 4px 4px 4px #555;
+}
+
+.corps_page .btn-default {
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: inherit;
+    font-size: 20px;
+}
+
+#recherche {
+    width: 200px;
+    margin-left: 265px;
+    margin-top: 100px;
+    height: 25px;
+}
+
+#tags {
+    height: 50px;
+}

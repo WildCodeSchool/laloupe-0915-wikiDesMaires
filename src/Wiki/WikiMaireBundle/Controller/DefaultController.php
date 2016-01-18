@@ -17,4 +17,9 @@ class DefaultController extends Controller
         return $this->render('WikiWikiMaireBundle:Default:contact.html.twig');
     }
 
+    public function homeAction()
+    {
+        return $this->render('WikiWikiMaireBundle:Default:home.html.twig');
+    }
+
 }

@@ -88,26 +88,11 @@ class Projet
      */
     private $daterealisation;
 
-    /**
-     * @var string
-     */
-    private $difficulte;
 
     /**
      * @var float
      */
     private $cout;
-
-    /**
-     * @var string
-     */
-    private $tailleprojet;
-
-    /**
-     * @var integer
-     */
-    private $bassinPopulation;
-
 
     /**
      * Get id
@@ -191,29 +176,7 @@ class Projet
         return $this->daterealisation;
     }
 
-    /**
-     * Set difficulte
-     *
-     * @param string $difficulte
-     *
-     * @return Projet
-     */
-    public function setDifficulte($difficulte)
-    {
-        $this->difficulte = $difficulte;
 
-        return $this;
-    }
-
-    /**
-     * Get difficulte
-     *
-     * @return string
-     */
-    public function getDifficulte()
-    {
-        return $this->difficulte;
-    }
 
     /**
      * Set cout
@@ -239,53 +202,6 @@ class Projet
         return $this->cout;
     }
 
-    /**
-     * Set tailleprojet
-     *
-     * @param string $tailleprojet
-     *
-     * @return Projet
-     */
-    public function setTailleprojet($tailleprojet)
-    {
-        $this->tailleprojet = $tailleprojet;
-
-        return $this;
-    }
-
-    /**
-     * Get tailleprojet
-     *
-     * @return string
-     */
-    public function getTailleprojet()
-    {
-        return $this->tailleprojet;
-    }
-
-    /**
-     * Set bassinPopulation
-     *
-     * @param integer $bassinPopulation
-     *
-     * @return Projet
-     */
-    public function setBassinPopulation($bassinPopulation)
-    {
-        $this->bassinPopulation = $bassinPopulation;
-
-        return $this;
-    }
-
-    /**
-     * Get bassinPopulation
-     *
-     * @return integer
-     */
-    public function getBassinPopulation()
-    {
-        return $this->bassinPopulation;
-    }
     /**
      * @var \Application\Sonata\UserBundle\Entity\User
      */
@@ -376,4 +292,63 @@ class Projet
 
 
 
+    /**
+     * @var string
+     */
+    private $duree;
+
+
+    /**
+     * Set duree
+     *
+     * @param string $duree
+     *
+     * @return Projet
+     */
+    public function setDuree($duree)
+    {
+        $this->duree = $duree;
+
+        return $this;
+    }
+
+    /**
+     * Get duree
+     *
+     * @return string
+     */
+    public function getDuree()
+    {
+        return $this->duree;
+    }
+    /**
+     * @var string
+     */
+    private $gains;
+
+
+    /**
+     * Set gains
+     *
+     * @param string $gains
+     *
+     * @return Projet
+     */
+    public function setGains($gains)
+    {
+        $this->gains = $gains;
+
+        return $this;
+    }
+
+    /**
+     * Get gains
+     *
+     * @return string
+     */
+    public function getGains()
+    {
+        return $this->gains;
+    }
+    
 }

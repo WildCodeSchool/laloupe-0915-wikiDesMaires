@@ -8,7 +8,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Wiki\WikiMaireBundle\Entity\Projet;
-use Wiki\WikiMaireBundle\Form\ProjetType;
+use Wiki\WikiMaireBundle\Form\Handler\ProjetHandler;
+use Wiki\WikiMaireBundle\Form\Model\ProjetModel;
+use Wiki\WikiMaireBundle\Form\Type\ProjetType;
 
 /**
  * Projet controller.
@@ -38,20 +40,12 @@ class ProjetController extends Controller
      */
     public function createAction(Request $request)
     {
-        $entity = new Projet();
+        $entity = new ProjetModel();
         $form = $this->createCreateForm($entity);
-        $form->handleRequest($request);
 
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-
-            $user = $this->getUser();
-
-            $entity->setUser($user);
-
-            $em->persist($entity);
-            $em->flush();
-
+        $formHandler = new ProjetHandler($form, $request, $this->getDoctrine()->getManager(), $this->getUser(), $this->get('wiki.crop'));
+        $process = $formHandler->process($entity);
+        if ($process) {
             return $this->redirect($this->generateUrl('sonata_user_profile_show'));
         }
 
@@ -68,7 +62,7 @@ class ProjetController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(Projet $entity)
+    private function createCreateForm(ProjetModel $entity)
     {
         $form = $this->createForm(new ProjetType(), $entity, array(
             'action' => $this->generateUrl('projet_create'),

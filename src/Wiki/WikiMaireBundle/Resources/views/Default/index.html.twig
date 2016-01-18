@@ -1,143 +1,119 @@
 
-{% extends '::base.html.twig' %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/modern-business.css">
-    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/newwiki.css') }}" type="text/css"/>
-{% endblock %}
+{% extends "::base.html.twig" %}
 
-{% block header %}
-    <header>
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <img class="logo" logo src="{{ asset('bundles/wikiwikimaire/img/logo.jpeg') }}" alt="logo AMRF">
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="{{ path('sonata_user_security_login') }}" >Connexion</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
-    </header>
-{% endblock %}
+{% block title %} Accueil - {{ parent() }} {% endblock %}
 
-{% block body -%}
+{% block body %}
 
-
-    <!-- Header Carousel -->
-    <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
+    <div id="my_carousel" class="carousel slide" data-ride="carousel">
+        <!-- Bulles -->
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#my_carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#my_carousel" data-slide-to="1"></li>
+            <li data-target="#my_carousel" data-slide-to="2"></li>
         </ol>
-
-        <!-- Wrapper for slides -->
+        <!-- Slides -->
         <div class="carousel-inner">
-            <div class="item active">
-                <img class="fill" background-image mairie1 src="{{ asset('bundles/wikiwikimaire/img/mairie1.jpg') }}" alt="mairie1">
-                <div class="carousel-caption">
-                    <h2>Votre espace de maire à maire</h2>
+            <!-- Page 1 -->
+            <div class="item active slider">
+                <div class="carousel-page">
+                    <img src="{{ asset('bundles/wikiwikimaire/img/slide/slide1.jpg') }}" class="img-responsive" style="margin:0px auto;">
                 </div>
+                <div class=" slide_bg" >Projet de Réhabilitation d'un vieux Gymnase</div>
             </div>
+<<<<<<< HEAD
             <div class="item">
                 <img class="fill" background-image image2 src="{{ asset('bundles/wikiwikimaire/img/eolienne.jpg') }}" alt="image2">
                 <div class="carousel-caption">
                     <h2>Vos Projets ...</h2>
+=======
+            <!-- Page 2 -->
+            <div class="item slider">
+                <div class="carousel-page">
+                    <img src="{{ asset('bundles/wikiwikimaire/img/slide/slide2.jpg') }}" class="img-responsive img-rounded" style="margin:0px auto;">
+>>>>>>> 2cc5056d1184eb6dd829bf2df732c834b007bb60
                 </div>
+                <div class="slide_bg">Projet de Réhabilitation de conduite d'eau potable</div>
             </div>
+<<<<<<< HEAD
             <div class="item">
                 <img class="fill" background-image document src="{{ asset('bundles/wikiwikimaire/img/projetecole.jpg') }}" alt="document">
                 <div class="carousel-caption">
                     <h2>Vos ressources ...</h2>
+=======
+            <!-- Page 3 -->
+            <div class="item slider">
+                <div class="carousel-page">
+                    <img src="{{ asset('bundles/wikiwikimaire/img/slide/slide3.jpeg') }}" class="img-responsive img-rounded" style="margin:0px auto;max-height:100%;">
+>>>>>>> 2cc5056d1184eb6dd829bf2df732c834b007bb60
                 </div>
+                <div class="slide_bg">Projet de construction d'une école numérique</div>
             </div>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
+        <!-- Contrôles -->
+        <a class="left carousel-control" href="#my_carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
+        <a class="right carousel-control" href="#my_carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>
-
-    <!-- Page Content -->
     <div class="container">
-
-        <!-- Marketing Icons Section -->
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">EXPERTS</h1>
-
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4>Expert Technique</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4>Expert Pédagogique</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4>Expert Juridique</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Portfolio Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Comment ça marche</h1>
-
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                </div>
-                <!-- /.row -->
-
-                <hr>
-
-                <!-- Call to Action Section -->
-                <div class="well">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="{{ path('contact') }}" class="btn btn-lg btn-default btn-block btn-color center-block">Inscription</a>
+            <div class="col-lg-7 col-md-offset-1">
+                <div id="column" class="left">
+                    <div class="on-third-left">
+                        <h4>Comment ça marche ?</h4>
+                        <div class="blockquote">
+                            <p class="blockquote"> Vous avez un nouveau projet ?
+                                Vous ne savez pas comment vous lancer ? Un projet similaire existe t il ? Une fois
+                                inscrit sur le site, vous pourrez identifier des projets proches du votre, contacter le
+                                maire qui a réalisé celui ci et avoir des réponses claires à vos questions...</p>
+                        </div>
+                        <div class="blockquote">
+                            <p class="blockquote"> Vous recherchez un expert pour vous aider dans la réalisation de votre projet .
+                                Ce site peut vous apporter des réponses, vous allez pouvoir sélectionner et contac-
+                                ter des experts avec des compétences juridiques, techniques, financières, pédago-
+                                giques....dans les domaines de votre recherche.</p>
                         </div>
                     </div>
                 </div>
-
-                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="hr_line"></div>
+    <div class="section"  style="padding-bottom: 25px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="text-center">Projet 1</h3>
+                    <img src="{{ asset('bundles/wikiwikimaire/img/img_test.jpg') }}" alt="" class="img-thumbnail img-responsive">
+                    <p style="padding-top: 10px;">Laboratoire de recyclage et de fabrication numérique.Les fablabs sont un réseau mondial de laboratoires locaux...</p>
+                    <a href="#" class="btn btn-default">Lire plus</a>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-center">Projet 2</h3>
+                    <img src="{{ asset('bundles/wikiwikimaire/img/img_test.jpg') }}" alt="" class="img-thumbnail img-responsive">
+                    <p style="padding-top: 10px;">Projet d’innovation des Femmes dans le domaine des TIC. Le groupe femmes & TIC RIM a eu comme activité.</p>
+                    <a href="#" class="btn btn-default">Lire plus</a>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-center">Projet 3</h3>
+                    <img src="{{ asset('bundles/wikiwikimaire/img/img_test.jpg') }}" alt="" class="img-thumbnail img-responsive">
+                    <p style="padding-top: 10px;">Projet d’innovation dans la cartographie numérique libre.OSM est un projet qui a pour but de constituer une base de données géographique...</p>
+                    <a href="#" class="btn btn-default">Lire plus</a>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-center">Projet 4</h3>
+                    <img src="{{ asset('bundles/wikiwikimaire/img/img_test.jpg') }}" alt="" class="img-thumbnail img-responsive">
+                    <p style="padding-top: 10px;">Projet d’innovation dans le développement des applications mobile. projet de Mauritanie Mobile consiste à encourager les jeunes à innover...</p>
+                    <a href="#" class="btn btn-default">Lire plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Wiki des Maires</p>
+    </footer>
 {% endblock %}
