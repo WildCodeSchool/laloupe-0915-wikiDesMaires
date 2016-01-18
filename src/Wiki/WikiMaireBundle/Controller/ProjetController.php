@@ -263,4 +263,5 @@ class ProjetController extends Controller
             'projet'   => $projets
         ));
     }
+
 }
