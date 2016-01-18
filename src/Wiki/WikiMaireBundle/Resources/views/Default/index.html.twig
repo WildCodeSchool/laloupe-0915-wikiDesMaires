@@ -1,10 +1,12 @@
-
-
 {% extends "::base.html.twig" %}
 
 {% block title %} Accueil - {{ parent() }} {% endblock %}
 
 {% block body %}
+
+    <a href="{{ path('homepage_afterlogin') }}">
+        <button class="btn btn-default">Connexion</button>
+    </a>
 
     <div id="my_carousel" class="carousel slide" data-ride="carousel">
         <!-- Bulles -->
@@ -22,17 +24,21 @@
                 </div>
                 <div class=" slide_bg" >Projet de Réhabilitation d'un vieux Gymnase</div>
             </div>
+
             <!-- Page 2 -->
             <div class="item slider">
                 <div class="carousel-page">
                     <img src="{{ asset('bundles/wikiwikimaire/img/slide/slide2.jpg') }}" class="img-responsive img-rounded" style="margin:0px auto;">
+
                 </div>
                 <div class="slide_bg">Projet de Réhabilitation de conduite d'eau potable</div>
             </div>
+
             <!-- Page 3 -->
             <div class="item slider">
                 <div class="carousel-page">
                     <img src="{{ asset('bundles/wikiwikimaire/img/slide/slide3.jpeg') }}" class="img-responsive img-rounded" style="margin:0px auto;max-height:100%;">
+
                 </div>
                 <div class="slide_bg">Projet de construction d'une école numérique</div>
             </div>
@@ -51,6 +57,7 @@
                 <div id="column" class="left">
                     <div class="on-third-left">
                         <h4>Comment ça marche ?</h4>
+
                         <div class="blockquote">
                             <p class="blockquote"> Vous avez un nouveau projet ?
                                 Vous ne savez pas comment vous lancer ? Un projet similaire existe t il ? Une fois
@@ -58,7 +65,8 @@
                                 maire qui a réalisé celui ci et avoir des réponses claires à vos questions...</p>
                         </div>
                         <div class="blockquote">
-                            <p class="blockquote"> Vous recherchez un expert pour vous aider dans la réalisation de votre projet .
+                            <p class="blockquote"> Vous recherchez un expert pour vous aider dans la réalisation de
+                                votre projet .
                                 Ce site peut vous apporter des réponses, vous allez pouvoir sélectionner et contac-
                                 ter des experts avec des compétences juridiques, techniques, financières, pédago-
                                 giques....dans les domaines de votre recherche.</p>
@@ -67,7 +75,19 @@
                 </div>
             </div>
         </div>
+
+        <a href="{{ path('contact') }}">
+            <button class="btn1 btn-default">Inscription</button>
+        </a>
+
     </div>
+
+
+
+    <!--
+    // Proposition de projets
+
+
     <div class="hr_line"></div>
     <div class="section"  style="padding-bottom: 25px;">
         <div class="container">
@@ -99,6 +119,8 @@
             </div>
         </div>
     </div>
+
+    -->
     <footer>
         <p>&copy; Wiki des Maires</p>
     </footer>

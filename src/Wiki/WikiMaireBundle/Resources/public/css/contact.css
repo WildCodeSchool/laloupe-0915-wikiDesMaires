@@ -1,5 +1,5 @@
 label {
-    color: #263CAC;
+    color: #050505;
     font-size: 24px;
 }
 h2 {
@@ -7,20 +7,20 @@ h2 {
     font-size:24px;
 }
 h3 {
-    color: red;
-    font-size: 40px;
-    margin-top: 3cm;
-    margin-bottom: 2cm;
+    color: black;
+    font-size: 45px;
+    margin-top: 0,9cm;
+    margin-bottom: 0,9cm;
     text-align: center;
 }
 p {
     text-align: center;
-    color: red;
+    color: black;
 }
 .my_background {
     background: no-repeat;
     background-size: cover;
-    ;
+    background-color: #DDD7EA;
 }
 .help-block {
     text-align: center;
@@ -28,11 +28,37 @@ p {
 .navbar-brand {
     font-size: 28px;
     color: #A9587A;
-}
+} 
 .btn {
-    background-color: #337AB7;
+    background-color: #C5BBDB;
+    box-shadow: 4px 4px 4px #555;
+    margin-left: 420px;
+    margin-top: 20px;
 }
-.btn:hover {
-    background-color: #CCC;
+
+input[type="submit"] {
+    background-color: #C5BBDB;
+    width: 115px;
+    height: 40px;
+    box-shadow: 4px 4px 4px #555;
+}
+
+.input-group-addon {
+    text-align: center;
+    color: #050505;
+    background-color: #C5BBDB;
+    width: 4cm;
+}
+
+.row {
+    margin-right: -5cm;
+}
+
+.rectangle{
+    width: 750px;
+    height: 680px;
+    background: white;
+    padding: 30px;
+    margin-top: 145px;
 }
 
