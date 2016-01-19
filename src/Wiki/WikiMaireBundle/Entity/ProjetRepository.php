@@ -2,6 +2,8 @@
 
 namespace Wiki\WikiMaireBundle\Entity;
 
+use Doctrine\ORM\Query\ResultSetMapping;
+
 /**
  * ProjetRepository
  *
@@ -19,6 +21,29 @@ class ProjetRepository extends \Doctrine\ORM\EntityRepository
             ->Where('p.tags LIKE :str')
             ->setParameter('str', '%'.$tags.'%');
         $query = $queryBuilder->getQuery();
+        return $query->getResult();
+    }
+
+    public function getSuggested($nb)
+    {
+        $rsm = new ResultSetMapping();
+        $rsm->addEntityResult('Wiki\WikiMaireBundle\Entity\Projet', 'p');
+        $rsm->addFieldResult('p', 'id', 'id');
+        $rsm->addFieldResult('p', 'nomprojet', 'nomprojet');
+        $rsm->addFieldResult('p', 'description', 'description');
+        $rsm->addFieldResult('p', 'duree', 'duree');
+        $rsm->addFieldResult('p', 'gains', 'gains');
+        $rsm->addFieldResult('p', 'daterealisation', 'daterealisation');
+        $rsm->addFieldResult('p', 'cout', 'cout');
+        $rsm->addFieldResult('p', 'photo', 'photo');
+        $rsm->addFieldResult('p', 'financement', 'financement');
+        $rsm->addFieldResult('p', 'user', 'user');
+
+        $sql = 'SELECT * FROM projet ORDER BY RAND() LIMIT ?';
+
+        $query = $this->_em->createNativeQuery($sql, $rsm);
+        $query->setParameter(1, $nb);
+
         return $query->getResult();
     }
 }
