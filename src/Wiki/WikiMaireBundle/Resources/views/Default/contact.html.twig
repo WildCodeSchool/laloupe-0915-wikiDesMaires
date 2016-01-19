@@ -1,9 +1,6 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/modern-business.css">
     <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/contact.css') }}" type="text/css"/>
 {% endblock %}
@@ -11,6 +8,7 @@
 {% block body -%}
 
 
+<<<<<<< HEAD
 <body class="my_background" style="background-image:url({{ asset('bundles/wikiwikimaire/img/contact.png') }})">
 
 <!-- Contact Details Column -->
@@ -64,11 +62,84 @@
         <input type="submit" value="Envoyez">
     </div>
     </form>
+=======
+{#<body class="my_background" style="background-image:url({{ asset('bundles/wikiwikimaire/img/contact.png') }})">#}
+>>>>>>> e820c9b9aea35ae3e12a8eeedfbfb645c0020aab
+
+{#<!-- Contact Details Column -->#}
+{#<div class="col-md-2">#}
+{#</div>#}
+
+{#<!-- /.row -->#}
+
+{#<!-- Contact Form -->#}
+{#<!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->#}
+{#<div class="row">#}
+
+    {#<a href="{{ path('wiki_wiki_maire_homepage') }}">#}
+        {#<button class="btn btn-default">Retour</button>#}
+    {#</a>#}
 
 
-</div>
-<!-- /.row -->
+    {#<div class="col-md-4">#}
+        {#<div class="rectangle">#}
 
-<hr>
+        {#<h3>Nous contacter</h3>#}
 
-{% endblock %}
+
+        {#<form name="sentMessage" id="contactForm" novalidate method="POST" action="#">#}
+            {#<div class="control-group form-group">#}
+                {#<div class="controls">#}
+                    {#<span class="input-group-addon" id="basic-addon3">Votre nom et prénom</span>#}
+                    {#<input type="text" class="form-control" id="name" required#}
+                           {#data-validation-required-message="Indiquer votre nom & prenom.">#}
+
+                    {#<p class="help-block"></p>#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="control-group form-group">#}
+                {#<div class="controls">#}
+                    {#<span class="input-group-addon" id="basic-addon3">Votre numéro de téléphone</span>#}
+                    {#<input type="tel" class="form-control" id="phone" required#}
+                           {#data-validation-required-message="Votre numero de telephone.">#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="control-group form-group">#}
+                {#<div class="controls">#}
+                    {#<span class="input-group-addon" id="basic-addon3">Votre adresse Email</span>#}
+                    {#<input type="email" class="form-control" id="email" required#}
+                           {#data-validation-required-message="Votre Adresse Email.">#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="control-group form-group">#}
+                {#<div class="controls">#}
+                    {#<span class="input-group-addon" id="basic-addon3">Votre Message</span>#}
+                    {#<textarea rows="10" cols="100" class="form-control" id="message" required#}
+                              {#data-validation-required-message="Votre message" maxlength="999"#}
+                              {#style="resize:none"></textarea>#}
+                {#</div>#}
+            {#</div>#}
+            {#<div id="success"></div>#}
+
+            {#<div class="col-md-1">#}
+                {#<!-- For success/fail messages -->#}
+                {#<input type="submit" value="Envoyez">#}
+            {#</div>#}
+        {#</form>#}
+    {#</div>#}
+        {#</div>#}
+    {#<!-- /.row -->#}
+    <form action="{{ path('contact') }}" method="post" {{ form_enctype(form) }} class="simon">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.name) }}
+        {{ form_row(form.telephone) }}
+        {{ form_row(form.mail) }}
+        {{ form_row(form.message) }}
+
+        {{ form_rest(form) }}
+
+        <input type="submit" value="Submit" />
+    </form>
+
+    {% endblock %}

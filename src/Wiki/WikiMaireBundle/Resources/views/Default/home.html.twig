@@ -27,7 +27,7 @@
     <div class="container corps_page">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <ul>
+            <ul id="hiden">
                 <li>
                     <a href="{{ path('projet_create') }}">
                         <button class="btn btn-default"><h2>Ajouter un nouveau Projet</h2></button>
@@ -45,7 +45,7 @@
                     <h2 align="center">Rechercher un Projet</h2>
                 </div>
                 <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control" placeholder="Entrez votre recherche" id="tags">
+                    <input type="text" class="form-control quicksearch" placeholder="Entrez votre recherche" id="cache">
                     <span class="input-group-addon">
                         <button type="submit">
                             <span class="glyphicon glyphicon-search"></span>
@@ -57,9 +57,39 @@
         <div class="col-md-2"></div>
     </div>
 
-    <!-- Projets Recherchés -->
-    <div>
+    <!--<button id="cache">Fait disparaitre</button>-->
 
+    <!-- Projets Recherchés -->
+    <div class="grid projet_hide">
+        <div class="projects">
+            {% for entity in entities %}
+                <div class="row project element-item col-md-11">
+                    {% if loop.index is even %}
+                        <div class="col-md-5">
+                            <a href="#">
+                                <img src="{{ app.request.basepath }}/uploads/{{ entity.photo }}" class="img-thumbnail">
+                            </a>
+                        </div>
+                        <div class="col-md-7">
+                            <p>Description :</p>
+
+                            <p>{{ entity.description }}</p>
+                        </div>
+                    {% else %}
+                        <div class="col-md-7">
+                            <p>Description :</p>
+
+                            <p>{{ entity.description }}</p>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="#">
+                                <img src="{{ app.request.basepath }}/uploads/{{ entity.photo }}" class="img-thumbnail">
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock %}
@@ -67,5 +97,51 @@
 {% block javascripts %}
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+        $(function()
+        {
+            $('.projet_hide').hide();
+            $('#cache').keyup(function() {
+                $('#hiden').hide(1000);
+                $('.projet_hide').show(1000);
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            // quick search regex
+            var qsRegex;
+            // init Isotope
+            var $grid = $('.grid').isotope({
+                itemSelector: '.element-item',
+                layoutMode: 'fitRows',
+                filter: function () {
+                    return qsRegex ? $(this).text().match(qsRegex) : true;
+                }
+            });
+            // use value of search field to filter
+            var $quicksearch = $('.quicksearch').keyup(debounce(function () {
+                qsRegex = new RegExp($quicksearch.val(), 'gi');
+                $grid.isotope();
+            }, 200));
+        });
+        // debounce so filtering doesn't happen every millisecond
+        function debounce(fn, threshold) {
+            var timeout;
+            return function debounced() {
+                if (timeout) {
+                    clearTimeout(timeout);
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+
+                timeout = setTimeout(delayed, threshold || 100);
+            }
+        }
+    </script>
 {% endblock %}

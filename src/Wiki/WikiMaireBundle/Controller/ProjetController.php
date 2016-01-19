@@ -27,9 +27,8 @@ class ProjetController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('WikiWikiMaireBundle:Projet')->findAll();
-
-        return $this->render('WikiWikiMaireBundle:Projet:index.html.twig', array(
+        $entities = $em->getRepository('WikiWikiMaireBundle:Projet')->getSuggested(4);
+        return $this->render('WikiWikiMaireBundle:Projet:detail.html.twig', array(
             'entities' => $entities,
         ));
     }
@@ -263,4 +262,5 @@ class ProjetController extends Controller
             'projet'   => $projets
         ));
     }
+
 }

@@ -1,21 +1,39 @@
 body{
     background-color: #DDD7EA;
 }
+
 .navbar {
     position: relative;
     min-height: 80px;
     margin-bottom: 20px;
     border: 1px solid transparent;
 }
+
 .navbar{
     margin-bottom: 0px;
 }
+
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #E7E7E7;
     padding-top: 12px;
 }
 
+.btn {
+    background: #C5BBDB;
+    display: block;
+    width: 200px;
+    margin-left: 970px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 4px #555;
+
+}
+
 /*Carousel slide*/
+
+#my_carousel{
+    margin-top: 40px;
+    }
+
 .carousel-inner{
     height: 500px;
 }
@@ -27,10 +45,13 @@ body{
     background-color:#5f666d;
     color:white;
 }
+
 .slider img{
     height: 500px;
     width: 1280px;
+
 }
+
 .slider .slide_bg{
     position: absolute;
     bottom: 0;
@@ -51,30 +72,32 @@ body{
     height: auto;
     position: relative;
 }
+
 #column h4 {
-    width: 270px;
+    width: 215px;
     padding: 10px;
     padding-left: 20px;
-    color: #ffffff;
-    background-color: #9786BA;
+    background-color: #C5BBDB;
     font-size: 18px;
     margin: 0;
     height: 40px;
     margin-top: 40px;
     margin-bottom: -10px;
 }
+
 .blockquote p {
     font-style: italic;
     padding: 20px 20px 20px 60px;
     width: 850px;
     margin-top: 10px;
     margin-bottom: 20px;
-    background: #F7F5E2;
+    background: white;
     /*font-family: "Fira Sans","Helvetica Neue",Arial,sans-serif;*/
 }
+
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;
-    background-color: #9786BA;
+    background-color: #C5BBDB;
     font-size: 18px;
     height: 45px;
     width: 140px;
@@ -82,10 +105,12 @@ body{
     padding-left: 20px;
     border-radius: 10px;
 }
+
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: #ffffff;
     background-color: #B9AED2;
 }
+
 .hr_line {
     width: 100%;
     max-width: 1260px;
@@ -94,23 +119,30 @@ body{
     margin-bottom: 30px;
     float: left;
 }
+
 footer{
     width: 100%;
     background-color: lightgrey;
-    height: 110px;
+    height: 50px;
+    margin-top: 30px;
+    padding: 15px;
 }
+
 footer p {
     text-align: center;
 }
+
 .form-control {
     display: block;
     height: 50px;
     width: 350px;
     margin-top: 30px;
 }
+
 .form-group .pass{
     margin-top: 100px;
 }
+
 .connexion{
     margin-left: 320px;
     height: 330px;
@@ -120,9 +152,11 @@ footer p {
     margin-top: -10px;
 
 }
+
 .form-horizontal .control-label {
     margin-top: 30px;
 }
+
 #column_connexion h4 {
     width: 270px;
     padding: 10px;
@@ -136,10 +170,22 @@ footer p {
     margin-bottom: -10px;
     margin-left: 320px;
 }
+
 input[type="submit"] {
     width: 250px;
     height: 40px;
     background-color: #9786BA;
     color: #fff;
+}
+
+
+.btn1 {
+    background: #C5BBDB;
+    display: block;
+    width: 1100px;
+    margin-top: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px #555;
+    margin-left: 20px;
 }
 

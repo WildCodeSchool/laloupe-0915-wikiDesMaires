@@ -19,7 +19,13 @@ class DefaultController extends Controller
 
     public function homeAction()
     {
-        return $this->render('WikiWikiMaireBundle:Default:home.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('WikiWikiMaireBundle:Projet')->findAll();
+
+        return $this->render('WikiWikiMaireBundle:Default:home.html.twig', array(
+            'entities' => $entities,
+        ));
     }
 
 }

@@ -14,5 +14,6 @@ homepage_afterlogin:
 
 contact:
     path:     /contact
-    defaults: { _controller: WikiWikiMaireBundle:Default:contact }
-
+    defaults: { _controller: WikiWikiMaireBundle:Contact:mail }
+    requirements:
+        _method:  GET|POST

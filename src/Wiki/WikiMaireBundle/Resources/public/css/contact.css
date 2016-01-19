@@ -30,30 +30,31 @@ p {
     color: #A9587A;
 } 
 .btn {
-    color: #FFFFFF !important;
-    background-color: #C1B7D7 !important;
-}
-.btn:hover {
-    background-color: #010202 !important;
-}
-input[type="submit"] {
-    cursor: pointer;
     background-color: #C5BBDB;
-    width: 250px;
-    height: 50px;
-    font-size: 25px;
-    font-family: strong;
-    box-shadow: 8px 8px 8px #555;
-    margin-bottom: 0cm;
+    box-shadow: 4px 4px 4px #555;
+    margin-left: 420px;
+    margin-top: 20px;
 }
+
+input[type="submit"] {
+    background-color: #C5BBDB;
+    width: 115px;
+    height: 40px;
+    box-shadow: 4px 4px 4px #555;
+}
+
 .input-group-addon {
     text-align: center;
     color: #050505;
     background-color: #C5BBDB;
     width: 4cm;
 }
-.row {
-    margin-right: -5cm;
-}
 
+.rectangle{
+    width: 750px;
+    height: 680px;
+    background: white;
+    padding: 30px;
+    margin-top: 145px;
+}
 
