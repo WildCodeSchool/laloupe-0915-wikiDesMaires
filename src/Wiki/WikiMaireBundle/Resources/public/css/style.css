@@ -147,7 +147,7 @@ footer p {
     margin-left: 320px;
     height: 330px;
     width: 650px;
-    background-color: #F7F5E2;
+    background-color: white;
     border-radius-bottomleft: 10px;
     margin-top: -10px;
 
@@ -158,15 +158,14 @@ footer p {
 }
 
 #column_connexion h4 {
-    width: 270px;
+    width: 175px;
     padding: 10px;
     padding-left: 20px;
-    color: #ffffff;
-    background-color: #9786BA;
+    background-color: #C5BBDB;
     font-size: 18px;
     margin: 0;
     height: 40px;
-    margin-top: 40px;
+    margin-top: 45px;
     margin-bottom: -10px;
     margin-left: 320px;
 }
@@ -174,8 +173,8 @@ footer p {
 input[type="submit"] {
     width: 250px;
     height: 40px;
-    background-color: #9786BA;
-    color: #fff;
+    background-color: #C5BBDB;
+    box-shadow: 4px 4px 4px #555;
 }
 
 
