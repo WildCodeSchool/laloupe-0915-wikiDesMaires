@@ -28,7 +28,7 @@ class ProjetController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('WikiWikiMaireBundle:Projet')->getSuggested(4);
-        return $this->render('WikiWikiMaireBundle:Projet:detail.html.twig', array(
+        return $this->render('WikiWikiMaireBundle:Projet:index.html.twig', array(
             'entities' => $entities,
         ));
     }
@@ -237,14 +237,14 @@ class ProjetController extends Controller
         ));
     }
 
-    public function RechercheAction(Request $request)
+    public function RechercheAction(Request $request, $id)
     {
-        $tags = $request->request->get('tags');
+
         $em = $this->getDoctrine()->getManager();
 
         $serializer = SerializerBuilder::create()->build();
 
-        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->RechercheProjet($tags);
+        $projets = $em->getRepository('WikiWikiMaireBundle:Projet')->find($id);
         $jsonContent = $serializer->serialize($projets, 'json');
 
         $response = new Response($jsonContent);

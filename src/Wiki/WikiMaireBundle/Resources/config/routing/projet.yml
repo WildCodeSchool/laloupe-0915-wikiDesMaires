@@ -28,6 +28,6 @@ projet_detail:
 
 
 projet_recherche:
-    path:     /recherche
+    path:     /{id}/recherche
     defaults: { _controller: "WikiWikiMaireBundle:Projet:Recherche" }
     methods:  [POST, GET]
