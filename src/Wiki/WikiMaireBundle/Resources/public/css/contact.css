@@ -1,0 +1,50 @@
+label {
+    color: #050505;
+    font-size: 14px;
+    margin-top: 40px;
+}
+input[type="Submit"] {
+    cursor: pointer;
+    background-color: #C5BBDB;
+    width: 250px;
+    height: 50px;
+    font-size: 25px;
+    box-shadow: 8px 8px 8px #555;
+    margin-top: 3cm;
+    margin-left: 4cm;
+    text-align: center;
+}
+form {
+    background-color: #FFFFFF;
+    margin-top: 1cm;
+    margin-left: 8cm;
+    max-width: 600px;
+    height: 14cm;
+}
+body {
+    background-color: #DDD7EA;
+}
+.form-control {
+    margin-top: 1cm;
+    display: block;
+    height: 40px;
+    width: 350px;
+}
+h1 {
+    font-size: 22px;
+    margin-top: 2cm;
+    margin-bottom: 8cm;
+    text-align: center;
+}
+.rectangle {
+    height: 30px;
+    width: 220px;
+    background: #C5BBDB none repeat scroll 0% 0%;
+    margin-left: 490px;
+    text-align: center;
+    box-shadow: 4px 4px 4px #555;
+}
+
+
+
+
