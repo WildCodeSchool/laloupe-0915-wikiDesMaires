@@ -29,8 +29,8 @@
         <!-- Titre -->
         <div class="container titre">
             <div class="row">
-                <div class="col-md-2">
-                    <h1><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }} : </a></h1>
+                <div class="col-md-12">
+                    <h1><a href="{{ path('projet_detail', { 'id': entity.id }) }}">{{ entity.nomprojet }} </a></h1>
                 </div>
             </div>
         </div>
@@ -93,7 +93,10 @@
         <h5>Projets Similaires</h5>
     </div>
 
-    {#<ul>
+    <div style="width: 100%; height: 100%;">
+        <canvas id="myChart" style="width: 100%; height: auto;"></canvas>
+    </div>
+    <div id="js-legend" class="chart-legend"></div>    {#<ul>
 
 
         <li>{{ entity.description }}</li>
@@ -114,63 +117,64 @@
 
 {% block javascripts %}
     <script src="{{ asset('bundles/wikiwikimaire/js/jquery-1.11.3.min.js') }}"></script>
-    <script src="{{ asset('bundles/wikiwikimaire/js/jcanvas.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
     <script>
-        window.onload = function () {
+        $.ajax({
+                    url: 'http://localhost/projet-wiki_des_maires/web/app_dev.php/projet/'+{{ entity.id }}+'/recherche',
+                    datatype: 'json'
+                })
+                .done(function(data) {
+                    console.log(data);
+                    var str = data.financement;
+                    var dato = [];
+                    var i = 0;
+                    var key = "";
+                    var value = "";
+                    var colors = ["blue","gray","green","yellow","purple","red"];
+                    var inValue = false;
+                    while(str[i]) {
+                        if (str[i] != ':' && !inValue) {
+                            key += str[i];
+                        } else if (str[i] === ':') {
+                            inValue = true;
+                        } else if (inValue && str[i] != ';') {
+                            value += str[i];
+                        } else {
+                            inValue = false;
+                            value = parseInt(value);
+                            dato.push({
+                                label: key,
+                                value: value,
+                                color: colors[i%6]
+                            });
+                            key = "";
+                            value = "";
+                        }
+                        i++;
+                    }
+                    console.log(dato);
+                    var options = {
+                        segmentShowStroke: false,
+                        animateRotate: true,
+                        animateScale: false,
+                        percentageInnerCutout: 50,
+                        tooltipTemplate: "<%= label %>"+" "+"<%= value %> %"
+                    }
+                    var canvas = document.getElementById("myChart");
+                    var ctx = canvas.getContext("2d");
+                    new Chart(ctx).Doughnut(dato,options);
 
-            var dps = [
-                {y: 10, legendText:"Etat", label: "Etat 10%"},
-                {y: 13, legendText:"Région", label: "Région 13%"},
-                {y: 18, legendText:"Département", label: "Département 18%"},
-                {y: 20, legendText:"EPCI", label: "EPCI 20%"},
-                {y: 5,  legendText:"autre", label: "autre 5%"}
-            ];
-            var bmp = [{x:"Etat"}, { x: "Région"}, { x: "Département"}, { x: "EPCI"}, {x: "autre"}];
-            //dataPoints.
-
-            var chart = new CanvasJS.Chart("chartContainer",{
-                title :{
-                    text: "Financement"
-                },
-                data: [{
-                    type: "pie",
-                    dataPoints : dps,
-                    indexLabels : bmp
-                }],
-                legendText: bmp
-            });
-
-            chart.render();
-            var xVal = dps.length + 1;
-            var yVal = 15;
-            var updateInterval = 1000;
-
-            var updateChart = function () {
+                    //Legend  du camembert
+                    document.getElementById('js-legend').innerHTML = myChart.generateLegend();
 
 
-                yVal = yVal +  Math.round(5 + Math.random() *(-5-5));
-                dps.push({x: xVal,y: yVal});
+                });
 
-                xVal++;
-                if (dps.length >  10 )
-                {
-                    dps.shift();
-                }
 
-                chart.render();
 
-// update chart after specified time.
-
-            };
-        }
     </script>
-
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
 
 {% endblock %}

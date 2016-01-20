@@ -24,7 +24,7 @@ class ContactController extends Controller
                 // Perform some action, such as sending an email
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Contact venant du site')
-//                    ->setFrom('email@email.fr')
+                    ->setFrom('email@email.fr')
                     ->setTo('wikidesmaires@gmail.com')
                     ->setBody(
                         $this->renderView('emails/contactreceive.html.twig',
