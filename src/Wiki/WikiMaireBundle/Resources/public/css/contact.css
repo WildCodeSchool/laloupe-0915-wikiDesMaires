@@ -10,8 +10,8 @@ input[type="Submit"] {
     height: 50px;
     font-size: 25px;
     box-shadow: 8px 8px 8px #555;
-    margin-top: 3cm;
-    margin-left: 4cm;
+    margin-top: 1cm;
+    margin-left: 1cm;
     text-align: center;
 }
 form {
@@ -19,7 +19,7 @@ form {
     margin-top: 1cm;
     margin-left: 8cm;
     max-width: 600px;
-    height: 14cm;
+    height: 13cm;
 }
 body {
     background-color: #DDD7EA;
@@ -30,11 +30,24 @@ body {
     height: 40px;
     width: 350px;
 }
-h1 {
+h1{
     font-size: 22px;
-    margin-top: 2cm;
+    padding-top: 4px;
+}
+h2 {
+    padding-top: 2px;
+    font-size: 26px;
     margin-bottom: 8cm;
     text-align: center;
+}
+.button-retour {
+    height: 30px;
+    width: 140px;
+    margin-top: 1cm;
+    margin-left: 25cm;
+    background: #C5BBDB none repeat scroll 0% 0%;
+    text-align: center;
+    box-shadow: 4px 4px 4px #555;
 }
 .rectangle {
     height: 30px;
@@ -44,6 +57,7 @@ h1 {
     text-align: center;
     box-shadow: 4px 4px 4px #555;
 }
+
 
 
 

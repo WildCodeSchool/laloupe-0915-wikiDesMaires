@@ -79,8 +79,11 @@
             {{ flashMessage }}
         </div>
     {% endfor %}
+    <div class="button-retour">
+        <h1>Retour</h1>
+    </div>
     <div class="rectangle">
-    <h1>Nous Contacter</h1>
+    <h2>Nous Contacter</h2>
         </div>
     <form action="{{ path('contact') }}" method="post" {{ form_enctype(form) }} class="inscription">
         {{ form_errors(form) }}
