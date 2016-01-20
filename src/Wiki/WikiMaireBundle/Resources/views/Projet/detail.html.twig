@@ -93,8 +93,10 @@
         <h5>Projets Similaires</h5>
     </div>
 
-    <canvas id="myChart" width="400" height="400"></canvas>
-    {#<ul>
+    <div style="width: 100%; height: 100%;">
+        <canvas id="myChart" style="width: 100%; height: auto;"></canvas>
+    </div>
+    <div id="js-legend" class="chart-legend"></div>    {#<ul>
 
 
         <li>{{ entity.description }}</li>
@@ -153,9 +155,19 @@
                         i++;
                     }
                     console.log(dato);
+                    var options = {
+                        segmentShowStroke: false,
+                        animateRotate: true,
+                        animateScale: false,
+                        percentageInnerCutout: 50,
+                        tooltipTemplate: "<%= label %>"+" "+"<%= value %> %"
+                    }
                     var canvas = document.getElementById("myChart");
                     var ctx = canvas.getContext("2d");
-                    new Chart(ctx).Doughnut(dato);
+                    new Chart(ctx).Doughnut(dato,options);
+
+                    //Legend  du camembert
+                    document.getElementById('js-legend').innerHTML = myChart.generateLegend();
 
 
                 });
