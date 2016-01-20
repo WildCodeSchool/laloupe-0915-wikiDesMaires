@@ -7,7 +7,6 @@
 
 {% block body -%}
 
-
 {#<body class="my_background" style="background-image:url({{ asset('bundles/wikiwikimaire/img/contact.png') }})">#}
 
 {#<!-- Contact Details Column -->#}
@@ -79,6 +78,7 @@
             {{ flashMessage }}
         </div>
     {% endfor %}
+
     <form action="{{ path('contact') }}" method="post" {{ form_enctype(form) }} class="simon">
         {{ form_errors(form) }}
 
@@ -89,7 +89,7 @@
 
         {{ form_rest(form) }}
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit"/>
     </form>
 
-    {% endblock %}
+{% endblock %}
