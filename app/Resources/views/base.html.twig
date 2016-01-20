@@ -3,22 +3,12 @@
 <head>
     <meta charset="UTF-8" />
 
-<<<<<<< HEAD
-    <title>{% block title %} Wiki des Maires {% endblock %}</title>
 
-
-    {#Appel des fichiers bootstap en CDN#}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-=======
     <title>{% block title %}Wiki des maires{% endblock %}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
->>>>>>> e820c9b9aea35ae3e12a8eeedfbfb645c0020aab
+
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     {% block stylesheets %}
@@ -30,11 +20,9 @@
 
 </head>
 
-<<<<<<< HEAD
-<body>
-=======
+
 <body data-user="{{ app.user }}" {% if is_granted('ROLE_ADMIN') %} class="admin" {% endif %}>
->>>>>>> e820c9b9aea35ae3e12a8eeedfbfb645c0020aab
+
 
 
 {#&#123;&#35;Debut header&#35;&#125;#}
