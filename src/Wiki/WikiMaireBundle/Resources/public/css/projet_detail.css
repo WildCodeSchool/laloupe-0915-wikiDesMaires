@@ -107,6 +107,18 @@ li {
 #myChart {
     width: 800px;
     height: 400px;
+}
 
+#hi{
+    display: inline-block;
+    margin: 0 90px auto;
+    width: 350px;
+}
 
+.rectangle1 {
+    width: 480px;
+    height: 280px;
+    margin-left: 35px;
+    background: white;
+    display: inline-block;
 }
