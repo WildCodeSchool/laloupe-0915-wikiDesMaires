@@ -46,22 +46,53 @@ li {
     text-align: center;
 }
 
-.btn-default, #recherche {
-    background-color: #C5BBDB;
-    background-image: none;
+.btn-default1 {
+    padding-top: 8px;
+    height: 40px;
+    width: 220px;
+    align: center;
+    background: #C5BBDB none repeat scroll 0% 0%;
+    text-align: center;
     box-shadow: 4px 4px 4px #555;
 }
-.btn-default:hover {
+
+.btn-default2 {
+    padding-top: 8px;
+    height: 40px;
+    width: 220px;
+    align: center;
+    background: #C5BBDB none repeat scroll 0% 0%;
+    text-align: center;
+    box-shadow: 4px 4px 4px #555;
+}
+
+.btn-default3 {
+    padding-bottom: 10px;
+    height: 50px;
+    width: 220px;
+    align: center;
+    background: #C5BBDB none repeat scroll 0% 0%;
+    text-align: center;
+    box-shadow: 4px 4px 4px #555;
+}
+.btn-default1 .btn-default2:hover {
     background-color: #E0E0E0;
 }
 
 .corps_page .btn-default {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 h2 {
-    font-family: inherit;
-    font-size: 20px;
+    margin-top: 0cm;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+h3 {
+    padding-top: -8px;
+    font-size: 18px;
+    margin-top: 0cm;
 }
 
 #recherche {
