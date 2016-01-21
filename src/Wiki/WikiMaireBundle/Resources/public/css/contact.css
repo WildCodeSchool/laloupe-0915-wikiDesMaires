@@ -33,6 +33,9 @@ body {
     height: 40px;
     width: 350px;
 }
+.form-control:hover {
+    background-color: #E0E0E0;
+}
 h1{
     font-size: 18px ;color: #000000;
     padding-top: 4px;

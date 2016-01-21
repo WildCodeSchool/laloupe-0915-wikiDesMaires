@@ -46,10 +46,13 @@ li {
     text-align: center;
 }
 
-.btn-default, .btn-default:hover, #recherche {
+.btn-default, #recherche {
     background-color: #C5BBDB;
     background-image: none;
     box-shadow: 4px 4px 4px #555;
+}
+.btn-default:hover {
+    background-color: #E0E0E0;
 }
 
 .corps_page .btn-default {
