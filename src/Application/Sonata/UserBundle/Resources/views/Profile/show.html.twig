@@ -69,7 +69,7 @@
                 <div class="row project">
                     {% if loop.index is even %}
                         <div class="col-md-5">
-                            <a href="#">
+                            <a href="{{ path('projet_detail', { 'id': entity.id }) }}">
                                 <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail"  >
                             </a>
                         </div>
@@ -83,7 +83,7 @@
                             <p>{{ entity.description }}</p>
                         </div>
                         <div class="col-md-5">
-                            <a href="#">
+                            <a href="{{ path('projet_detail', { 'id': entity.id }) }}">
                                 <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
                             </a>
                         </div>

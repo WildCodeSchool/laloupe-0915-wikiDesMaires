@@ -252,6 +252,7 @@ class ProjetController extends Controller
 
         return $response;
     }
+
     public function ProfileAction()
     {
         $em = $this->getDoctrine()->getManager();

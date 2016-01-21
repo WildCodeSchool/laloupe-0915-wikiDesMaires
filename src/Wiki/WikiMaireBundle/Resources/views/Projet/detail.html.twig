@@ -60,8 +60,14 @@
                     <p>- Durée : {{ entity.duree }}</p>
                     <p>- Gain pour la commune : {{ entity.gains }}</p>
                     <p>- Cout de réalisation : {{ entity.cout }} Euro </p>
-                    <p>- Financement : {{ entity.financement }}</p>
+                    <p>- Financement :</p>
                 </div>
+
+                <div style="width: 100%; height: 100%;">
+                    <canvas id="myChart" style="width:800px; height: 400px;"></canvas>
+                </div>
+                <div id="js-legend" class="chart-legend"></div>
+
                 <div id="actu" class="tab-pane fade">
                     <p>actu</p>
                 </div>
@@ -80,7 +86,7 @@
     </div>
     <div class="container contact">
 
-        <div class="col-md-11">
+        <div class="col-md-12">
             <p><span class="glyphicon glyphicon-envelope"></span> {{ entity.user.email }}</p>
 
             <p><span class="glyphicon glyphicon-earphone"></span> {{ app.user.phone }}</p>
@@ -93,48 +99,33 @@
         <h5>Projets Similaires</h5>
     </div>
 
-    <div style="width: 100%; height: 100%;">
-        <canvas id="myChart" style="width: 100%; height: auto;"></canvas>
-    </div>
-    <div id="js-legend" class="chart-legend"></div>    {#<ul>
 
 
-        <li>{{ entity.description }}</li>
-        <li>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</li>
-        <li>{{ entity.difficulte }}</li>
-        <li>{{ entity.cout }}</li>
-        <li>{{ entity.tailleprojet }}</li>
-        <li>{{ entity.bassinPopulation }}</li>
-        <li>{{ entity.user.username}}</li>
-        <a href="#">
-            <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
-        </a>
 
-    </ul>#}
 {% endblock %}
-
-
 
 {% block javascripts %}
     <script src="{{ asset('bundles/wikiwikimaire/js/jquery-1.11.3.min.js') }}"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+
+
     <script>
         $.ajax({
-                    url: 'http://localhost/projet-wiki_des_maires/web/app_dev.php/projet/'+{{ entity.id }}+'/recherche',
-                    datatype: 'json'
-                })
-                .done(function(data) {
+            url: 'http://localhost/projet-wiki_des_maires/web/app_dev.php/projet/'+{{ entity.id }}+'/recherche',
+            datatype: 'json'
+        })
+                .done(function (data) {
                     console.log(data);
                     var str = data.financement;
                     var dato = [];
                     var i = 0;
                     var key = "";
                     var value = "";
-                    var colors = ["blue","gray","green","yellow","purple","red"];
+                    var colors = ["blue", "gray", "green", "yellow", "purple", "red"];
                     var inValue = false;
-                    while(str[i]) {
+                    while (str[i]) {
                         if (str[i] != ':' && !inValue) {
                             key += str[i];
                         } else if (str[i] === ':') {
@@ -147,7 +138,7 @@
                             dato.push({
                                 label: key,
                                 value: value,
-                                color: colors[i%6]
+                                color: colors[i % 6]
                             });
                             key = "";
                             value = "";
@@ -160,20 +151,16 @@
                         animateRotate: true,
                         animateScale: false,
                         percentageInnerCutout: 50,
-                        tooltipTemplate: "<%= label %>"+" "+"<%= value %> %"
+                        tooltipTemplate: "<%= label %>" + " " + "<%= value %> %"
                     }
                     var canvas = document.getElementById("myChart");
                     var ctx = canvas.getContext("2d");
-                    new Chart(ctx).Doughnut(dato,options);
+                    new Chart(ctx).Doughnut(dato, options);
 
                     //Legend  du camembert
                     document.getElementById('js-legend').innerHTML = myChart.generateLegend();
 
-
                 });
-
-
-
     </script>
 
 

@@ -44,6 +44,7 @@ li {
 
 .corps_page {
     text-align: center;
+    margin-top: -180px;
 }
 
 .btn-default, .btn-default:hover, #recherche {
@@ -70,4 +71,11 @@ h2 {
 
 #tags {
     height: 50px;
+}
+
+.project {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    margin-left: 35px;
 }
