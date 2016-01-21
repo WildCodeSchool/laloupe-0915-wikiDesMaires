@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8" />
 
+
     <title>{% block title %}Wiki des maires{% endblock %}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     {% block stylesheets %}
@@ -18,7 +20,9 @@
 
 </head>
 
+
 <body data-user="{{ app.user }}" {% if is_granted('ROLE_ADMIN') %} class="admin" {% endif %}>
+
 
 
 {#&#123;&#35;Debut header&#35;&#125;#}
