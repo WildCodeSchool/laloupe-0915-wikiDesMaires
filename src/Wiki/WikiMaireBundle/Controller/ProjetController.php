@@ -274,6 +274,7 @@ class ProjetController extends Controller
         $projet = $em->getRepository('WikiWikiMaireBundle:Projet')->find($projet_id);
         if ($em->getRepository('WikiWikiMaireBundle:Likes')->findOneBy(array('projet' => $projet_id, 'user' => $user)) != null)
         {
+            $this->get('session')->getFlashBag()->Add('notice', 'Projet déja liké');
 
         }
         else{
@@ -285,6 +286,7 @@ class ProjetController extends Controller
 
                 $em->persist($entity);
                 $em->flush();
+                $this->get('session')->getFlashBag()->Add('notice', 'Merci pour le like');
             }
 
         }
