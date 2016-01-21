@@ -92,25 +92,22 @@
     <div class="rectangle">
         <h5>Projets Similaires</h5>
     </div>
+    {% for proj in try %}
+
+        <div id="hi">
+            <h3 class="text-center">{{ proj.nomprojet }}</h3>
+            <img src="{{ app.request.basepath }}/uploads/{{ proj.photo }}" alt="" class="img-thumbnail img-responsive">
+            <p>{{ proj.description }}</p>
+        </div>
+
+    {% endfor %}
 
     <div style="width: 100%; height: 100%;">
         <canvas id="myChart" style="width: 100%; height: auto;"></canvas>
     </div>
-    <div id="js-legend" class="chart-legend"></div>    {#<ul>
+    <div id="js-legend" class="chart-legend"></div>
 
 
-        <li>{{ entity.description }}</li>
-        <li>{% if entity.daterealisation %}{{ entity.daterealisation|date('Y-m-d H:i:s') }}{% endif %}</li>
-        <li>{{ entity.difficulte }}</li>
-        <li>{{ entity.cout }}</li>
-        <li>{{ entity.tailleprojet }}</li>
-        <li>{{ entity.bassinPopulation }}</li>
-        <li>{{ entity.user.username}}</li>
-        <a href="#">
-            <img src="{{app.request.basepath}}/uploads/{{ entity.photo }}" class="img-thumbnail" >
-        </a>
-
-    </ul>#}
 {% endblock %}
 
 

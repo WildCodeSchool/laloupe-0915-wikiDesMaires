@@ -380,4 +380,33 @@ class Projet
     {
         return $this->financement;
     }
+    /**
+     * @var integer
+     */
+    private $like;
+
+
+    /**
+     * Set like
+     *
+     * @param integer $like
+     *
+     * @return Projet
+     */
+    public function setLike($like)
+    {
+        $this->like = $like;
+
+        return $this;
+    }
+
+    /**
+     * Get like
+     *
+     * @return integer
+     */
+    public function getLike()
+    {
+        return $this->like;
+    }
 }
