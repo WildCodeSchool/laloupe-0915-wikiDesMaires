@@ -14,6 +14,9 @@ input[type="Submit"] {
     margin-left: 1cm;
     text-align: center;
 }
+input:hover {
+    background-color: #E0E0E0;
+}
 form {
     background-color: #FFFFFF;
     margin-top: 1cm;
@@ -40,6 +43,9 @@ h1{
     background: #C5BBDB none repeat scroll 0% 0%;
     text-align: center;
     box-shadow: 4px 4px 4px #555;
+}
+h1:hover {
+    background-color: #E0E0E0;
 }
 h2 {
     padding-top: 4px;
