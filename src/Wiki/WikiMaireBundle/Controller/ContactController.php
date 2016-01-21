@@ -34,7 +34,7 @@ class ContactController extends Controller
                         ));
                 $this->get('mailer')->send($message);
 
-              $this->get('session')->getFlashBag()->Add('notice', 'Your contact enquiry was successfully sent. Thank you!');
+              $this->get('session')->getFlashBag()->Add('notice', 'Votre Message a bien été envoyé ');
 
                 // Redirect - This is important to prevent users re-posting
                 // the form if they refresh the page
