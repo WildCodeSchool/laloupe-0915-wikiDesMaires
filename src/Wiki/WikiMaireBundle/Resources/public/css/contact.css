@@ -8,7 +8,7 @@ input[type="Submit"] {
     background-color: #C5BBDB;
     width: 250px;
     height: 50px;
-    font-size: 25px;
+    font-size: 18px;
     box-shadow: 8px 8px 8px #555;
     margin-top: 1cm;
     margin-left: 1cm;
@@ -31,16 +31,8 @@ body {
     width: 350px;
 }
 h1{
-    font-size: 22px;
+    font-size: 18px ;color: #000000;
     padding-top: 4px;
-}
-h2 {
-    padding-top: 2px;
-    font-size: 26px;
-    margin-bottom: 8cm;
-    text-align: center;
-}
-.button-retour {
     height: 30px;
     width: 140px;
     margin-top: 1cm;
@@ -48,6 +40,12 @@ h2 {
     background: #C5BBDB none repeat scroll 0% 0%;
     text-align: center;
     box-shadow: 4px 4px 4px #555;
+}
+h2 {
+    padding-top: 4px;
+    font-size: 18px;
+    margin-bottom: 8cm;
+    text-align: center;
 }
 .rectangle {
     height: 30px;
