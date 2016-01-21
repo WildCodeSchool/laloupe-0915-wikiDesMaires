@@ -225,7 +225,7 @@ class ProjetController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('WikiWikiMaireBundle:Projet')->find($id);
-        $tri = $em->getRepository('WikiWikiMaireBundle:Projet')->getSuggested(4);
+        $tri = $em->getRepository('WikiWikiMaireBundle:Projet')->getSuggested(2);
 
 
         if (!$entity) {
