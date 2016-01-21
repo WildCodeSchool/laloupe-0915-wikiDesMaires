@@ -39,7 +39,11 @@ body {
     width: 350px;
 }
 
-p{
+.form-control:hover {
+    background-color: #E0E0E0;
+}
+
+h1{
     font-size: 18px ;color: #000000;
     padding-top: 4px;
     height: 30px;
