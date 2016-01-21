@@ -31,7 +31,7 @@ class User extends BaseUser
 
     protected function getUploadDir()
     {
-        return 'uploads/photos';
+        return 'photos';
     }
 
     protected function getUploadRootDir()
