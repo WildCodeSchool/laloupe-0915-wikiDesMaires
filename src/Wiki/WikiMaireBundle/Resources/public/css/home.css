@@ -32,10 +32,6 @@ li {
     color: #333;
 }
 
-.info_co a:hover {
-    text-decoration: underline;
-}
-
 /*******************
 *                  *
 * Corps de la Page *
@@ -67,15 +63,23 @@ li {
 }
 
 .btn-default3 {
-    padding-bottom: 10px;
-    height: 50px;
+    height: 40px;
     width: 220px;
     align: center;
     background: #C5BBDB none repeat scroll 0% 0%;
     text-align: center;
     box-shadow: 4px 4px 4px #555;
 }
-.btn-default1 .btn-default2:hover {
+
+.rectangle {
+    margin-bottom: -2cm;
+}
+
+.btn-default1:hover {
+    background-color: #E0E0E0;
+}
+
+.btn-default2:hover {
     background-color: #E0E0E0;
 }
 
@@ -89,10 +93,11 @@ h2 {
     text-align: center;
     color: black;
 }
+
 h3 {
-    padding-top: -8px;
-    font-size: 18px;
     margin-top: 0cm;
+    font-size: 18px;
+    margin-top: 2cm;
 }
 
 #recherche {
