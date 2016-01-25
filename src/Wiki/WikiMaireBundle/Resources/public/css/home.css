@@ -98,11 +98,12 @@ h2 {
 
 h3 {
     margin-top: -3px;
-    padding-top: 9px;
+    padding-top: 11px;
     font-size: 18px;
 }
 
 #recherche {
+    padding-top: 5px;
     width: 50px;
     margin-left: 265px;
     margin-top: 250px;
