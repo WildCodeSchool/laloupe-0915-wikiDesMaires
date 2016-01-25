@@ -11,9 +11,9 @@
     <div class="menu">
         <ul>
             <li>Commune de {{ app.user.commune.nomcommune }}</li>
-            <li><a href="{{ path('fos_user_profile_show') }}">Mon Profil <span class="glyphicon glyphicon-user"></span></a>
+            <li><a href="{{ path('fos_user_profile_show') }}">Mon Profil<span class="glyphicon glyphicon-user"></span></a>
             </li>
-            <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter <span
+            <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter<span
                             class="glyphicon glyphicon-log-out"></span></a></li>
         </ul>
     </div>
@@ -39,10 +39,16 @@
         <label for="tags">Rechercher un projet: </label>
         <input id="tags" type="text">
     </div>#}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-notice">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
     <div class="grid">
         <div class="projects ">
             {% for entity in entities %}
                 <div class="row project element-item col-md-11">
+
                     {% if loop.index is even %}
                         <div class="col-md-5">
                             <a href="{{ path('projet_detail', { 'id': entity.id }) }}">
@@ -53,12 +59,14 @@
                             <p>Description :</p>
 
                             <p>{{ entity.description }}</p>
+                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}">like</a>
                         </div>
                     {% else %}
                         <div class="col-md-7">
                             <p>Description :</p>
 
                             <p>{{ entity.description }}</p>
+                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}">like</a>
                         </div>
                         <div class="col-md-5">
                             <a href="{{ path('projet_detail', { 'id': entity.id }) }}">

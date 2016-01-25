@@ -52,7 +52,8 @@ li {
 .section, .contact, .projet_similaires {
     background-color: white;
     padding: 30px;
-    margin-left: 28px;
+    margin-left: 35px;
+    width: 1090px;
 }
 
 .titre a {
@@ -86,7 +87,7 @@ li {
 .rectangle {
     width: 150px;
     height: 25px;
-    margin-left: 28px;
+    margin-left: 35px;
     background: #C5BBDB;
 
 }
@@ -99,10 +100,25 @@ h5 {
     padding-top: 6px;
 }
 
+li {
+    list-style:none;
+}
 
-/**********************
-*                     *
-*   Camembert         *
-*                     *
-**********************/
+#myChart {
+    width: 800px;
+    height: 400px;
+}
 
+#hi{
+    display: inline-block;
+    margin: 0 90px auto;
+    width: 350px;
+}
+
+.rectangle1 {
+    width: 480px;
+    height: 280px;
+    margin-left: 35px;
+    background: white;
+    display: inline-block;
+}

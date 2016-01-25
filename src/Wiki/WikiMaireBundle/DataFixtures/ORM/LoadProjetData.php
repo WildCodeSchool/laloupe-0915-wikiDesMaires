@@ -26,7 +26,7 @@ class LoadProjetData extends AbstractFixture implements FixtureInterface, Ordere
         $entity->setDuree('209');
         $entity->setGains('Benefique pour mes collaborateurs');
         $entity->setCout('20 000');
-        $entity->getFinancement();
+        $entity->setFinancement('departement:3;');
 
         $file = new File(__DIR__.'/../Data/projet.jpeg');
         $destFile = __DIR__.'/../Data/tmp-projet.jpeg';

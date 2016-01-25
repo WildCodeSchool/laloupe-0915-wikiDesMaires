@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Wiki\WikiMaireBundle\Entity\Projet;
+use Wiki\WikiMaireBundle\Entity\Likes;
 use Wiki\WikiMaireBundle\Form\Handler\ProjetHandler;
 use Wiki\WikiMaireBundle\Form\Model\ProjetModel;
 use Wiki\WikiMaireBundle\Form\Type\ProjetType;
@@ -224,6 +225,8 @@ class ProjetController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('WikiWikiMaireBundle:Projet')->find($id);
+        $tri = $em->getRepository('WikiWikiMaireBundle:Projet')->getSuggested(2);
+
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Projet entity.');
@@ -234,6 +237,7 @@ class ProjetController extends Controller
         return $this->render('WikiWikiMaireBundle:Projet:detail.html.twig', array(
             'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
+            'try' => $tri
         ));
     }
 
@@ -252,6 +256,7 @@ class ProjetController extends Controller
 
         return $response;
     }
+
     public function ProfileAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -263,4 +268,29 @@ class ProjetController extends Controller
         ));
     }
 
+    public function LikeAction($projet_id)
+    {
+        $user = $this->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $projet = $em->getRepository('WikiWikiMaireBundle:Projet')->find($projet_id);
+        if ($em->getRepository('WikiWikiMaireBundle:Likes')->findOneBy(array('projet' => $projet_id, 'user' => $user)) != null)
+        {
+            $this->get('session')->getFlashBag()->Add('notice', 'Projet déja liké');
+
+        }
+        else{
+            if ($projet != null) {
+                $entity = new Likes();
+                $entity->setUser($user);
+                $entity->setProjet($projet);
+                $entity->setAime($entity->getAime() + 1);
+
+                $em->persist($entity);
+                $em->flush();
+                $this->get('session')->getFlashBag()->Add('notice', 'Merci pour le like');
+            }
+
+        }
+        return $this->redirect($this->generateUrl('projet'));
+    }
 }

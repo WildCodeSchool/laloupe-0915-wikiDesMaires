@@ -7,6 +7,10 @@ namespace Wiki\WikiMaireBundle\Entity;
  */
 class Commune
 {
+    public function __toString()
+    {
+        return $this->nomcommune;
+    }
     /**
      * @var integer
      */

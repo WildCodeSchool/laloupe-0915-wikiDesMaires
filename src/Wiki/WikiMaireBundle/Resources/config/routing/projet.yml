@@ -31,3 +31,8 @@ projet_recherche:
     path:     /{id}/recherche
     defaults: { _controller: "WikiWikiMaireBundle:Projet:Recherche" }
     methods:  [POST, GET]
+
+projet_like:
+    path:     /{projet_id}/like
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:Like" }
+    methods:  [POST, GET]
