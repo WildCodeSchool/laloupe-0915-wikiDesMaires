@@ -1,0 +1,29 @@
+Wiki\WikiMaireBundle\Entity\commentaire:
+    type: entity
+    table: null
+    repositoryClass: Wiki\WikiMaireBundle\Entity\commentaireRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    fields:
+        message:
+            type: text
+
+    manyToOne:
+            user:
+                targetEntity: Application\Sonata\UserBundle\Entity\User
+                joinColumn:
+                    name: user_id
+                    referencedColumnName: id
+
+            projet:
+                targetEntity: Wiki\WikiMaireBundle\Entity\Projet
+                joinColumn:
+                    name: projet_id
+                    referencedColumnName: id
+    lifecycleCallbacks: {  }
+

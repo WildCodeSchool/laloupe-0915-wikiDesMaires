@@ -61,17 +61,29 @@
                     <p>- Gain pour la commune : {{ entity.gains }}</p>
                     <p>- Cout de réalisation : {{ entity.cout }} Euro </p>
                     <p>- Financement :</p>
+                    <div style="width: 100%; height: 100%;">
+                        <canvas id="myChart" style="width:800px; height: 400px;"></canvas>
+                    </div>
+                    <div id="js-legend" class="chart-legend"></div>
                 </div>
 
-                <div style="width: 100%; height: 100%;">
-                    <canvas id="myChart" style="width:800px; height: 400px;"></canvas>
-                </div>
-                <div id="js-legend" class="chart-legend"></div>
+
 
                 <div id="actu" class="tab-pane fade">
                     <p>actu</p>
                 </div>
                 <div id="com" class="tab-pane fade">
+
+                    <div>
+
+                        {{ form_start(form) }}
+                        {{ form_widget(form.message) }}
+                        {{ form_widget(form.submit) }}
+                        {{ form_end(form) }}
+
+                    </div>
+
+
                     <p>Commentaire 1</p>
 
                     <p>Commentaire 2</p>
@@ -102,6 +114,7 @@
 
         <div class="rectangle1">
             <div id="hi">
+
                 <h3 class="text-center">{{ proj.nomprojet }}</h3>
                 <a href="{{ path('projet_detail', { 'id': entity.id }) }}"><img
                             src="{{ app.request.basepath }}/uploads/{{ proj.photo }}" alt=""
@@ -113,10 +126,7 @@
 
     {% endfor %}
 
-    <div style="width: 100%; height: 100%;">
-        <canvas id="myChart" style="width: 100%; height: auto;"></canvas>
-    </div>
-    <div id="js-legend" class="chart-legend"></div>
+
 
 {% endblock %}
 

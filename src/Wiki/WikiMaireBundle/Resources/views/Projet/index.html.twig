@@ -59,14 +59,18 @@
                             <p>Description :</p>
 
                             <p>{{ entity.description }}</p>
-                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}">like</a>
+                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}"><span
+                                        class="glyphicon glyphicon-thumbs-up"></span></a>
+                                <a href="{{ path('commentaire', {'projet_id': entity.id }) }}">Commentaire</a>
                         </div>
                     {% else %}
                         <div class="col-md-7">
                             <p>Description :</p>
 
                             <p>{{ entity.description }}</p>
-                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}">like</a>
+                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}"><span
+                                        class="glyphicon glyphicon-thumbs-up"></span></a>
+                            <a href="{{ path('commentaire', {'projet_id': entity.id }) }}">Commentaire</a>
                         </div>
                         <div class="col-md-5">
                             <a href="{{ path('projet_detail', { 'id': entity.id }) }}">

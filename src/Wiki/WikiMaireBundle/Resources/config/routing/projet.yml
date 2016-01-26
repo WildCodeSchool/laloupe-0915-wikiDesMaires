@@ -36,3 +36,14 @@ projet_like:
     path:     /{projet_id}/like
     defaults: { _controller: "WikiWikiMaireBundle:Projet:Like" }
     methods:  [POST, GET]
+
+projet_commentaire:
+    path:     /{projet_id}/commentaire
+    defaults: { _controller: "WikiWikiMaireBundle:Projet:Commentaire" }
+    methods:  [POST, GET]
+
+
+commentaire:
+    path:     /commentaire
+    defaults: { _controller: "WikiWikiMaireBundle:Commentaire:CommentaireCreate" }
+    methods:  [POST, GET]

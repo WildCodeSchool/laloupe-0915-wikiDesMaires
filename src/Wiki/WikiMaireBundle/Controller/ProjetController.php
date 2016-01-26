@@ -12,6 +12,8 @@ use Wiki\WikiMaireBundle\Entity\Likes;
 use Wiki\WikiMaireBundle\Form\Handler\ProjetHandler;
 use Wiki\WikiMaireBundle\Form\Model\ProjetModel;
 use Wiki\WikiMaireBundle\Form\Type\ProjetType;
+use Wiki\WikiMaireBundle\Entity\commentaire;
+use Wiki\WikiMaireBundle\Form\Type\CommentaireType;
 
 /**
  * Projet controller.
@@ -111,29 +113,6 @@ class ProjetController extends Controller
         ));
     }
 
-    /**
-     * Displays a form to edit an existing Projet entity.
-     *
-     */
-    public function editAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('WikiWikiMaireBundle:Projet')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Projet entity.');
-        }
-
-        $editForm = $this->createEditForm($entity);
-        $deleteForm = $this->createDeleteForm($id);
-
-        return $this->render('WikiWikiMaireBundle:Projet:edit.html.twig', array(
-            'entity' => $entity,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Creates a form to edit a Projet entity.
@@ -220,7 +199,7 @@ class ProjetController extends Controller
             ->getForm();
     }
 
-    public function detailAction($id)
+    public function detailAction($id,Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -234,11 +213,29 @@ class ProjetController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
 
+        $commentaire = new Commentaire();
+        $commentForm = $this->createForm(new CommentaireType(), $commentaire);
+        $commentForm->add('submit', 'submit', array('label' => 'Envoyer'));
+
+        if ($request->getMethod() == 'POST') {
+            $commentForm->bind($request);
+
+            if ($commentForm->isValid()) {
+                $commentaire->setUser($this->getUser());
+                $commentaire->setProjet($entity);
+                $em->persist($commentaire);
+                $em->flush();
+
+            }
+        }
         return $this->render('WikiWikiMaireBundle:Projet:detail.html.twig', array(
             'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
-            'try' => $tri
+            'try' => $tri,
+            'commentaire' => $commentaire,
+            'form' => $commentForm->createView()
         ));
+
     }
 
     public function RechercheAction(Request $request, $id)
@@ -293,4 +290,39 @@ class ProjetController extends Controller
         }
         return $this->redirect($this->generateUrl('projet'));
     }
+
+//    public function CommentaireProjetAction($projet_id)
+//    {
+//        $user = $this->getUser();
+//        $em = $this->getDoctrine()->getManager();
+//        $projet = $em->getRepository('WikiWikiMaireBundle:Projet')->find($projet_id);
+//        if ($em->getRepository('WikiWikiMaireBundle:commentaire')->findOneBy(array('projet' => $projet_id, 'user' => $user)) != null)
+//        {
+//
+//
+//        }
+//        else{
+//            if ($projet != null) {
+//                $entity = new Commentaire();
+//                $entity->setUser($user);
+//                $entity->setProjet($projet);
+//                $entity->setMessage($entity->getMessage());
+//
+//                $em->persist($entity);
+//                $em->flush();
+//            }
+//
+//        }
+//        return $this->redirect($this->generateUrl('projet'));
+//
+//        $form = $this->createCreateForm($entity);
+//
+//        return $this->render('WikiWikiMaireBundle:Projet:new.html.twig', array(
+//            'entity' => $entity,
+//            'form' => $form->createView(),
+//        ));
+//    }
+
+
+
 }

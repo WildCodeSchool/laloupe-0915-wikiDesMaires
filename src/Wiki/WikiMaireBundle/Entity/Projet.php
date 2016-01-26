@@ -409,4 +409,34 @@ class Projet
     {
         return $this->like;
     }
+
+    /**
+     * @var integer
+     */
+    private $commentaire;
+
+
+    /**
+     * Set like
+     *
+     * @param integer $like
+     *
+     * @return Projet
+     */
+    public function setCommentaire($commentaire)
+    {
+        $this->commentaire = $commentaire;
+
+        return $this;
+    }
+
+    /**
+     * Get like
+     *
+     * @return integer
+     */
+    public function getCommentaire()
+    {
+        return $this->commentaire;
+    }
 }
