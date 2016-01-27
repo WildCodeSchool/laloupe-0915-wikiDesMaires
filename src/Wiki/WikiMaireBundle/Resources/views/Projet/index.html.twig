@@ -59,14 +59,16 @@
                             <p>Description :</p>
 
                             <p>{{ entity.description }}</p>
-                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}">like</a>
+                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}"><img src="{{ asset('bundles/wikiwikimaire/img/like.png') }}" alt="" style="width: 25px;"></a>
+                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}"><img src="{{ asset('bundles/wikiwikimaire/img/dislike.jpg') }}" alt="" style="width: 40px;"></a>
                         </div>
                     {% else %}
                         <div class="col-md-7">
                             <p>Description :</p>
 
                             <p>{{ entity.description }}</p>
-                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}">like</a>
+                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}"><img src="{{ asset('bundles/wikiwikimaire/img/like.png') }}" alt="" style="width: 25px;"></a>
+                            <a href="{{ path('projet_like', { 'projet_id': entity.id }) }}"><img src="{{ asset('bundles/wikiwikimaire/img/dislike.jpg') }}" alt="" style="width: 40px;"></a>
                         </div>
                         <div class="col-md-5">
                             <a href="{{ path('projet_detail', { 'id': entity.id }) }}">
