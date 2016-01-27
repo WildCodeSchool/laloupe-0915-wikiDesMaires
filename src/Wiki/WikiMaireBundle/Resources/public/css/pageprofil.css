@@ -109,10 +109,10 @@ a {
 
 
 .img-rectangle {
-    margin-left: 25px;
-    margin-top: 20px;
-    height: 90px;
+    margin: 20px auto;
+    height: 200px;
     width: auto;
+    display: block;
 }
 
 .texte {

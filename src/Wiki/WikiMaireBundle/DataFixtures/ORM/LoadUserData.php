@@ -90,7 +90,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
 
         // Maires
         $user6 = $userManager->createUser();
-        $user6->setUsername('olivierbureaux');
+        $user6->setUsername('olivier');
         $user6->setEmail('mairie-longuevile-sur-scie@wanadoo.fr');
         $user6->setEnabled(true);
         $user6->setPlainPassword('olivier');
@@ -101,7 +101,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $this->setReference('user-olivier', $user6);
 
         $user7 = $userManager->createUser();
-        $user7->setUsername('gilbertmabille');
+        $user7->setUsername('gilbert');
         $user7->setEmail('mairie-village-les-loges@wanadoo.fr');
         $user7->setEnabled(true);
         $user7->setPlainPassword('gilbert');

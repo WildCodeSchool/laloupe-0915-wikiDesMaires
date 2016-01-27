@@ -27,8 +27,8 @@ class LoadProjetData extends AbstractFixture implements FixtureInterface, Ordere
         $entity->setGains('des économies importantes grâce au chauffage de 5 bâtiments soit 3 000 m2');
         $entity->setCout('20 000');
         $entity->setFinancement('departement:3;');
-        $file = new File(__DIR__.'/../Data/chauffagebois.jpg');
-        $destFile = __DIR__.'/../Data/chauffagebois.jpg';
+        $file = new File(__DIR__.'/../Data/chauffage.jpg');
+        $destFile = __DIR__.'/../Data/tmp-chauffagebois.jpg';
         copy($file, $destFile);
         $entity->file = new File($destFile);
         $entity->setUser($em->merge($this->getReference('user-olivier')));
@@ -43,8 +43,8 @@ class LoadProjetData extends AbstractFixture implements FixtureInterface, Ordere
         $entity->setGains('des économies importantes grâce au chauffage de 520 m2 de locaux ');
         $entity->setCout('53 000');
         $entity->setFinancement('departement:3;');
-        $file = new File(__DIR__.'/../Data/chaudierebois.png');
-        $destFile = __DIR__.'/../Data/chaudierebois.png';
+        $file = new File(__DIR__.'/../Data/chaudiere.png');
+        $destFile = __DIR__.'/../Data/tmp-chaudierebois.png';
         copy($file, $destFile);
         $entity->file = new File($destFile);
         $entity->setUser($em->merge($this->getReference('user-gilbert')));
