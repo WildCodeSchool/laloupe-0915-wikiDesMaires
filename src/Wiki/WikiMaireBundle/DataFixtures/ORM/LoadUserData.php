@@ -88,12 +88,38 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user5->setAdressemairie('18 Rue de la Gare');
 
 
+        // Maires
+        $user6 = $userManager->createUser();
+        $user6->setUsername('olivierbureaux');
+        $user6->setEmail('mairie-longuevile-sur-scie@wanadoo.fr');
+        $user6->setEnabled(true);
+        $user6->setPlainPassword('olivier');
+        $user6->setFirstname('Olivier');
+        $user6->setCommune($manager->merge($this->getReference('commune-1')));
+        $user6->setLastname('Bureaux');
+        $user6->setAdressemairie('18 Rue de la Gare');
+        $this->setReference('user-olivier', $user6);
+
+        $user7 = $userManager->createUser();
+        $user7->setUsername('gilbertmabille');
+        $user7->setEmail('mairie-village-les-loges@wanadoo.fr');
+        $user7->setEnabled(true);
+        $user7->setPlainPassword('gilbert');
+        $user7->setFirstname('Gilbert');
+        $user7->setCommune($manager->merge($this->getReference('commune-2')));
+        $user7->setLastname('Mabille');
+        $user7->setAdressemairie('18 Rue de la Gare');
+        $this->setReference('user-gilbert', $user7);
+
+
         // Mise a jour des utilisateurs
         $userManager->updateUser($user1, true);
         $userManager->updateUser($user2, true);
         $userManager->updateUser($user3, true);
         $userManager->updateUser($user4, true);
         $userManager->updateUser($user5, true);
+        $userManager->updateUser($user6, true);
+        $userManager->updateUser($user7, true);
 
 
     }

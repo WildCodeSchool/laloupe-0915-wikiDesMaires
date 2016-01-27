@@ -18,7 +18,7 @@ class ProjetType extends AbstractType
             ->add('nomprojet', 'text',array('label' => 'Nom du Projet'))
             ->add('description', 'textarea',array('label' => 'Description'))
             ->add('daterealisation','date', array('label' => 'Année de Réalisation'))
-            ->add('duree','number', array('label' => 'Durée'))
+            ->add('duree','text', array('label' => 'Durée'))
             ->add('gains', 'text' , array('label' => 'Gains pour la commune'))
             ->add('cout', 'number',array('label' => 'Coût de  la Réalisation'))
             ->add('file', 'file', array('label' => 'Photo du projet', 'required' => false))

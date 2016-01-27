@@ -289,5 +289,5 @@ class ProjetController extends Controller
         }
         return $this->redirect($this->generateUrl('projet'));
     }
-    
+
 }

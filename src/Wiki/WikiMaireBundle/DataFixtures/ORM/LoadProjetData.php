@@ -20,20 +20,36 @@ class LoadProjetData extends AbstractFixture implements FixtureInterface, Ordere
     {
 
         $entity = new Projet();
-        $entity->setNomprojet('S\'assoir autour d\'une table');
-        $entity->setDescription('Blabla bla blabla');
-        $entity->setDaterealisation(new \DateTime());
-        $entity->setDuree('209');
-        $entity->setGains('Benefique pour mes collaborateurs');
+        $entity->setNomprojet('Chaudière à bois pour l\'école');
+        $entity->setDescription('chaudière à bois déchiqueté de 100 Kw consommation de 70 T annuelles de bois bocager issus de l\'élagage des haies');
+        $entity->setDaterealisation(new \DateTime('2013-01-01'));
+        $entity->setDuree('3 mois');
+        $entity->setGains('des économies importantes grâce au chauffage de 5 bâtiments soit 3 000 m2');
         $entity->setCout('20 000');
         $entity->setFinancement('departement:3;');
-
-        $file = new File(__DIR__.'/../Data/projet.jpeg');
-        $destFile = __DIR__.'/../Data/tmp-projet.jpeg';
+        $file = new File(__DIR__.'/../Data/chauffagebois.jpg');
+        $destFile = __DIR__.'/../Data/chauffagebois.jpg';
         copy($file, $destFile);
         $entity->file = new File($destFile);
-        $entity->setUser($em->merge($this->getReference('user-celine')));
+        $entity->setUser($em->merge($this->getReference('user-olivier')));
         $em->persist($entity);
+
+
+        $entity = new Projet();
+        $entity->setNomprojet('Chaudière à bois pour l\'école du village et un local avec un conteneur préfabriqué');
+        $entity->setDescription('chaudière à bois  de bois bocager issus de l\'élagage des haies ');
+        $entity->setDaterealisation(new \DateTime('2014-03-01'));
+        $entity->setDuree('3 mois');
+        $entity->setGains('des économies importantes grâce au chauffage de 520 m2 de locaux ');
+        $entity->setCout('53 000');
+        $entity->setFinancement('departement:3;');
+        $file = new File(__DIR__.'/../Data/chaudierebois.png');
+        $destFile = __DIR__.'/../Data/chaudierebois.png';
+        copy($file, $destFile);
+        $entity->file = new File($destFile);
+        $entity->setUser($em->merge($this->getReference('user-gilbert')));
+        $em->persist($entity);
+
 
         $em->flush();
     }

@@ -25,6 +25,10 @@ class LoadCommuneData extends AbstractFixture implements FixtureInterface, Order
             $entity->setNomcommune(str_replace('"', '', $data[1]));
             if ($data[0]=='"30206"')
                 $this->setReference('commune-poulx', $entity);
+            if ($data[0]=='"76590"')
+                $this->setReference('commune-1', $entity);
+            if ($data[0]=='"76796"')
+                $this->setReference('commune-2', $entity);
             $em->persist($entity);
         }
         fclose($stream);
