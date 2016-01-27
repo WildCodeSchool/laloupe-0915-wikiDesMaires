@@ -282,8 +282,7 @@ class ProjetController extends Controller
             if ($projet != null) {
                 $entity = new Likes();
                 $entity->setUser($user);
-                $entity->setProjet($projet);
-                $entity->setAime($entity->getAime() + 1);
+                $entity->setProjet($projet);;
 
                 $em->persist($entity);
                 $em->flush();
@@ -293,4 +292,6 @@ class ProjetController extends Controller
         }
         return $this->redirect($this->generateUrl('projet'));
     }
+
+
 }
