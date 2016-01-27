@@ -32,10 +32,6 @@ li {
     color: #333;
 }
 
-.info_co a:hover {
-    text-decoration: underline;
-}
-
 /*******************
 *                  *
 * Corps de la Page *
@@ -68,15 +64,24 @@ li {
 }
 
 .btn-default3 {
-    padding-bottom: 10px;
-    height: 50px;
+    margin-top: -110px;
+    height: 40px;
     width: 220px;
     align: center;
     background: #C5BBDB none repeat scroll 0% 0%;
     text-align: center;
     box-shadow: 4px 4px 4px #555;
 }
-.btn-default1 .btn-default2:hover {
+
+.rectangle {
+    margin-bottom: -2cm;
+}
+
+.btn-default1:hover {
+    background-color: #E0E0E0;
+}
+
+.btn-default2:hover {
     background-color: #E0E0E0;
 }
 
@@ -90,16 +95,18 @@ h2 {
     text-align: center;
     color: black;
 }
+
 h3 {
-    padding-top: -8px;
+    margin-top: -3px;
+    padding-top: 11px;
     font-size: 18px;
-    margin-top: 0cm;
 }
 
 #recherche {
-    width: 200px;
+    padding-top: 5px;
+    width: 50px;
     margin-left: 265px;
-    margin-top: 100px;
+    margin-top: 250px;
     height: 25px;
 }
 
@@ -113,3 +120,4 @@ h3 {
     margin: 10px 0;
     margin-left: 35px;
 }
+
