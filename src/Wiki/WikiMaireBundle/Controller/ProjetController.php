@@ -279,8 +279,7 @@ class ProjetController extends Controller
             if ($projet != null) {
                 $entity = new Likes();
                 $entity->setUser($user);
-                $entity->setProjet($projet);
-                $entity->setAime($entity->getAime() + 1);
+                $entity->setProjet($projet);;
 
                 $em->persist($entity);
                 $em->flush();
@@ -290,39 +289,5 @@ class ProjetController extends Controller
         }
         return $this->redirect($this->generateUrl('projet'));
     }
-
-//    public function CommentaireProjetAction($projet_id)
-//    {
-//        $user = $this->getUser();
-//        $em = $this->getDoctrine()->getManager();
-//        $projet = $em->getRepository('WikiWikiMaireBundle:Projet')->find($projet_id);
-//        if ($em->getRepository('WikiWikiMaireBundle:commentaire')->findOneBy(array('projet' => $projet_id, 'user' => $user)) != null)
-//        {
-//
-//
-//        }
-//        else{
-//            if ($projet != null) {
-//                $entity = new Commentaire();
-//                $entity->setUser($user);
-//                $entity->setProjet($projet);
-//                $entity->setMessage($entity->getMessage());
-//
-//                $em->persist($entity);
-//                $em->flush();
-//            }
-//
-//        }
-//        return $this->redirect($this->generateUrl('projet'));
-//
-//        $form = $this->createCreateForm($entity);
-//
-//        return $this->render('WikiWikiMaireBundle:Projet:new.html.twig', array(
-//            'entity' => $entity,
-//            'form' => $form->createView(),
-//        ));
-//    }
-
-
-
+    
 }

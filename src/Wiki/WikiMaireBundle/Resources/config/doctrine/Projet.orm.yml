@@ -31,8 +31,7 @@ Wiki\WikiMaireBundle\Entity\Projet:
         financement:
             type: string
             length: 255
-        like:
-            type: integer
+
 
 
 
