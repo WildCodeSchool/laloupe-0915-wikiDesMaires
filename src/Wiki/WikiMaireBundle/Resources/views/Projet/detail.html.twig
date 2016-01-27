@@ -55,12 +55,12 @@
             </ul>
             <div class="tab-content">
                 <div id="projet" class="tab-pane fade in active">
-                    <p>- Description : {{ entity.description }}</p>
-                    <p>- Date de réalisation: {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
-                    <p>- Durée : {{ entity.duree }}</p>
-                    <p>- Gain pour la commune : {{ entity.gains }}</p>
-                    <p>- Cout de réalisation : {{ entity.cout }} Euro </p>
-                    <p>- Financement :</p>
+                    <p>- <b>Description :</b> {{ entity.description }}</p>
+                    <p>- <b>Date de réalisation:</b> {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
+                    <p>- <b>Durée :</b> {{ entity.duree }}</p>
+                    <p>- <b>Gain pour la commune :</b> {{ entity.gains }}</p>
+                    <p>- <b>Cout de réalisation :</b> {{ entity.cout }} Euro </p>
+                    <p>- <b>Financement :</b></p>
                     <div style="width: 100%; height: 100%;">
                         <canvas id="myChart" style="width:800px; height: 400px;"></canvas>
                     </div>
