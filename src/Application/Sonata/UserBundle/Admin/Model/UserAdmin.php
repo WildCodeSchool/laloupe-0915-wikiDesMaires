@@ -101,7 +101,6 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                 ->add('email')
             ->end()
             ->with('Profile')
-                ->add('dateOfBirth')
                 ->add('firstname')
                 ->add('lastname')
                 ->add('gender')
@@ -135,7 +134,6 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
             //Profile Part
 
             ->with('Profile')
-                ->add('dateOfBirth', 'birthday', array('required' => false))
                 ->add('firstname', null, array('required' => false))
                 ->add('lastname', null, array('required' => false))
                 ->add('gender', 'sonata_user_gender', array(
@@ -147,9 +145,11 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
             // Nouveau Champs ajoutés
 
                 ->add('adressemairie', null, array('label' => 'Adresse mairie'))
-                ->add('bassindepopulation', null, array('label' => 'Bassin de population'))
                 ->add('commune', 'sonata_type_model_list', array(
                     'label'=> 'Commune'))
+                ->add('descriptioncommmune', null, array('label' => 'Description Commune'))
+                ->add('population', null, array('label' => 'Population INSEE'))
+                ->add('mandat', null, array('label' => 'Mandat'))
                 ->add('fil', 'file', array(
                     'label' => 'Photo de profil',
                     'required' => false

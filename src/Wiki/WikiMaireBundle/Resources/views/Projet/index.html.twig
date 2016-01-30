@@ -35,10 +35,7 @@
         </div>
     </div>
     <br>
-    {#<div class="ui-widget">
-        <label for="tags">Rechercher un projet: </label>
-        <input id="tags" type="text">
-    </div>#}
+
     {% for flashMessage in app.session.flashbag.get('notice') %}
         <div class="flash-notice">
             {{ flashMessage }}

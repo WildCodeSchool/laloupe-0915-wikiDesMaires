@@ -29,14 +29,7 @@
             <h5>Présentation de la commune</h5>
         </div>
         <div class="rectangle_3">
-            <p>La Loupe est une commune française située dans le département d’Eure-et-Loir,
-                en région Centre-Val de Loire.
-                C’est une commune du Parc naturel régional du Perche et le chef-lieu du can-
-                ton de La Loupe. Elle fait partie de la communauté de communes des Portes du
-                Perche.
-                La Loupe est située dans l’arrondissement de Nogent-le-Rotrou, dans le Perche.
-                La ligne de chemin de fer de Paris-Montparnasse à Brest traverse La Loupe, la
-                reliant ainsi par le train à Paris Montparnasse, Chartres et Le Mans.
+            <p> {{  user.descriptioncommmune }}
             </p>
         </div>
     </div>
@@ -49,8 +42,8 @@
                         <img src="{{app.request.basepath}}/photos/{{ user.photoprofil }}" class="img-rectangle" >
                         <div class="texte">
                             <p class="font-weight"> {{ user.firstname }} {{ user.lastname }}</p>
-                            <p>Mandat : </p>
-                            <p>Population Commune (INSEE): </p>
+                            <p>Mandat : {{ user.mandat }}</p>
+                            <p>Population Commune (INSEE): <br>{{ user.population }} </p>
                             <div class="rectangle">
                                 <p><i class="glyphicon glyphicon-envelope"></i>  {{ user.email }}</p>
                                 <p><i class="glyphicon glyphicon-earphone"></i> {{ user.phone }}</p>

@@ -15,10 +15,11 @@ body {
 }
 
 .rectangle_1 {
-    width: 250px;
-    height: 320px;
+    width: 270px;
+    height: 460px;
     background: #C5BBDB;
     margin-top: -90px;
+    padding: 9px;
 
 }
 

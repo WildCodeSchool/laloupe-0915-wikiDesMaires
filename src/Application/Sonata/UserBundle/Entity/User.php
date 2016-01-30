@@ -135,11 +135,6 @@ class User extends BaseUser
      */
     private $adressemairie;
 
-    /**
-     * @var string
-     */
-    private $bassindepopulation;
-
 
     /**
      * Set adressemairie
@@ -166,28 +161,96 @@ class User extends BaseUser
     }
 
     /**
-     * Set bassindepopulation
+     * @var string
+     */
+    private $population;
+
+
+    /**
+     * Set population
      *
-     * @param string $bassindepopulation
+     * @param string $population
      *
      * @return User
      */
-    public function setBassindepopulation($bassindepopulation)
+    public function setPopulation($population)
     {
-        $this->bassindepopulation = $bassindepopulation;
+        $this->population = $population;
 
         return $this;
     }
 
     /**
-     * Get bassindepopulation
+     * Get population
      *
      * @return string
      */
-    public function getBassindepopulation()
+    public function getPopulation()
     {
-        return $this->bassindepopulation;
+        return $this->population;
     }
+
+    /**
+     * @var string
+     */
+    private $descriptioncommmune;
+
+
+    /**
+     * Set descriptioncommmune
+     *
+     * @param string $descriptioncommmune
+     *
+     * @return User
+     */
+    public function setDescriptioncommmune($descriptioncommmune)
+    {
+        $this->descriptioncommmune = $descriptioncommmune;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptioncommmune
+     *
+     * @return string
+     */
+    public function getDescriptioncommmune()
+    {
+        return $this->descriptioncommmune;
+    }
+
+    /**
+     * @var string
+     */
+    private $mandat;
+
+
+    /**
+     * Set mandat
+     *
+     * @param string $mandat
+     *
+     * @return User
+     */
+    public function setMandat($mandat)
+    {
+        $this->mandat = $mandat;
+
+        return $this;
+    }
+
+    /**
+     * Get mandat
+     *
+     * @return string
+     */
+    public function getMandat()
+    {
+        return $this->mandat;
+    }
+
+
 
     /**
      * @var string

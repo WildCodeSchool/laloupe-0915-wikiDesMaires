@@ -83,11 +83,6 @@
                         {{ form_end(form) }}
 
                     </div>
-
-
-                    <p>Commentaire 1</p>
-
-                    <p>Commentaire 2</p>
                 </div>
             </div>
         </div>
@@ -116,12 +111,10 @@
         <div class="rectangle1">
             <div id="hi">
 
-                <h3 class="text-center">{{ proj.nomprojet }}</h3>
+                <h5 class="text-center">{{ proj.nomprojet }}</h5>
                 <a href="{{ path('projet_detail', { 'id': entity.id }) }}"><img
                             src="{{ app.request.basepath }}/uploads/{{ proj.photo }}" alt=""
                             class="img-thumbnail img-responsive"></a>
-
-                <p>{{ proj.description }}</p>
             </div>
         </div>
 

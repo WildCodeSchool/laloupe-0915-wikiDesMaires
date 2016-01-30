@@ -21,9 +21,7 @@ class ProjetAdmin extends Admin
             ->add('nomprojet')
             ->add('description')
             ->add('daterealisation')
-            ->add('difficulte')
             ->add('cout')
-            ->add('tailleprojet')
         ;
     }
 
@@ -33,7 +31,6 @@ class ProjetAdmin extends Admin
             ->add('nomprojet')
             ->add('daterealisation')
             ->add('cout')
-            ->add('tailleprojet')
             ;
     }
 
@@ -43,9 +40,7 @@ class ProjetAdmin extends Admin
             ->addIdentifier('nomprojet')
             ->add('description')
             ->add('daterealisation')
-            ->add('difficulte')
             ->add('cout')
-            ->add('tailleprojet')
             ->add('user')
             ->add('_action', 'actions', array(
                 'actions' => array(

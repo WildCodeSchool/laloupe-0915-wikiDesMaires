@@ -12,7 +12,9 @@
         <field name="photoprofil" column="photoprofil" type="string" length="255" nullable="true" />
 
         <field name="adressemairie" column="adressemarie" type="string" length="255" nullable="true" />
-        <field name="bassindepopulation" column="bassindepopulation" type="string" length="255" nullable="true"
+        <field name="population" column="population" type="string" length="255" nullable="true" />
+        <field name="mandat" column="mandat" type="string" length="255" nullable="true" />
+        <field name="descriptioncommmune" column="descriptioncommmune" type="string" length="255" nullable="true"
 />
 
         <many-to-one field="commune" target-entity="Wiki\WikiMaireBundle\Entity\Commune">

@@ -53,12 +53,6 @@ class ProfileType extends \Sonata\UserBundle\Form\Type\ProfileType
                 'label'    => 'form.label_lastname',
                 'required' => false
             ))
-            ->add('dateOfBirth', 'birthday', array(
-                'label'    => 'form.label_date_of_birth',
-                'required' => false,
-                'widget'   => 'single_text'
-
-            ))
             ->add('phone', null, array(
                 'label'    => 'form.label_phone',
                 'required' => false

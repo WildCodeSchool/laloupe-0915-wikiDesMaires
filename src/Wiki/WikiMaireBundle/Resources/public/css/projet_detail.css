@@ -25,6 +25,7 @@ li {
     text-align: right;
     margin-bottom: 40px;
     font-size: 15px;
+    padding: 40px;
 }
 
 .info_co a {
@@ -53,7 +54,8 @@ li {
     background-color: white;
     padding: 30px;
     margin-left: 35px;
-    width: 1150px
+    width: 1100px;
+
 }
 
 .titre a {
@@ -80,7 +82,7 @@ li {
 
 .contact p {
     display: inline;
-    margin: 170px;
+    margin: 120px;
 
 }
 
@@ -116,9 +118,14 @@ li {
 }
 
 .rectangle1 {
-    width: 480px;
-    height: 280px;
+    width: 530px;
+    height: 300px;
     margin-left: 35px;
     background: white;
     display: inline-block;
+}
+
+#commentaire_submit {
+    margin-left: 0px;
+
 }
