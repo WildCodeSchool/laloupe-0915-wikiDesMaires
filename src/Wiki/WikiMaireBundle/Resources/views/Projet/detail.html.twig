@@ -75,6 +75,12 @@
                 </div>
                 <div id="com" class="tab-pane fade">
 
+                    <ul>
+                        {% for comment in comments %}
+                        <li>{{ comment.message }}</li>
+                        {% endfor %}
+                    </ul>
+
                     <div>
 
                         {{ form_start(form) }}
@@ -131,7 +137,7 @@
 
     <script>
         $.ajax({
-            url: 'http://localhost/projet-wiki_des_maires/web/app_dev.php/projet/'+{{ entity.id }}+'/recherche',
+            url: '{{ path("projet_recherche", {"id": entity.id}) }}',
             datatype: 'json'
         })
                 .done(function (data) {

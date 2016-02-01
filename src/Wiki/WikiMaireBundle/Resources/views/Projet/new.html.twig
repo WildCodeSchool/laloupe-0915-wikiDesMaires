@@ -7,118 +7,139 @@
 
 
 {% block body -%}
-    <div class="menu">
-        <ul>
-            <li>Commune de {{ app.user.commune.nomcommune }}</li>
-            <li><a href="{{ path('fos_user_profile_show')}}">Mon Profil <span class="glyphicon glyphicon-user"></span></a></li>
-            <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter <span class="glyphicon glyphicon-log-out"></span></a></li>
-        </ul>
-    </div>
-    <div class="rectangle">
-        <h4>Ajouter un nouveau Projet</h4><br>
-    </div>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li>Commune de {{ app.user.commune.nomcommune }}</li>
+                <li><a href="{{ path('fos_user_profile_show')}}">Mon Profil <span class="glyphicon glyphicon-user"></span></a></li>
+                <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter <span class="glyphicon glyphicon-log-out"></span></a></li>
+            </ul>
+        </div>
+        <div class="rectangle">
+            <h4>Ajouter un nouveau Projet</h4><br>
+        </div>
 
 
-    <div class="col-md-9 question">
-        <div class="rectangle1">
+        <div class="form-content">
 
             {{ form_start(form) }}
-            {{ form_errors(form.nomprojet) }}
-            <div class="col-md-3">
-                <label for="nom projet">Nom du Projet</label>
-            </div>
-            <div class="col-md-9">
-                {{ form_widget(form.nomprojet) }}
-            </div>
-
-            {{ form_errors(form.description) }}
-            <div class="col-md-3">
-                <label for="decription">Description</label>
-            </div>
-            <div class="col-md-9">
-                {{ form_widget(form.description) }}
+            <div class="row">
+                {{ form_errors(form.nomprojet) }}
+                <div class="col-md-3">
+                    <label for="nom projet">Nom du Projet</label>
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.nomprojet) }}
+                </div>
             </div>
 
-            {{ form_errors(form.daterealisation) }}
-            <div class="col-md-3">
-                <label for="annee de realisation">Année de réalisation</label>
-            </div>
-            <div class="col-md-9">
-                {{ form_widget(form.daterealisation) }}
-            </div>
-
-
-            {{ form_errors(form.duree) }}
-            <div class="col-md-3">
-                <label for="duree">Durée</label>
-            </div>
-            <div class="col-md-9">
-                {{ form_widget(form.duree) }}
+            <div class="row">
+                {{ form_errors(form.description) }}
+                <div class="col-md-3">
+                    <label for="decription">Description</label>
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.description) }}
+                </div>
             </div>
 
-            {{ form_errors(form.gains) }}
-            <div class="col-md-3">
-                <label for="gains">Gains pour la commune</label>
-            </div>
-            <div class="col-md-9">
-                {{ form_widget(form.gains) }}
-            </div>
-
-            {{ form_errors(form.cout) }}
-            <div class="col-md-3">
-                <label for="cout">Coût de la réalisation</label>
-            </div>
-            <div class="col-md-9">
-                {{ form_widget(form.cout) }}
+            <div class="row">
+                {{ form_errors(form.daterealisation) }}
+                <div class="col-md-3">
+                    <label for="annee de realisation">Année de réalisation</label>
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.daterealisation) }}
+                </div>
             </div>
 
-            {{ form_errors(form.financement) }}
-            <div class="col-md-3">
-                <label for="financement">Financement</label>
+            <div class="row">
+                {{ form_errors(form.duree) }}
+                <div class="col-md-3">
+                    <label for="duree">Durée</label>
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.duree) }}
+                </div>
             </div>
-            <div class="hidden">{{ form_widget(form.financement) }}</div>
 
-
-            <p>
-                <label for="percent-etat">Etat </label>
-                <input type="checkbox" value="etat" class="checkbox" id="etat" style="float:left;">
-                <input type="text" id="percent-etat"/> %
-            </p>
-
-
-            <div class="col-md-3"></div>
-            <p>
-                <label for="percent-region">Région </label>
-                <input type="checkbox" value="region" class="checkbox" style="float:left;">
-                <input type="text" id="percent-region"/> %
-            </p>
-
-            <div class="col-md-3"></div>
-            <p>
-                <label for="percent-departement">Département </label>
-                </label><input type="checkbox" value="departement" class="checkbox" style="float:left;">
-                <input type="text" id="percent-departement"/> %
-            </p>
-
-            <div class="col-md-3"></div>
-            <p>
-                <label for="percent-epci">EPCI </label>
-                <input type="checkbox" value="epci" class="checkbox" style="float:left;">
-                <input type="text" id="percent-epci"/> %
-            </p>
-
-            <div class="col-md-3"></div>
-            <p>
-                <input type="checkbox" value="1" class="checkbox autre" style="float:left;">
-                <input type="text" id="name-1" placeholder="Autre financement..."/>
-                <input type="text" id="percent-1"/> %
-            </p>
-
-
-            <div class="col-md-3">
-                <label for="Photo projet">Photo du projet</label>
+            <div class="row">
+                {{ form_errors(form.gains) }}
+                <div class="col-md-3">
+                    <label for="gains">Gains pour la commune</label>
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.gains) }}
+                </div>
             </div>
-            {{ form_widget(form.file) }}
+
+            <div class="row">
+                {{ form_errors(form.cout) }}
+                <div class="col-md-3">
+                    <label for="cout">Coût de la réalisation</label>
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.cout) }}
+                </div>
+            </div>
+
+            <div class="finnancement">
+                {{ form_errors(form.financement) }}
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="financement">Financement</label>
+                    </div>
+                    <div class="hidden">{{ form_widget(form.financement) }}</div>
+
+
+                    <div class="col-md-9">
+                        <label for="percent-etat">Etat </label>
+                        <input type="checkbox" value="etat" class="checkbox" id="etat" style="float:left;">
+                        <input type="text" id="percent-etat"/> %
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-3">
+                        <label for="percent-region">Région </label>
+                        <input type="checkbox" value="region" class="checkbox" style="float:left;">
+                        <input type="text" id="percent-region"/> %
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-3">
+                        <label for="percent-departement">Département </label>
+                        <input type="checkbox" value="departement" class="checkbox" style="float:left;">
+                        <input type="text" id="percent-departement"/> %
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-3">
+                        <label for="percent-epci">EPCI </label>
+                        <input type="checkbox" value="epci" class="checkbox" style="float:left;">
+                        <input type="text" id="percent-epci"/> %
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="checkbox" value="1" class="checkbox autre" style="float:left;">
+                        <input type="text" id="name-1" placeholder="Autre financement..."/>
+                        <input type="text" id="percent-1"/> %
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="Photo projet">Photo du projet</label>
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.file) }}
+                </div>
+            </div>
 
             {# Coord fields #}
             {{ form_widget(form.x) }}
@@ -159,8 +180,11 @@
             </div>
 
 
-            {{ form_widget(form.submit) }}
-
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3">
+                    {{ form_widget(form.submit) }}
+                </div>
+            </div>
 
             {{ form_end(form) }}
 
@@ -191,6 +215,7 @@
                     if( $(this).is(':checked') ) {
                         var newValue = parseInt($('.checkbox.autre:last').val()) + 1;
                         $('p:last').after('' +
+                                '<div class="col-md-3"></div>' +
                                 '<p>' +
                                 '<input type="checkbox" value="'+newValue+'" class="checkbox autre" style="float:left;">' +
                                 '<input type="text" id="name-'+newValue+'" placeholder="Autre financement..."/>' +
@@ -223,7 +248,7 @@
             $('#cropDialog').modal({ show: false});
             var one=new CROP;
             one.init(".default");
-            one.loadImg("http://localhost/projet-wiki_des_maires/web/bundles/wikiwikimaire/img/image2.png");
+            one.loadImg("{{ asset('bundles/wikiwikimaire/img/image2.png') }}");
             $("input#wiki_wikimairebundle_projet_file").change(function(){
                 loadImageFile();
                 /*$(".uploadfile").wrap("<form>").closest("form").get(0).reset();
@@ -240,9 +265,9 @@
                         '   <button class="cropButton" id="cropButton">Valider</button>' +
                         '</div>'
                 );
-                one=new CROP;
+                one=new CROP();
                 one.init(".default");
-                one.loadImg(e.target.result);
+                setTimeout(function() {one.loadImg(e.target.result);},500);
                 $("#cropButton").click(function(e){
                     e.preventDefault();
                     console.log(coordinates(one));

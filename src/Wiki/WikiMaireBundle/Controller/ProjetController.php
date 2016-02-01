@@ -12,7 +12,7 @@ use Wiki\WikiMaireBundle\Entity\Likes;
 use Wiki\WikiMaireBundle\Form\Handler\ProjetHandler;
 use Wiki\WikiMaireBundle\Form\Model\ProjetModel;
 use Wiki\WikiMaireBundle\Form\Type\ProjetType;
-use Wiki\WikiMaireBundle\Entity\commentaire;
+use Wiki\WikiMaireBundle\Entity\Commentaire;
 use Wiki\WikiMaireBundle\Form\Type\CommentaireType;
 
 /**
@@ -31,6 +31,7 @@ class ProjetController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('WikiWikiMaireBundle:Projet')->getSuggested(4);
+
         return $this->render('WikiWikiMaireBundle:Projet:index.html.twig', array(
             'entities' => $entities,
         ));
@@ -205,6 +206,7 @@ class ProjetController extends Controller
 
         $entity = $em->getRepository('WikiWikiMaireBundle:Projet')->find($id);
         $tri = $em->getRepository('WikiWikiMaireBundle:Projet')->getSuggested(2);
+        $comments = $em->getRepository('WikiWikiMaireBundle:Commentaire')->findByProjet($entity);
 
 
         if (!$entity) {
@@ -225,14 +227,14 @@ class ProjetController extends Controller
                 $commentaire->setProjet($entity);
                 $em->persist($commentaire);
                 $em->flush();
-
+                return $this->redirect($this->generateUrl('projet_detail', array('id'=>$entity->getId())));
             }
         }
         return $this->render('WikiWikiMaireBundle:Projet:detail.html.twig', array(
             'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
             'try' => $tri,
-            'commentaire' => $commentaire,
+            'comments' => $comments,
             'form' => $commentForm->createView()
         ));
 

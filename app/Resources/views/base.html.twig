@@ -5,14 +5,13 @@
 
 
     <title>{% block title %}Wiki des maires{% endblock %}</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/wikiwikimaire/css/style.css') }}">
 
     {% endblock %}
 
@@ -23,39 +22,6 @@
 
 <body data-user="{{ app.user }}" {% if is_granted('ROLE_ADMIN') %} class="admin" {% endif %}>
 
-
-
-{#&#123;&#35;Debut header&#35;&#125;#}
-{#<header class="main-header">#}
-    {#<nav class="navbar navbar-default navbar-static-top">#}
-        {#<div class="container">#}
-            {#<div class="navbar-header">#}
-                {#<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">#}
-                    {#<span class="sr-only">Toggle navigation</span>#}
-                    {#<span class="icon-bar"></span>#}
-                    {#<span class="icon-bar"></span>#}
-                    {#<span class="icon-bar"></span>#}
-                {#</button>#}
-                {#<a class="navbar-brand" href="{{ path('wiki_wiki_maire_homepage') }}">WIKI</a>#}
-            {#</div>#}
-
-            {#<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">#}
-                {#<ul class="nav navbar-nav navbar-right">#}
-                    {#{% if app.user %}#}
-                    {#<li>#}
-                        {#<a href="{{ path('sonata_user_security_login') }}">LOGOUT</a>#}
-                    {#</li>#}
-                    {#{% else %}#}
-                    {#<li>#}
-                        {#<a href="{{ path('sonata_user_security_login') }}">CONNEXION</a>#}
-                    {#</li>#}
-                    {#{% endif %}#}
-                {#</ul>#}
-            {#</div>#}
-        {#</div>#}
-    {#</nav>#}
-{#</header>#}
-{#&#123;&#35;Fin header&#35;&#125;#}
 {% block body %}
 {% endblock %}
 

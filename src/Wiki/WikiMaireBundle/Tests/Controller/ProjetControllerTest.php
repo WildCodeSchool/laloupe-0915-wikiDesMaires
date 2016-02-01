@@ -10,7 +10,7 @@ class ProjetControllerTest extends WebTestCase
 {
 
 
-        public function testPageIndex()
+    public function testPageIndex()
     {
         $fixtures = array(
             'Wiki\WikiMaireBundle\DataFixtures\ORM\LoadCommuneData',
@@ -28,7 +28,7 @@ class ProjetControllerTest extends WebTestCase
         $this->assertEquals(true, true);
 
 
-        // Test si la page projet affiche les projets
+        // Test si la page projet n'affiche pas les projets a un anonyme
         $client = static::createClient();
         $crawler = $client->request('GET', '/projet/');
         $this->assertEquals(302,$client->getResponse()->getStatusCode());
@@ -37,8 +37,12 @@ class ProjetControllerTest extends WebTestCase
 
 
         //Test du bouton "Mon Profil"
-        $client = static::createClient();
+        $client = static::createClient(array(), array(
+            'PHP_AUTH_USER' => 'celine',
+            'PHP_AUTH_PW' => 'celine',
+        ));
         $crawler = $client->request('GET', '/projet/');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $link = $crawler
             ->filter('a:contains("Mon Profil")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
@@ -62,7 +66,7 @@ class ProjetControllerTest extends WebTestCase
 
         $this->assertEquals('Sonata\UserBundle\Controller\AdminSecurityController::logoutAction', $client->getRequest()->attributes->get('_controller'));
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
-     }
+    }
 
 
     public function testPageNew()
@@ -246,7 +250,7 @@ class ProjetControllerTest extends WebTestCase
         $crawler = $client->click($link);
 
 
-        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals('Wiki\WikiMaireBundle\Controller\ProjetController::indexAction', $client->getRequest()->attributes->get('_controller'));
 
 
@@ -264,7 +268,7 @@ class ProjetControllerTest extends WebTestCase
         $this->assertTrue(200 === $client->getResponse()->getStatusCode());
         $this->assertEquals('Wiki\WikiMaireBundle\Controller\DefaultController::indexAction', $client->getRequest()->attributes->get('_controller'));
 
-      }
+    }
 
 }
 

@@ -1,25 +1,27 @@
 Wiki\WikiMaireBundle\Entity\Commentaire:
     type: entity
-    table: null
-    repositoryClass: Wiki\WikiMaireBundle\Entity\CommentaireRepository
     id:
         id:
             type: integer
             id: true
             generator:
                 strategy: AUTO
+
     fields:
-        comment:
-            type: string
-            length: 255
-        date:
-            type: date
+        message:
+            type: text
 
     manyToOne:
-        user:
-            targetEntity: Application\Sonata\UserBundle\Entity\User
-            joinColumn:
-                name: maire_id
-                referencedColumnName: id
+            user:
+                targetEntity: Application\Sonata\UserBundle\Entity\User
+                joinColumn:
+                    name: user_id
+                    referencedColumnName: id
 
+            projet:
+                targetEntity: Wiki\WikiMaireBundle\Entity\Projet
+                joinColumn:
+                    name: projet_id
+                    referencedColumnName: id
     lifecycleCallbacks: {  }
+

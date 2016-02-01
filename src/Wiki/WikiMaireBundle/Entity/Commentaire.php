@@ -3,7 +3,7 @@
 namespace Wiki\WikiMaireBundle\Entity;
 
 /**
- * Commentaire
+ * commentaire
  */
 class Commentaire
 {
@@ -12,15 +12,73 @@ class Commentaire
      */
     private $id;
 
+
+    /**
+     * @var \Wiki\WikiMaireBundle\Entity\Projet
+     */
+    private $projet;
+
     /**
      * @var string
      */
-    private $comment;
+    private $name;
 
     /**
-     * @var \DateTime
+     * @var string
      */
-    private $date;
+    private $message;
+
+
+    /**
+     * Set message
+     *
+     * @param string $message
+     *
+     * @return Contact
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
+
+        return $this;
+    }
+
+    /**
+     * Get message
+     *
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Contact
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
 
 
     /**
@@ -33,53 +91,7 @@ class Commentaire
         return $this->id;
     }
 
-    /**
-     * Set comment
-     *
-     * @param string $comment
-     *
-     * @return Commentaire
-     */
-    public function setComment($comment)
-    {
-        $this->comment = $comment;
 
-        return $this;
-    }
-
-    /**
-     * Get comment
-     *
-     * @return string
-     */
-    public function getComment()
-    {
-        return $this->comment;
-    }
-
-    /**
-     * Set date
-     *
-     * @param \DateTime $date
-     *
-     * @return Commentaire
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
     /**
      * @var \Application\Sonata\UserBundle\Entity\User
      */
@@ -91,7 +103,7 @@ class Commentaire
      *
      * @param \Application\Sonata\UserBundle\Entity\User $user
      *
-     * @return Commentaire
+     * @return Likes
      */
     public function setUser(\Application\Sonata\UserBundle\Entity\User $user = null)
     {
@@ -108,5 +120,30 @@ class Commentaire
     public function getUser()
     {
         return $this->user;
+    }
+
+
+    /**
+     * Set projet
+     *
+     * @param \Wiki\WikiMaireBundle\Entity\Projet $projet
+     *
+     * @return Likes
+     */
+    public function setProjet(Projet $projet)
+    {
+        $this->projet = $projet;
+
+        return $this;
+    }
+
+    /**
+     * Get projet
+     *
+     * @return \Wiki\WikiMaireBundle\Entity\Projet
+     */
+    public function getProjet()
+    {
+        return $this->projet;
     }
 }
