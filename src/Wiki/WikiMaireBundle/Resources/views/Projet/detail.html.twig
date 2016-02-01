@@ -77,7 +77,7 @@
 
                     <ul>
                         {% for comment in comments %}
-                        <li>{{ comment.message }}</li>
+                            <li>{{ comment.message }}</li>
                         {% endfor %}
                     </ul>
 
@@ -109,22 +109,26 @@
     </div>
 
     <!-- Projet Similaires -->
-    <div class="rectangle">
-        <h5>Projets Similaires</h5>
-    </div>
-    {% for proj in try %}
-
-        <div class="rectangle1">
-            <div id="hi">
-
-                <h5 class="text-center">{{ proj.nomprojet }}</h5>
-                <a href="{{ path('projet_detail', { 'id': entity.id }) }}"><img
-                            src="{{ app.request.basepath }}/uploads/{{ proj.photo }}" alt=""
-                            class="img-thumbnail img-responsive"></a>
-            </div>
+    <div class="sim-projets container">
+        <div class="rectangle">
+            <h5>Projets Similaires</h5>
         </div>
+        <div class="row">
+            {% for proj in try %}
 
-    {% endfor %}
+                <div class="col-md-6">
+                    <div id="hi">
+
+                        <h5 class="text-center">{{ proj.nomprojet }}</h5>
+                        <a href="{{ path('projet_detail', { 'id': entity.id }) }}"><img
+                                    src="{{ app.request.basepath }}/uploads/{{ proj.photo }}" alt=""
+                                    class="img-thumbnail img-responsive"></a>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}
 
@@ -137,9 +141,9 @@
 
     <script>
         $.ajax({
-            url: '{{ path("projet_recherche", {"id": entity.id}) }}',
-            datatype: 'json'
-        })
+                    url: '{{ path("projet_recherche", {"id": entity.id}) }}',
+                    datatype: 'json'
+                })
                 .done(function (data) {
                     console.log(data);
                     var str = data.financement;

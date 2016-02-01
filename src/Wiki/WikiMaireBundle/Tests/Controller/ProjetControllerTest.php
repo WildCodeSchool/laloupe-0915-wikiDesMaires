@@ -138,6 +138,8 @@ class ProjetControllerTest extends WebTestCase
         $form['wiki_wikimairebundle_projet[cout]'] = '40000';
         $form['wiki_wikimairebundle_projet[file]'] = $photo;
         $form['wiki_wikimairebundle_projet[financement]'] = 'departement:3;';
+        $form['wiki_wikimairebundle_projet[duree]'] = '2 ans';
+        $form['wiki_wikimairebundle_projet[gains]'] = 'C\'est très enrichissant';
         $form['wiki_wikimairebundle_projet[x]'] = 0;
         $form['wiki_wikimairebundle_projet[y]'] = 0;
         $form['wiki_wikimairebundle_projet[w]'] = 400;
