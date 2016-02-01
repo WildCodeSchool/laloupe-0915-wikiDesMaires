@@ -55,8 +55,12 @@ class ProjetControllerTest extends WebTestCase
 
 
         //Test du bouton "Se déconnecter"
-        $client = static::createClient();
+        $client = static::createClient(array(), array(
+            'PHP_AUTH_USER' => 'celine',
+            'PHP_AUTH_PW' => 'celine',
+        ));
         $crawler = $client->request('GET', '/projet/');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $link = $crawler
             ->filter('a:contains("Se déconnecter")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
@@ -64,7 +68,7 @@ class ProjetControllerTest extends WebTestCase
 
         $crawler = $client->click($link);
 
-        $this->assertEquals('Sonata\UserBundle\Controller\AdminSecurityController::logoutAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Sonata\UserBundle\Controller\SecurityFOSUser1Controller::logoutAction', $client->getRequest()->attributes->get('_controller'));
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
     }
 
@@ -256,7 +260,7 @@ class ProjetControllerTest extends WebTestCase
 
         //Test du bouton "Se deconnecter"
         $link = $crawler
-            ->filter('a:contains("Se déconnecter ")')// find all links with the text "Greet"
+            ->filter('a:contains("Se déconnecter")')// find all links with the text "Greet"
             ->eq(0)// select the second link in the list
             ->link();
 

@@ -24,7 +24,7 @@ class ProjetRepository extends \Doctrine\ORM\EntityRepository
         return $query->getResult();
     }
 
-    public function getSuggested($nb)
+    public function getSuggested($nb, $env)
     {
         $rsm = new ResultSetMapping();
         $rsm->addEntityResult('Wiki\WikiMaireBundle\Entity\Projet', 'p');
@@ -39,7 +39,10 @@ class ProjetRepository extends \Doctrine\ORM\EntityRepository
         $rsm->addFieldResult('p', 'financement', 'financement');
         $rsm->addFieldResult('p', 'user', 'user');
 
-        $sql = 'SELECT * FROM projet ORDER BY RAND() LIMIT ?';
+        if ($env=='test')
+            $sql = 'SELECT * FROM projet ORDER BY RANDOM() LIMIT ?';
+        else
+            $sql = 'SELECT * FROM projet ORDER BY RAND() LIMIT ?';
 
         $query = $this->_em->createNativeQuery($sql, $rsm);
         $query->setParameter(1, $nb);
