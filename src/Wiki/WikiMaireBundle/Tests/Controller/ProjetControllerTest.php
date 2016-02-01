@@ -116,7 +116,10 @@ class ProjetControllerTest extends WebTestCase
         $this->assertEquals(1, $crawler->filter('form textarea#wiki_wikimairebundle_projet_description')->count());
         $this->assertEquals(1, $crawler->filter('form input#wiki_wikimairebundle_projet_cout')->count());
         $this->assertEquals(1, $crawler->filter('form input#wiki_wikimairebundle_projet_file')->count());
-        $this->assertEquals(1, $crawler->filter('form textarea#wiki_wikimairebundle_projet_finencement')->count());
+        $this->assertEquals(1, $crawler->filter('form input.checkbox[value=etat]')->count());
+        $this->assertEquals(1, $crawler->filter('form input.checkbox[value=region]')->count());
+        $this->assertEquals(1, $crawler->filter('form input.checkbox[value=departement]')->count());
+        $this->assertEquals(1, $crawler->filter('form input.checkbox[value=epci]')->count());
 
 
         // Sélection basée sur la valeur, l'id ou le nom des boutons
@@ -130,7 +133,11 @@ class ProjetControllerTest extends WebTestCase
         $form['wiki_wikimairebundle_projet[description]'] = 'il était une fois';
         $form['wiki_wikimairebundle_projet[cout]'] = '40000';
         $form['wiki_wikimairebundle_projet[file]'] = $photo;
-        $form['wiki_wikimairebundle_projet[finencement]'] = 'departement:3;';
+        $form['wiki_wikimairebundle_projet[financement]'] = 'departement:3;';
+        $form['wiki_wikimairebundle_projet[x]'] = 0;
+        $form['wiki_wikimairebundle_projet[y]'] = 0;
+        $form['wiki_wikimairebundle_projet[w]'] = 400;
+        $form['wiki_wikimairebundle_projet[h]'] = 200;
         $crawler = $client->submit($form);
 
         // Il faut suivre la redirection
