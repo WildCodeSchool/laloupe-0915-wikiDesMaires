@@ -17,6 +17,7 @@ class CommuneAdmin extends Admin
     {
         $datagridMapper
             ->add('id')
+            ->add('codepostal', null, array('label' => 'Code Postal'))
             ->add('nomcommune')
         ;
     }
@@ -28,6 +29,7 @@ class CommuneAdmin extends Admin
     {
         $listMapper
             ->add('id')
+            ->add('codepostal', null, array('label' => 'Code Postal'))
             ->add('nomcommune')
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -47,6 +49,7 @@ class CommuneAdmin extends Admin
         $formMapper
             ->add('id')
             ->add('nomcommune')
+            ->add('codepostal', null, array('label' => 'Code Postal'))
         ;
     }
 
@@ -57,6 +60,7 @@ class CommuneAdmin extends Admin
     {
         $showMapper
             ->add('id')
+            ->add('codepostal', null, array('label' => 'Code Postal'))
             ->add('nomcommune')
         ;
     }
