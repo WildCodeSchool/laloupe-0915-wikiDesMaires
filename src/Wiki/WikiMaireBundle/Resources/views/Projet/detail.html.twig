@@ -57,10 +57,17 @@
                 <div id="projet" class="tab-pane fade in active">
 
                     <p>- <b>Description :</b> {{ entity.description }}</p>
-                    <p>- <b>Date de réalisation:</b> {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}</p>
+
+                    <p>- <b>Date de
+                            réalisation:</b> {% if entity.daterealisation %}{{ entity.daterealisation|date('Y') }}{% endif %}
+                    </p>
+
                     <p>- <b>Durée :</b> {{ entity.duree }}</p>
+
                     <p>- <b>Gain pour la commune :</b> {{ entity.gains }}</p>
+
                     <p>- <b>Cout de réalisation :</b> {{ entity.cout }} Euro </p>
+
                     <p>- <b>Financement :</b></p>
 
                     <div style="width: 100%; height: 100%;">
@@ -109,10 +116,10 @@
     </div>
 
     <!-- Projet Similaires -->
+    <div class="rectangle">
+        <h5>Projets Similaires</h5>
+    </div>
     <div class="sim-projets container">
-        <div class="rectangle">
-            <h5>Projets Similaires</h5>
-        </div>
         <div class="row">
             {% for proj in try %}
 
@@ -141,9 +148,9 @@
 
     <script>
         $.ajax({
-                    url: '{{ path("projet_recherche", {"id": entity.id}) }}',
-                    datatype: 'json'
-                })
+            url: '{{ path("projet_recherche", {"id": entity.id}) }}',
+            datatype: 'json'
+        })
                 .done(function (data) {
                     console.log(data);
                     var str = data.financement;
