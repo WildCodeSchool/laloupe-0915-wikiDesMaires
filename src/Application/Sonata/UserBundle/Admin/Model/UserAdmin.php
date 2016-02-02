@@ -147,9 +147,12 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                 ->add('adressemairie', null, array('label' => 'Adresse mairie'))
                 ->add('commune', 'sonata_type_model_list', array(
                     'label'=> 'Commune'))
-                ->add('descriptioncommmune', null, array('label' => 'Description Commune'))
-                ->add('population', null, array('label' => 'Population INSEE'))
-                ->add('mandat', null, array('label' => 'Mandat'))
+                ->add('descriptioncommmune', null, array('label' => 'Description Commune',
+                                                        'required' => true))
+                ->add('population', null, array('label' => 'Population INSEE',
+                                                'required' => true))
+                ->add('mandat', null, array('label' => 'Mandat',
+                                            'required' => true))
                 ->add('fil', 'file', array(
                     'label' => 'Photo de profil',
                     'required' => false
