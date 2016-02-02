@@ -21,6 +21,10 @@ class Commune
      */
     private $nomcommune;
 
+    /**
+     * @var string
+     */
+    private $codepostal;
 
     /**
      * Get id
@@ -54,5 +58,29 @@ class Commune
     public function getNomcommune()
     {
         return $this->nomcommune;
+    }
+
+    /**
+     * Set codepostal
+     *
+     * @param string $codepostal
+     *
+     * @return codepostal
+     */
+    public function setCodepostal($codepostal)
+    {
+        $this->codepostal = $codepostal;
+
+        return $this;
+    }
+
+    /**
+     * Get codepostal
+     *
+     * @return string
+     */
+    public function getCodepostal()
+    {
+        return $this->codepostal;
     }
 }
