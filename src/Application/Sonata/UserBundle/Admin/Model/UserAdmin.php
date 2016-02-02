@@ -153,6 +153,7 @@ class UserAdmin extends \Sonata\UserBundle\Admin\Model\UserAdmin
                                                 'required' => true))
                 ->add('mandat', null, array('label' => 'Mandat',
                                             'required' => true))
+                ->add('codepostal', null, array('label' => 'Code Postal'))
                 ->add('fil', 'file', array(
                     'label' => 'Photo de profil',
                     'required' => false
